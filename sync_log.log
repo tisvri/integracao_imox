@@ -528,3 +528,15 @@
 2026-02-26 18:27:41,567 - INFO - REDCap: exported record 93-2 for event vsv1_arm_1 with 385 fields
 2026-02-26 18:27:43,218 - INFO - Polotrial: authentication successful
 2026-02-26 18:27:45,781 - INFO - V2: date field revisao_dt_visita is empty. Not updating visit date for participant 3303 in Polotrial.
+2026-02-26 18:35:54,421 - INFO - Dispatching to V2 handler: vrv2_arm_1
+2026-02-26 18:35:55,756 - INFO - REDCap: exported record 93-2 for event vrv2_arm_1 with 193 fields
+2026-02-26 18:35:55,756 - INFO - V2: record 93-2 -> randomization_group=3
+2026-02-26 18:35:56,069 - INFO - REDCap: exported record 93-2 for event vsv1_arm_1 with 385 fields
+2026-02-26 18:35:57,580 - INFO - Polotrial: authentication successful
+2026-02-26 18:36:00,086 - INFO - V2: date field revisao_dt_visita is empty. Not updating visit for participant 3303.
+2026-02-26 18:39:38,727 - INFO - Dispatching to V2 handler: vrv2_arm_1
+2026-02-26 18:39:39,919 - INFO - REDCap: exported record 93-2 for event vrv2_arm_1 with 193 fields
+2026-02-26 18:39:39,920 - INFO - V2: record 93-2 -> randomization_group=3
+2026-02-26 18:39:40,329 - INFO - REDCap: exported record 93-2 for event vsv1_arm_1 with 385 fields
+2026-02-26 18:39:41,453 - INFO - Polotrial: authentication successful
+2026-02-26 18:39:43,857 - INFO - V2: date field revisao_dt_visita is empty. Not updating visit for participant 3303.
