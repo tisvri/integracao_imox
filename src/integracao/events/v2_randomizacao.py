@@ -44,6 +44,11 @@ ARM_POLOTRIAL_PATTERNS: Dict[int, Dict[str, str]] = {
         "pattern": r"Grupo.*Hidra.*Ultra Refres.*Hidra.*[IÍií]ntimo",
         "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
     },
+    # 2: {
+    #     "pattern": r"Grupo Hidra. Ultra. Refres. e Hidra. Intimo",
+    #     "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
+    # },
+
     3: {
         "pattern": r"Grupo.*Trat.*Intensivo Noturno",
         "label": "Grupo 3 - Tratamento Intensivo Noturno",
