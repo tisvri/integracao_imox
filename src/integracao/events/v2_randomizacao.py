@@ -162,10 +162,10 @@ def sync_v2_randomization(
     # 6. Update visit task (VR/V2)
     time.sleep(20)
     visits = polotrial.list_participant_visits(co_participante=co_participante)
-    v2_visit = next((v for v in visits if v.get("nome_tarefa", "") == "VR/V2"), None)
+    v2_visit = next((v for v in visits if v.get("nome_tarefa", "") == V2_EVENT), None)
     if not v2_visit:
         raise RuntimeError(
-            f"V2: Visit 'VR/V2' not found in PoloTrial for participant {co_participante}"
+            f"V2: Visit '{V2_EVENT}' not found in PoloTrial for participant {co_participante}"
         )
 
     participante_visita_id = int(v2_visit["id"])
@@ -174,15 +174,15 @@ def sync_v2_randomization(
         "data_realizada": v2_date,
         "status": 20,
     }
-    logger.info("DEBUG: Desired VR/V2 visit update payload:\n%s", json.dumps(desired, indent=2))
+    logger.info("DEBUG: Desired %s visit update payload:\n%s", V2_EVENT, json.dumps(desired, indent=2))
 
     current = polotrial.get_participant_visit(participante_visita_id)
     # Compare only what matters
     if str(current.get("data_realizada", ""))[:10] == str(desired["data_realizada"])[:10] and int(current.get("status", -1)) == int(desired["status"]):
-        logger.info("VR/V2 already up to date (id=%s).", participante_visita_id)
+        logger.info("%s already up to date (id=%s).", V2_EVENT, participante_visita_id)
     else:
         polotrial.update_participant_visit(participante_visita_id, desired)
-        logger.info("VR/V2 updated (id=%s).", participante_visita_id)
+        logger.info("%s updated (id=%s).", V2_EVENT, participante_visita_id)
 
     logger.info(f"DEBUG: Current Date: {current.get('data_realizada')} | Desired Date: {desired['data_realizada']}")
 
@@ -299,7 +299,7 @@ def sync_v2_procedures(
             unmatched_procedures.append(proc_name)
 
     # DEBUG: Show procedures with mapping info
-    logger.info("DEBUG: Available procedures in VR/V2:")
+    logger.info("DEBUG: Available procedures in %s:", V2_EVENT)
     for idx, row in pvp_df.iterrows():
         check_field = row.get("redcap_check_field")
         date_field = row.get("redcap_date_field")
@@ -400,7 +400,7 @@ def sync_consulta_medica_executor(
     ).strip()
     if not executor_name:
         logger.info(
-            "VR/V2: consulta_nome_medico empty; skipping executor sync."
+            "%s: consulta_nome_medico empty; skipping executor sync.", V2_EVENT
         )
         return
 
@@ -408,7 +408,7 @@ def sync_consulta_medica_executor(
         volunteer_payload.get("consulta_dt") or "",
     ).strip()
     if not data_realizada:
-        logger.info("VR/V2: consulta_dt empty; skipping executor sync.")
+        logger.info("%s: consulta_dt empty; skipping executor sync.", V2_EVENT)
         return
 
     cm = merged_procedures_df[
@@ -418,22 +418,22 @@ def sync_consulta_medica_executor(
     ]
     if cm.empty:
         logger.warning(
-            "VR/V2: 'Consulta Médica' procedure not found in visit."
+            "%s: 'Consulta Médica' procedure not found in visit.", V2_EVENT
         )
         return
 
     procedure_id = int(cm["id"].iloc[0])
     if len(cm) > 1:
         logger.warning(
-            "VR/V2: multiple 'Consulta Médica' found; using id=%s",
-            procedure_id,
+            "%s: multiple 'Consulta Médica' found; using id=%s",
+            V2_EVENT, procedure_id,
         )
 
     person = polotrial.find_person_by_name(executor_name)
     if not person:
         logger.error(
-            "VR/V2: executor %r not found in PoloTrial /pessoas.",
-            executor_name,
+            "%s: executor %r not found in PoloTrial /pessoas.",
+            V2_EVENT, executor_name,
         )
         return
     executor_id = int(person["id"])
@@ -441,8 +441,8 @@ def sync_consulta_medica_executor(
     existing_links = polotrial.list_procedure_executors(procedure_id)
     if any(int(x.get("executor", -1)) == executor_id for x in existing_links):
         logger.info(
-            "VR/V2: executor already linked. procedure=%s executor=%s",
-            procedure_id, executor_id,
+            "%s: executor already linked. procedure=%s executor=%s",
+            V2_EVENT, procedure_id, executor_id,
         )
         return
 
@@ -458,9 +458,9 @@ def sync_consulta_medica_executor(
     }
     created = polotrial.create_procedure_executor(payload)
     logger.info(
-        "VR/V2: executor linked to Consulta Médica. "
+        "%s: executor linked to Consulta Médica. "
         "procedure=%s executor=%s response_id=%s",
-        procedure_id, executor_id, created.get("id"),
+        V2_EVENT, procedure_id, executor_id, created.get("id"),
     )
 
 
@@ -533,28 +533,28 @@ def update_participant_arm_if_needed(
             current_data_rand = str(participant.get("data_randomizacao") or "")[:10]
             if current_data_rand == data_randomizacao[:10]:
                 logger.info(
-                    "VR/V2: participant %s already in arm %s (%s) "
+                    "%s: participant %s already in arm %s (%s) "
                     "and data_randomizacao already set. No update.",
-                    co_participante, co_braco_desired, arm_label,
+                    V2_EVENT, co_participante, co_braco_desired, arm_label,
                 )
                 return
             # Braço correto mas data_randomizacao diferente — atualiza
             logger.info(
-                "VR/V2: participant %s already in arm %s (%s) "
+                "%s: participant %s already in arm %s (%s) "
                 "but data_randomizacao needs update.",
-                co_participante, co_braco_desired, arm_label,
+                V2_EVENT, co_participante, co_braco_desired, arm_label,
             )
         else:
             logger.info(
-                "VR/V2: participant %s already in arm %s (%s). No update.",
-                co_participante, co_braco_desired, arm_label,
+                "%s: participant %s already in arm %s (%s). No update.",
+                V2_EVENT, co_participante, co_braco_desired, arm_label,
             )
             return
 
     logger.info("DEBUG: Sending arm update payload:\n%s", json.dumps(arm_payload, indent=2))
     polotrial.update_participant(co_participante, arm_payload)
     logger.info(
-        "VR/V2: participant %s arm updated %s → %s (%s). data_randomizacao=%s",
-        co_participante, current_arm_id, co_braco_desired, arm_label,
+        "%s: participant %s arm updated %s → %s (%s). data_randomizacao=%s",
+        V2_EVENT, co_participante, current_arm_id, co_braco_desired, arm_label,
         data_randomizacao or "(not set)",
     )

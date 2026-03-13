@@ -14,6 +14,10 @@ from integracao.mappings.site_code_maps import SITE_CODE_MAPPING
 from integracao.mappings.race_code_maps import RACE_CODE_MAPPING
 from integracao.mappings.gender_maps import GENDER_MAPPING 
 import time
+import dotenv
+import os
+
+dotenv.load_dotenv(override=True)
 
 logger = logging.getLogger(__name__)
 
@@ -34,24 +38,24 @@ def sync_v1_screening(
         )
     
     # 2. Mapping fields REDCap -> PoloTrial
-    gender_code = GENDER_MAPPING.get(str(redcap_payload .get("dados_pessoais_q5","")).strip(), None)
-    site_code = SITE_CODE_MAPPING.get(str(redcap_payload .get("dados_pessoais_site","")).strip(), None)
-    race_code = RACE_CODE_MAPPING.get(str(redcap_payload .get("dados_pessoais_q9","")).strip(), None)
+    gender_code = GENDER_MAPPING.get(str(os.getenv("GENERO")).strip(), None)
+    site_code = SITE_CODE_MAPPING.get(str(os.getenv("CENTRO")).strip(), None)
+    race_code = RACE_CODE_MAPPING.get(str(os.getenv("RAÇA")).strip(), None)
     
     volunteer_payload = {
-        "nome": redcap_payload.get("record_id") or record_id,
-        "iniciais": redcap_payload.get("dados_pessoais_q12"),
-        "data_nascimento": redcap_payload.get("dados_pessoais_q4"),
+        "nome": os.getenv("NOME") or record_id,
+        "iniciais": os.getenv("INICIAIS"),
+        "data_nascimento": os.getenv("DT_NASCIMENTO"),
         "sexo": gender_code,
-        "email": redcap_payload.get("informacoes_contato_q5"),
-        "data_inclusao": redcap_payload.get("dados_sociodemograficos_dt"),
+        "email": os.getenv("EMAIL"),
+        "data_inclusao": os.getenv("DT_INCLUSAO"),
         "centro": site_code,
         "raca_cor": race_code,
         "contatos": "11111111111",
     }
     
     if not site_code:
-        raise RuntimeError("Could not map site (dados_pessoais_site) to polotrial co_centro")
+        raise RuntimeError("Could not map site (%s) to polotrial co_centro", os.getenv("CENTRO"))
     
     #3. Volunteer
     existing = polotrial.find_volunteer_by_name(volunteer_payload["nome"])
@@ -94,9 +98,9 @@ def sync_v1_screening(
         participant_payload = {
             "co_voluntario": co_voluntario,
             "co_protocolo": co_protocolo,
-            "data_inclusao": redcap_payload .get("dados_sociodemograficos_dt"),
-            "id_participante": redcap_payload.get("record_id") or record_id,
-            "numero_de_screening": redcap_payload.get("record_id") or record_id,
+            "data_inclusao": os.getenv("DT_INCLUSAO"),
+            "id_participante": os.getenv("PARTICIPANT_ID") or record_id,
+            "numero_de_screening": os.getenv("NOME") or record_id,
             "status_participante": "540",
             "co_braco": co_braco,
             "atualizar_agenda": "1",
@@ -123,8 +127,8 @@ def sync_v1_screening(
     
     participante_visita_id = int(v1["id"])
     desired = {
-        "data_estimada": redcap_payload.get("dados_sociodemograficos_dt"),
-        "data_realizada": redcap_payload.get("dados_sociodemograficos_dt"),
+        "data_estimada": os.getenv("DATA_ESTIMADA_VISITA"),
+        "data_realizada": os.getenv("DATA_REALIZADA_VISITA"),
         "status": 20,
     }
     

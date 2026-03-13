@@ -1,1 +1,2 @@
 1. Checar nomes das visitas na Polo (situação: )
+2. checar os procedimentos no codebook do redcap
