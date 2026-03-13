@@ -37,27 +37,45 @@ def sync_v1_screening(
         event_name
         )
     
-    # 2. Mapping fields REDCap -> PoloTrial
-    gender_code = GENDER_MAPPING.get(str(os.getenv("GENERO")).strip(), None)
-    site_code = SITE_CODE_MAPPING.get(str(os.getenv("CENTRO")).strip(), None)
-    race_code = RACE_CODE_MAPPING.get(str(os.getenv("RAÇA")).strip(), None)
+    # 2. Helper: read field name from .env and get value from redcap payload
+    def rc(
+        env_var: str,
+        fallback: str = ""
+    ) -> str:
+        field_name = os.getenv(env_var, "")
+        if not field_name:
+            return fallback
+        value = redcap_payload.get(field_name, fallback)
+
+        if field_name == "record_id":
+            return record_id
+        return str(value) if value else fallback
+    
+    # 3. Mapping fields REDCap -> PoloTrial
+    gender_code = GENDER_MAPPING.get(rc("GENERO").strip(), None)
+    site_code = SITE_CODE_MAPPING.get(rc("CENTRO").strip(), None)
+    race_code = RACE_CODE_MAPPING.get(rc("RAÇA").strip(), None)
     
     volunteer_payload = {
-        "nome": os.getenv("NOME") or record_id,
-        "iniciais": os.getenv("INICIAIS"),
-        "data_nascimento": os.getenv("DT_NASCIMENTO"),
+        "nome": rc("NOME", record_id),
+        "iniciais": rc("INICIAIS"),
+        "data_nascimento": rc("DT_NASCIMENTO"),
         "sexo": gender_code,
-        "email": os.getenv("EMAIL"),
-        "data_inclusao": os.getenv("DT_INCLUSAO"),
+        "email": rc("EMAIL"),
+        "data_inclusao": rc("DT_INCLUSAO"),
         "centro": site_code,
         "raca_cor": race_code,
         "contatos": "11111111111",
     }
     
     if not site_code:
-        raise RuntimeError("Could not map site (%s) to polotrial co_centro", os.getenv("CENTRO"))
+        raw_centro = rc("FIELD_CENTRO")
+        raise RuntimeError(
+            f"Could not map site ({raw_centro!r}) to polotrial co_centro. "
+            f"Check SITE_CODE_MAPPING keys."
+        )
     
-    #3. Volunteer
+    # 4. Volunteer
     existing = polotrial.find_volunteer_by_name(volunteer_payload["nome"])
     if existing:
         co_voluntario = int(existing["id"])
@@ -67,7 +85,7 @@ def sync_v1_screening(
         co_voluntario = int(created["id"])
         logger.info("Volunteer created: %s -> id=%s", record_id, co_voluntario)
         
-    #4. Site Protocol
+    # 5. Site Protocol
     logger.info("DEBUG: Searching protocol - co_centro=%s, apelido_protocolo=%s", site_code, protocol_nickname)
     protocol = polotrial.get_protocol(co_centro = site_code, apelido_protocolo = protocol_nickname)
     if not protocol:
@@ -75,7 +93,7 @@ def sync_v1_screening(
     co_protocolo = int(protocol["id"])
     logger.info("Protocol found: id=%s (site=%s)", co_protocolo, site_code)
     
-    #5. Protocol Arm
+    # 6. Protocol Arm
     arms = polotrial.list_arms(co_protocolo)
     arm_match = next(
         (
@@ -88,7 +106,7 @@ def sync_v1_screening(
         raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
     co_braco = int(arm_match["id"])
     
-    #6. Guarantee participant
+    # 7. Guarantee participant
     participant = polotrial.find_participant(co_voluntario = co_voluntario, co_protocolo = co_protocolo)
     if participant:
         co_participante = int(participant["id"])
@@ -98,9 +116,9 @@ def sync_v1_screening(
         participant_payload = {
             "co_voluntario": co_voluntario,
             "co_protocolo": co_protocolo,
-            "data_inclusao": os.getenv("DT_INCLUSAO"),
-            "id_participante": os.getenv("PARTICIPANT_ID") or record_id,
-            "numero_de_screening": os.getenv("NOME") or record_id,
+            "data_inclusao": rc("DT_INCLUSAO"),
+            "id_participante": rc("PARTICIPANT_ID", record_id),
+            "numero_de_screening": rc("NOME", record_id),
             "status_participante": "540",
             "co_braco": co_braco,
             "atualizar_agenda": "1",
@@ -118,7 +136,7 @@ def sync_v1_screening(
         co_participante = int(created["id"])
         logger.info("Participant created: id=%s", co_participante)
     
-    #7. Update visit task (VS/V1)
+    # 8. Update visit task (VS/V1)
     time.sleep(20)
     visits = polotrial.list_participant_visits(co_participante = co_participante)
     v1 = next((v for v in visits if v.get("nome_tarefa","") == "VS/V1"), None)
@@ -127,8 +145,8 @@ def sync_v1_screening(
     
     participante_visita_id = int(v1["id"])
     desired = {
-        "data_estimada": os.getenv("DATA_ESTIMADA_VISITA"),
-        "data_realizada": os.getenv("DATA_REALIZADA_VISITA"),
+        "data_estimada": rc("DATA_ESTIMADA_VISITA"),
+        "data_realizada": rc("DATA_REALIZADA_VISITA"),
         "status": 20,
     }
     
@@ -143,7 +161,7 @@ def sync_v1_screening(
         )
         logger.info("VS/V1 updated (id=%s).", participante_visita_id)
     
-    #8. Procedures: load participant visit procedure + names
+    # 9. Procedures: load participant visit procedure + names
     pvp_df = sync_v1_procedures(
         participante_visita_id=participante_visita_id,
         co_protocolo=co_protocolo,

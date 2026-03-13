@@ -16,3 +16,9 @@
 2026-03-13 16:36:41,634 - INFO - DEBUG REDCAP STATUS: 200
 2026-03-13 16:36:41,634 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
 2026-03-13 16:36:41,635 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-13 16:55:27,396 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-13 16:55:28,253 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
