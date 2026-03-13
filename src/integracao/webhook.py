@@ -84,7 +84,7 @@ app = FastAPI(
 #============================================================================================================================
 # Health Check Endpoint
 #============================================================================================================================
-@app.get("/health")
+@app.get("/imox_det_health")
 async def health():
     """
     Health check endpoint to verify that the webhook is running.
@@ -103,8 +103,8 @@ async def health():
 # Endpiont to receive Redcap DET events
 #============================================================================================================================
 
-@app.post("/redcap-det", status_code=status.HTTP_200_OK)
-async def redcap_det(
+@app.post("/redcap-imox-det", status_code=status.HTTP_200_OK)
+async def redcap_imox_det(
     
     background_tasks: BackgroundTasks,
 
@@ -141,7 +141,7 @@ async def redcap_det(
             Response: A FastAPI Response object indicating that the request was received successfully.
 
         Steps:
-            1. Define a POST endpoint at the path "/redcap-det" that accepts form data.
+            1. Define a POST endpoint at the path "redcap-imox-det" that accepts form data.
             2. Extract relevant information from the incoming form data, such as project ID, username, instrument name, record ID, event name, data access group, repeat instance information, and URLs.
             3. Schedule a background task using `background_tasks.add_task()` to process the DET event asynchronously by calling `dispatch_event()` with the extracted information and global clients for Redcap and PoloTrial.
             4. Return a response indicating that the request was received successfully with a status code of 200 OK.
