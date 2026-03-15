@@ -1927,3 +1927,5 @@
 }
 2026-03-15 15:51:48,090 - INFO - visita_2__randomiz_arm_1: participant 3310 arm updated 242 → 241 (Alocado). data_randomizacao=2025-12-26
 2026-03-15 15:51:48,090 - INFO - V2 sync completed for record_id=57-1
+2026-03-15 16:01:24,544 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-15 16:03:16,095 - INFO - Shutting down webhook for protocol: oxandrolona
