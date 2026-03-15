@@ -22,3 +22,575 @@
 2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP STATUS: 200
 2026-03-13 16:55:28,252 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
 2026-03-13 16:55:28,253 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-13 17:18:51,766 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-13 17:18:52,566 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-13 17:18:52,566 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-13 17:18:52,566 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-13 17:18:52,566 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-13 17:18:52,567 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-14 16:32:25,948 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:32:26,819 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:32:26,820 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:32:26,820 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:32:26,820 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:32:26,820 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-14 16:32:32,185 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:32:32,833 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:32:32,833 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:32:32,833 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:32:32,833 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:32:32,834 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-14 16:36:16,227 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:36:16,903 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:36:16,903 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:36:16,903 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:36:16,903 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:36:16,904 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-14 16:36:16,904 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:36:16,904 - INFO - Mapped site: '' -> None
+2026-03-14 16:36:16,904 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-03-14 16:36:16,904 - INFO - Volunteer payload prepared: {'nome': '56-1', 'iniciais': 'WBL', 'data_nascimento': '2005-02-11', 'sexo': '603', 'email': '', 'data_inclusao': '2025-12-16', 'centro': None, 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-03-14 16:36:22,880 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:36:23,548 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:36:23,548 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:36:23,548 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:36:23,548 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"56-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:36:23,549 - INFO - REDCap: exported record 56-1 for event visita_1__screenin_arm_1 with 104 fields
+2026-03-14 16:36:23,549 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:36:23,549 - INFO - Mapped site: '' -> None
+2026-03-14 16:36:23,549 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-03-14 16:36:23,549 - INFO - Volunteer payload prepared: {'nome': '56-1', 'iniciais': 'WBL', 'data_nascimento': '2005-02-11', 'sexo': '603', 'email': '', 'data_inclusao': '2025-12-16', 'centro': None, 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-03-14 16:40:52,812 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:40:53,491 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:40:53,491 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:40:53,492 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:40:53,492 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:40:53,492 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 16:40:53,493 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:40:53,493 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 16:40:53,493 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 16:40:53,493 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 16:40:54,739 - INFO - Polotrial: authentication successful
+2026-03-14 16:40:58,484 - INFO - Volunteer created: 57-1 -> id=3335
+2026-03-14 16:40:58,484 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 16:40:58,937 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 16:47:02,051 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:47:02,746 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:47:02,746 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:47:02,746 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:47:02,747 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:47:02,747 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 16:47:02,747 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:47:02,748 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 16:47:02,748 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 16:47:02,748 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 16:47:03,994 - INFO - Polotrial: authentication successful
+2026-03-14 16:47:04,189 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 16:47:04,189 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 16:47:04,607 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 16:47:05,221 - INFO - DEBUG: Sending participant payload:
+{
+  "co_voluntario": 3335,
+  "co_protocolo": 2372,
+  "data_inclusao": "2025-11-28",
+  "id_participante": "57-1",
+  "numero_de_screening": "57-1",
+  "status_participante": "540",
+  "co_braco": 240,
+  "atualizar_agenda": "1",
+  "apagar_visitas_pendentes": "0"
+}
+2026-03-14 16:47:12,697 - INFO - DEBUG: Received participant response:
+{
+  "id": 3309,
+  "apagar_visitas_pendentes": 0,
+  "id_participante": "57-1",
+  "numero_de_screening": "57-1",
+  "co_protocolo": 2372,
+  "atualizar_agenda": 1,
+  "co_braco": 240,
+  "data_inclusao": "2025-11-28T00:00:00.000Z",
+  "status_participante": 540,
+  "co_voluntario": "3335",
+  "user_id_log": 4593
+}
+2026-03-14 16:47:12,698 - INFO - Participant created: id=3309
+2026-03-14 16:49:08,201 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:49:08,901 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:49:08,901 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:49:08,901 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:49:08,901 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:49:08,901 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 16:49:08,901 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:49:08,901 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 16:49:08,901 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 16:49:08,901 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 16:49:09,947 - INFO - Polotrial: authentication successful
+2026-03-14 16:49:10,150 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 16:49:10,150 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 16:49:10,560 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 16:49:11,277 - INFO - Participant exists: id=3309
+2026-03-14 16:51:46,194 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:51:46,850 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:51:46,850 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:51:46,850 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:51:46,850 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:51:46,851 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 16:51:46,851 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:51:46,851 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 16:51:46,851 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 16:51:46,851 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 16:51:47,848 - INFO - Polotrial: authentication successful
+2026-03-14 16:51:48,054 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 16:51:48,055 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 16:51:48,460 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 16:51:48,667 - INFO - DEBUG: Arms available for protocol 2372: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 16:51:48,667 - INFO - Arm matched for Triagem: id=240 name=IMOX Versão nº1
+2026-03-14 16:51:49,137 - INFO - Participant exists: id=3309
+2026-03-14 16:53:43,199 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 16:53:43,850 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 16:53:43,850 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 16:53:43,850 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 16:53:43,850 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 16:53:43,851 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 16:53:43,851 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 16:53:43,851 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 16:53:43,852 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 16:53:43,852 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 16:53:44,762 - INFO - Polotrial: authentication successful
+2026-03-14 16:53:44,949 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 16:53:44,949 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 16:53:45,300 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 16:53:45,812 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 16:53:45,812 - INFO - Arm matched for Triagem: id=240 name=IMOX Versão nº1
+2026-03-14 16:53:46,324 - INFO - Participant exists: id=3309
+2026-03-14 17:05:19,693 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:05:20,542 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:05:20,542 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:05:20,542 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:05:20,543 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:05:20,543 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:05:20,543 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:05:20,543 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:05:20,544 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:05:20,544 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:05:21,520 - INFO - Polotrial: authentication successful
+2026-03-14 17:05:21,725 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 17:05:21,725 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:05:22,134 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:05:22,343 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:05:22,343 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:05:22,851 - INFO - Participant exists: id=3309
+2026-03-14 17:07:49,949 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:07:50,704 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:07:50,704 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:07:50,704 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:07:50,704 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:07:50,705 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:07:50,706 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:07:50,706 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:07:50,706 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:07:50,706 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:07:51,742 - INFO - Polotrial: authentication successful
+2026-03-14 17:07:51,945 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 17:07:51,946 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:07:52,355 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:07:52,561 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:07:52,561 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:07:53,072 - INFO - Participant exists: id=3309
+2026-03-14 17:08:13,858 - INFO - Participant visits retrieved: 4
+2026-03-14 17:09:05,268 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:09:05,960 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:09:05,960 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:09:05,960 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:09:05,961 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:09:05,961 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:09:05,962 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:09:05,962 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:09:05,962 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:09:05,962 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:09:06,904 - INFO - Polotrial: authentication successful
+2026-03-14 17:09:07,107 - INFO - Volunteer exists: 57-1 -> id=3335
+2026-03-14 17:09:07,107 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:09:07,448 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:09:07,653 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:09:07,653 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:09:08,131 - INFO - Participant exists: id=3309
+2026-03-14 17:09:28,920 - INFO - Participant visits retrieved: 4
+2026-03-14 17:09:28,920 - INFO - Looking for visit with nome_tarefa= among: ['V3', 'V4', 'V5/VF', 'Não Programada']
+2026-03-14 17:11:24,913 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:11:25,631 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:11:25,631 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:11:25,631 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:11:25,631 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:11:25,633 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:11:25,633 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:11:25,633 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:11:25,633 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:11:25,633 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:11:26,680 - INFO - Polotrial: authentication successful
+2026-03-14 17:11:28,214 - INFO - Volunteer created: 57-1 -> id=3336
+2026-03-14 17:11:28,214 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:11:28,624 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:11:28,829 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:11:28,829 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:11:29,341 - INFO - DEBUG: Sending participant payload:
+{
+  "co_voluntario": 3336,
+  "co_protocolo": 2372,
+  "data_inclusao": "2025-11-28",
+  "id_participante": "57-1",
+  "numero_de_screening": "57-1",
+  "status_participante": "540",
+  "co_braco": 242,
+  "atualizar_agenda": "1",
+  "apagar_visitas_pendentes": "0"
+}
+2026-03-14 17:11:35,996 - INFO - DEBUG: Received participant response:
+{
+  "id": 3310,
+  "apagar_visitas_pendentes": 0,
+  "id_participante": "57-1",
+  "numero_de_screening": "57-1",
+  "co_protocolo": 2372,
+  "atualizar_agenda": 1,
+  "co_braco": 242,
+  "data_inclusao": "2025-11-28T00:00:00.000Z",
+  "status_participante": 540,
+  "co_voluntario": "3336",
+  "user_id_log": 4593
+}
+2026-03-14 17:11:35,996 - INFO - Participant created: id=3310
+2026-03-14 17:11:56,784 - INFO - Participant visits retrieved: 3
+2026-03-14 17:11:56,784 - INFO - Looking for visit with nome_tarefa= among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-03-14 17:14:45,349 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:14:46,154 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:14:46,154 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:14:46,154 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:14:46,155 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:14:46,155 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:14:46,156 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:14:46,156 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:14:46,156 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:14:46,156 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:14:47,178 - INFO - Polotrial: authentication successful
+2026-03-14 17:14:47,383 - INFO - Volunteer exists: 57-1 -> id=3336
+2026-03-14 17:14:47,383 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:14:47,793 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:14:47,997 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:14:47,997 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:14:48,510 - INFO - Participant exists: id=3310
+2026-03-14 17:15:09,296 - INFO - Participant visits retrieved: 3
+2026-03-14 17:15:09,297 - INFO - Lokking for visit #1 with name '' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-03-14 17:16:23,253 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:16:24,116 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:16:24,116 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:16:24,116 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:16:24,116 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:16:24,116 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:16:24,116 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:16:24,117 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:16:24,117 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:16:24,117 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:16:25,071 - INFO - Polotrial: authentication successful
+2026-03-14 17:16:25,258 - INFO - Volunteer exists: 57-1 -> id=3336
+2026-03-14 17:16:25,258 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:16:25,592 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:16:25,789 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:16:25,789 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:16:26,300 - INFO - Participant exists: id=3310
+2026-03-14 17:16:47,088 - INFO - Participant visits retrieved: 3, for participant 3310
+2026-03-14 17:16:47,088 - INFO - Lokking for visit #1 with name '' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-03-14 17:24:21,657 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:24:22,359 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:24:22,359 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:24:22,359 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:24:22,359 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:24:22,360 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:24:22,360 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:24:22,360 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:24:22,361 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:24:22,361 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:24:23,365 - INFO - Polotrial: authentication successful
+2026-03-14 17:24:23,589 - INFO - Volunteer exists: 57-1 -> id=3336
+2026-03-14 17:24:23,589 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:24:23,997 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:24:24,203 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:24:24,203 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:24:24,714 - INFO - Participant exists: id=3310
+2026-03-14 17:24:45,399 - INFO - Participant visits retrieved: 3, for participant 3310
+2026-03-14 17:24:45,399 - INFO - Lokking for visit #1 with name '' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-03-14 17:24:57,747 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-14 17:24:58,500 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:24:58,500 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:24:58,501 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:24:58,501 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:24:58,501 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:24:58,502 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-14 17:24:58,502 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-14 17:24:58,502 - INFO - Mapped race: 'Branco' -> '9186'
+2026-03-14 17:24:58,502 - INFO - Volunteer payload prepared: {'nome': '57-1', 'iniciais': 'V.M.L', 'data_nascimento': '2005-02-25', 'sexo': '603', 'email': '', 'data_inclusao': '2025-11-28', 'centro': '4', 'raca_cor': '9186', 'contatos': '11111111111'}
+2026-03-14 17:24:59,634 - INFO - Polotrial: authentication successful
+2026-03-14 17:24:59,837 - INFO - Volunteer exists: 57-1 -> id=3336
+2026-03-14 17:24:59,838 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:25:00,247 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:25:00,454 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-14 17:25:00,454 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-14 17:25:00,965 - INFO - Participant exists: id=3310
+2026-03-14 17:25:21,752 - INFO - Participant visits retrieved: 3, for participant 3310
+2026-03-14 17:25:21,752 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-03-14 17:25:21,752 - INFO - Participant visit found: id=40471
+2026-03-14 17:25:22,187 - INFO - VS/V1 updated (id=40471).
+2026-03-14 17:25:22,450 - INFO - DEBUG: Available procedures in VS/V1:
+2026-03-14 17:25:22,450 - INFO -  - ID: 648112 | Proc: Termo de consentimento Livre e Esclarecido | Data exec: None | Check field: tcle_pergunta_c=Sim | Date field: tcle_dt_visita_aplicacao=2025-11-28 11:30
+2026-03-14 17:25:22,450 - INFO -  - ID: 648113 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: None | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,451 - INFO -  - ID: 648114 | Proc: Dados demográficos | Data exec: None | Check field: demografia_dt_visita=2025-11-28 | Date field: demografia_dt_visita=2025-11-28
+2026-03-14 17:25:22,451 - INFO -  - ID: 648115 | Proc: Exame físico | Data exec: None | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,451 - INFO -  - ID: 648116 | Proc: História médica | Data exec: None | Check field: form_medico_revisao6=Não | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,451 - INFO -  - ID: 648117 | Proc: Sinais vitais | Data exec: None | Check field: form_medico_sv1=Sim | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,451 - INFO -  - ID: 648118 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Check field: form_medico_revisao4=Não | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,452 - INFO -  - ID: 648129 | Proc: Hemograma completo-sangue | Data exec: None | Check field: lab_hematocrito=43.7 | Date field: hematocrito_dt=N/A
+2026-03-14 17:25:22,452 - INFO -  - ID: 648127 | Proc: Creatinina sérica-sangue | Data exec: None | Check field: lab_creatinina=1.08 | Date field: lab_dt_visita=2025-10-17
+2026-03-14 17:25:22,452 - INFO -  - ID: 648131 | Proc: Bilirrubina sérica (total)-sangue | Data exec: None | Check field: lab_bilirrubina=0.88 | Date field: lab_dt_visita=2025-10-17
+2026-03-14 17:25:22,452 - INFO -  - ID: 648128 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: None | Check field: lab_tgp=18 | Date field: lab_dt_visita=2025-10-17
+2026-03-14 17:25:22,452 - INFO -  - ID: 648132 | Proc: Albumina-Sangue | Data exec: None | Check field: lab_albumina=4.66 | Date field: lab_dt_visita=2025-10-17
+2026-03-14 17:25:22,453 - INFO -  - ID: 648130 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: None | Check field: lab_psa=NA | Date field: lab_dt_visita=2025-10-17
+2026-03-14 17:25:22,453 - INFO -  - ID: 648119 | Proc: Teste de gravidez | Data exec: None | Check field: coleta_gravidez=N/A | Date field: coleta_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648120 | Proc: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: None | Check field: form_medico_revisao1=Sim | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648121 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: None | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648126 | Proc: Orientações para uso de métodos contraceptivos | Data exec: None | Check field: form_medico_gravidez_q3=N/A | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648122 | Proc: Monitoramento de eventos adversos | Data exec: None | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648123 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: None | Check field: ipaq_dt_visita=2025-11-28 | Date field: ipaq_dt_visita=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648124 | Proc: Consulta Médica | Data exec: None | Check field: form_medico_dt_rubrica=2025-11-28 | Date field: form_medico_dt_rubrica=2025-11-28
+2026-03-14 17:25:22,453 - INFO -  - ID: 648125 | Proc: Reembolso | Data exec: None | Check field: None=N/A | Date field: None=N/A
+2026-03-14 17:25:22,454 - INFO - DEBUG: Procedure mapping summary:
+2026-03-14 17:25:22,454 - INFO -   Total procedures in PoloTrial: 21
+2026-03-14 17:25:22,454 - INFO -   Matched with mapping: 20
+2026-03-14 17:25:22,454 - INFO -   Unmatched: 1
+2026-03-14 17:25:22,454 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-03-14 17:25:22,454 - WARNING -   - 'Reembolso'
+2026-03-14 17:25:22,457 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping....
+2026-03-14 17:25:22,457 - INFO - No date in REDCap for procedure 'Teste de gravidez' (check_field=coleta_gravidez)
+2026-03-14 17:25:22,673 - INFO - ✅s Procedure updated successfully. procedure_id=648115 date=2025-11-28
+2026-03-14 17:25:22,882 - INFO - ✅s Procedure updated successfully. procedure_id=648124 date=2025-11-28
+2026-03-14 17:25:22,885 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao6 indicates not done (value = 'não'). Skipping....
+2026-03-14 17:25:22,885 - INFO - No date in REDCap for procedure 'História médica' (check_field=form_medico_revisao6)
+2026-03-14 17:25:22,888 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao4 indicates not done (value = 'não'). Skipping....
+2026-03-14 17:25:22,888 - INFO - No date in REDCap for procedure 'Registro de uso de medicações pré-estudo e concomitantes' (check_field=form_medico_revisao4)
+2026-03-14 17:25:23,090 - INFO - ✅s Procedure updated successfully. procedure_id=648117 date=2025-11-28
+2026-03-14 17:25:23,292 - INFO - ✅s Procedure updated successfully. procedure_id=648114 date=2025-11-28
+2026-03-14 17:25:23,516 - INFO - ✅s Procedure updated successfully. procedure_id=648112 date=2025-11-28
+2026-03-14 17:25:23,730 - INFO - ✅s Procedure updated successfully. procedure_id=648113 date=2025-11-28
+2026-03-14 17:25:23,941 - INFO - ✅s Procedure updated successfully. procedure_id=648121 date=2025-11-28
+2026-03-14 17:25:23,944 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao7 indicates not done (value = 'não'). Skipping....
+2026-03-14 17:25:23,944 - INFO - No date in REDCap for procedure 'Monitoramento de eventos adversos' (check_field=form_medico_revisao7)
+2026-03-14 17:25:23,948 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping....
+2026-03-14 17:25:23,948 - INFO - No date in REDCap for procedure 'Orientações para uso de métodos contraceptivos' (check_field=form_medico_gravidez_q3)
+2026-03-14 17:25:24,161 - INFO - ✅s Procedure updated successfully. procedure_id=648120 date=2025-11-28
+2026-03-14 17:25:24,365 - INFO - ✅s Procedure updated successfully. procedure_id=648123 date=2025-11-28
+2026-03-14 17:25:24,368 - INFO - No procedure to sync for pattern Globulina Ligadora De Hormonios Sexuais
+2026-03-14 17:25:24,371 - INFO - No date in REDCap for procedure 'Hemograma completo-sangue' (check_field=lab_hematocrito)
+2026-03-14 17:25:24,585 - INFO - ✅s Procedure updated successfully. procedure_id=648127 date=2025-10-17
+2026-03-14 17:25:24,823 - INFO - ✅s Procedure updated successfully. procedure_id=648131 date=2025-10-17
+2026-03-14 17:25:25,045 - INFO - ✅s Procedure updated successfully. procedure_id=648128 date=2025-10-17
+2026-03-14 17:25:25,252 - INFO - ✅s Procedure updated successfully. procedure_id=648132 date=2025-10-17
+2026-03-14 17:25:25,473 - INFO - ✅s Procedure updated successfully. procedure_id=648130 date=2025-10-17
+2026-03-14 17:25:25,474 - INFO - V1 procedures synchronized: 14/21
+2026-03-14 17:25:25,474 - INFO - V1: consulta_nome_medico vazio; não é possível atribuir executor (Consulta Médica).
+2026-03-14 17:25:25,474 - INFO - V1 sync completed for record_id=57-1
+2026-03-14 17:28:21,036 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-14 17:28:21,858 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:28:21,859 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:28:21,859 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:28:21,859 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-14 17:28:21,860 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-14 17:28:22,118 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:28:22,118 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:28:22,118 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:28:22,118 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:28:22,119 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:28:41,149 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-14 17:28:41,808 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:28:41,808 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:28:41,808 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:28:41,808 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-14 17:28:41,810 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-14 17:28:42,071 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:28:42,072 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:28:42,072 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:28:42,072 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:28:42,073 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:31:50,579 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-14 17:31:51,281 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:31:51,281 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:31:51,281 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:31:51,281 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-14 17:31:51,282 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-14 17:31:51,557 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:31:51,557 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:31:51,558 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:31:51,558 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:31:51,558 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:31:52,716 - INFO - Polotrial: authentication successful
+2026-03-14 17:31:52,936 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-14 17:31:52,936 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:31:53,318 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:31:53,765 - INFO - Participant found: id=3310
+2026-03-14 17:33:06,971 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-14 17:33:07,663 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:33:07,664 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:33:07,664 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:33:07,664 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-14 17:33:07,665 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-14 17:33:07,934 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-14 17:33:07,934 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-14 17:33:07,934 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-14 17:33:07,934 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-14 17:33:07,935 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-14 17:33:09,108 - INFO - Polotrial: authentication successful
+2026-03-14 17:33:09,311 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-14 17:33:09,311 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-14 17:33:09,721 - INFO - Protocol found: id=2372 (site=4)
+2026-03-14 17:33:10,233 - INFO - Participant found: id=3310
+2026-03-15 10:13:21,363 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:13:22,223 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:13:22,223 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:13:22,223 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:13:22,224 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:13:22,225 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:13:22,483 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:13:22,483 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:13:22,483 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:13:22,484 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:13:22,484 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:13:23,665 - INFO - Polotrial: authentication successful
+2026-03-15 10:13:23,868 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:13:23,869 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:13:24,278 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:13:24,790 - INFO - Participant found: id=3310
+2026-03-15 10:28:29,089 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:28:29,801 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:28:29,801 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:28:29,801 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:28:29,802 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:28:29,803 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:28:30,109 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:28:30,109 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:28:30,109 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:28:30,109 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:28:30,110 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:28:32,260 - INFO - Polotrial: authentication successful
+2026-03-15 10:28:32,474 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:28:32,474 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:28:32,874 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:28:33,385 - INFO - Participant found: id=3310
+2026-03-15 10:36:18,462 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:36:19,268 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:36:19,268 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:36:19,268 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:36:19,268 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:36:19,269 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:36:19,530 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:36:19,530 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:36:19,530 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:36:19,530 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:36:19,531 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:36:20,639 - INFO - Polotrial: authentication successful
+2026-03-15 10:36:20,842 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:36:20,843 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:36:21,360 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:36:21,867 - INFO - Participant found: id=3310
+2026-03-15 10:36:21,867 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 10:39:19,927 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:39:20,760 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:39:20,760 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:39:20,761 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:39:20,761 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:39:20,762 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:39:21,012 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:39:21,012 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:39:21,012 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:39:21,012 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:39:21,013 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:39:21,989 - INFO - Polotrial: authentication successful
+2026-03-15 10:39:22,194 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:39:22,194 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:39:22,603 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:39:23,014 - INFO - Participant found: id=3310
+2026-03-15 10:39:23,014 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 10:39:33,766 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 18, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 10:44:02,544 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:44:03,298 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:44:03,298 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:44:03,298 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:44:03,298 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:44:03,298 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:44:03,565 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:44:03,565 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:44:03,565 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:44:03,565 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:44:03,565 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:44:04,510 - INFO - Polotrial: authentication successful
+2026-03-15 10:44:04,696 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:44:04,696 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:44:05,017 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:44:05,534 - INFO - Participant found: id=3310
+2026-03-15 10:44:05,534 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 10:44:16,286 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 18, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 10:44:57,145 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:44:57,825 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:44:57,825 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:44:57,825 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:44:57,826 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:44:57,827 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:44:58,090 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:44:58,090 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:44:58,090 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:44:58,090 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:44:58,091 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:44:59,091 - INFO - Polotrial: authentication successful
+2026-03-15 10:44:59,296 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:44:59,296 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:44:59,704 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:45:00,216 - INFO - Participant found: id=3310
+2026-03-15 10:45:00,216 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 10:45:10,217 - INFO - Lista de /participante_visita_procedimentos
+2026-03-15 10:45:10,968 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 18, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 10:57:25,098 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 10:57:25,774 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:57:25,774 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:57:25,774 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:57:25,775 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 10:57:25,776 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 10:57:26,026 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 10:57:26,027 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 10:57:26,027 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 10:57:26,027 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 10:57:26,028 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 10:57:27,123 - INFO - Polotrial: authentication successful
+2026-03-15 10:57:27,315 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 10:57:27,315 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 10:57:27,737 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 10:57:28,249 - INFO - Participant found: id=3310
+2026-03-15 10:57:28,250 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 10:57:38,250 - INFO - Lista de /participante_visita_procedimentos
+2026-03-15 10:57:39,104 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 18, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 11:14:30,247 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 11:14:31,125 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 11:14:31,125 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 11:14:31,126 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 11:14:31,126 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 11:14:31,127 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 11:14:31,408 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 11:14:31,408 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 11:14:31,408 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 11:14:31,409 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 11:14:31,409 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 11:14:32,457 - INFO - Polotrial: authentication successful
+2026-03-15 11:14:32,641 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 11:14:32,642 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 11:14:33,071 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 11:14:33,479 - INFO - Participant found: id=3310
+2026-03-15 11:14:33,480 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 11:14:43,480 - INFO - Lista de /participante_visita_procedimentos
+2026-03-15 11:14:44,232 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 18, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])

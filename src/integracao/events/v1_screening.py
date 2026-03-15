@@ -39,22 +39,34 @@ def sync_v1_screening(
     
     # 2. Helper: read field name from .env and get value from redcap payload
     def rc(
+        
         env_var: str,
         fallback: str = ""
     ) -> str:
-        field_name = os.getenv(env_var, "")
+        """
+        Helper function to read field value from REDCap payload using .env variable as reference.
+        It first reads the field name from the environment variable specified by `env_var`. If the environment variable is not set or empty, it returns the provided `fallback` value. If the environment variable is set, it retrieves the corresponding value from the `redcap_payload` using the field name. If the field name is "record_id", it returns the `record_id` directly. Otherwise, it returns the value as a string if it exists, or the `fallback` if the value is empty or not present in the payload.
+        """
+        field_name = os.getenv(env_var, "").strip().strip('"').strip("'")
         if not field_name:
             return fallback
         value = redcap_payload.get(field_name, fallback)
 
         if field_name == "record_id":
             return record_id
-        return str(value) if value else fallback
+        value = redcap_payload.get(field_name, "")
+        logger.debug("rc(%s) → field=%r, value=%r", env_var, field_name, value)
+        return str(value).strip() if value else fallback
     
     # 3. Mapping fields REDCap -> PoloTrial
     gender_code = GENDER_MAPPING.get(rc("GENERO").strip(), None)
+    logger.info("Mapped gender: %r -> %r", rc("GENERO"), gender_code)# Ponto de checagem
+
     site_code = SITE_CODE_MAPPING.get(rc("CENTRO").strip(), None)
+    logger.info("Mapped site: %r -> %r", rc("CENTRO"), site_code)# Ponto de checagem
+
     race_code = RACE_CODE_MAPPING.get(rc("RAÇA").strip(), None)
+    logger.info("Mapped race: %r -> %r", rc("RAÇA"), race_code)# Ponto de checagem
     
     volunteer_payload = {
         "nome": rc("NOME", record_id),
@@ -67,6 +79,7 @@ def sync_v1_screening(
         "raca_cor": race_code,
         "contatos": "11111111111",
     }
+    logger.info("Volunteer payload prepared: %s", volunteer_payload) # Ponto de checagem
     
     if not site_code:
         raw_centro = rc("FIELD_CENTRO")
@@ -95,16 +108,28 @@ def sync_v1_screening(
     
     # 6. Protocol Arm
     arms = polotrial.list_arms(co_protocolo)
+    triagem_arm_name = os.getenv("TRIAGEM_ARM_NAME", "").strip()
+
+    if not triagem_arm_name:
+        raise RuntimeError("TRIAGEM_ARM_NAME not set")
+
+    
     arm_match = next(
         (
             a for a in arms
-            if re.search(r"Prot. V2", str(a.get("nome", "")), re.IGNORECASE)
+            if re.search(re.escape(triagem_arm_name), str(a.get("nome", "")), re.IGNORECASE)
         ),
         None,
     )
+    #Checagem de braços
+    logger.info("DEBUG: Arms matched for Triagem: %s", [a.get("nome") for a in arms if re.search(rc("TRIAGEM_ARM_NAME"), str(a.get("nome", "")), re.IGNORECASE)])
+    
     if not arm_match:
         raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+    
     co_braco = int(arm_match["id"])
+    #Checagem do co_braco
+    logger.info("Arm matched for Triagem: id=%s name=%s", co_braco, arm_match.get("nome"))
     
     # 7. Guarantee participant
     participant = polotrial.find_participant(co_voluntario = co_voluntario, co_protocolo = co_protocolo)
@@ -139,11 +164,17 @@ def sync_v1_screening(
     # 8. Update visit task (VS/V1)
     time.sleep(20)
     visits = polotrial.list_participant_visits(co_participante = co_participante)
-    v1 = next((v for v in visits if v.get("nome_tarefa","") == "VS/V1"), None)
+    logger.info("Participant visits retrieved: %d, for participant %d", len(visits), co_participante)
+
+    v1_visit_name = os.getenv("V1_POLTRIAL_EVENT_NAME", "").strip()
+
+    v1 = next((v for v in visits if v.get("nome_tarefa","") == v1_visit_name), None)
+    logger.info("Lokking for visit #1 with name %r among: %s", v1_visit_name, [v.get("nome_tarefa") for v in visits])
     if not v1:
-        raise RuntimeError("Participant visit VS/V1 not found in Polotrial")
+        raise RuntimeError(f"Participant visit '{v1_visit_name}' not found in Polotrial")
     
     participante_visita_id = int(v1["id"])
+    logger.info("Participant visit found: id=%s", participante_visita_id)
     desired = {
         "data_estimada": rc("DATA_ESTIMADA_VISITA"),
         "data_realizada": rc("DATA_REALIZADA_VISITA"),

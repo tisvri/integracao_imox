@@ -25,39 +25,30 @@ logger = logging.getLogger(__name__)
 
 # ── Constants ──────────────────────────────────────────────────────────
 V1_EVENT = os.getenv("V1_EVENT_NAME")
-CENTER_FIELD = "dados_pessoais_site"
+CENTER_FIELD = os.getenv("CENTRO")
 
 V2_EVENT = os.getenv("V2_EVENT_NAME")
-V2_DATE_FIELD = "revisao_dt_visita"
+V2_DATE_FIELD =  os.getenv("DT_VISITA")
 
-RANDOMIZATION_FIELD = "randomizacao_q3"
+RANDOMIZATION_FIELD = os.getenv("RANDOMIZACAO")
+DT_RANDOMIZATION_FIELD = os.getenv("DT_RANDOMIZACAO")
 
 ARM_MAPPING: Dict[str, int] = {
     "1": 1,
-    "grupo 1 - sérum ultra repositor": 1,
+    "Não alocado": 1,
     "2": 2,
-    "grupo 2 - hidratante ultra refrescante e hidratante íntimo": 2,
-    "3": 3,
-    "grupo 3 - tratamento intensivo noturno": 3,
+    "Alocado": 2,
+    
 }
 
 ARM_POLOTRIAL_PATTERNS: Dict[int, Dict[str, str]] = {
     1: {
-        "pattern": r"Grupo.*S[eé]rum Ultra Repositor",
-        "label": "Grupo 1 - Sérum Ultra Repositor",
+        "pattern": os.getenv("OTHER_ARM_NAME"),
+        "label": "Não alocado",
     },
     2: {
-        "pattern": r"Grupo.*Hidra.*Ultra Refres.*Hidra.*[IÍií]ntimo",
-        "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
-    },
-    # 2: {
-    #     "pattern": r"Grupo Hidra. Ultra. Refres. e Hidra. Intimo",
-    #     "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
-    # },
-
-    3: {
-        "pattern": r"Grupo.*Trat.*Intensivo Noturno",
-        "label": "Grupo 3 - Tratamento Intensivo Noturno",
+        "pattern": os.getenv("PK_ARM_NAME"),
+        "label": "Alocado",
     },
 }
 
@@ -157,19 +148,26 @@ def sync_v2_randomization(
     # ── NOTA: data_randomizacao será enviada junto com o arm update
     #    no passo 9, pois o PUT /participantes/{id} retorna 404
     #    quando enviado sozinho sem co_braco.
-    v2_date_for_participant = str(redcap_payload.get('randomizacao_q2') or "").strip()
+    v2_date_for_participant = str(redcap_payload.get(V2_DATE_FIELD) or "").strip()
+    # Ponto de checagem:
+    logger.info("DEBUG: Data da V2: %s (from field %s)", v2_date_for_participant, V2_DATE_FIELD)
 
     # 6. Update visit task (VR/V2)
-    time.sleep(20)
+    time.sleep(10)
+    logger.info("Lista de /participante_visita_procedimentos")
     visits = polotrial.list_participant_visits(co_participante=co_participante)
-    v2_visit = next((v for v in visits if v.get("nome_tarefa", "") == V2_EVENT), None)
-    if not v2_visit:
+    #Logger de visitas
+    logger.info("DEBUG: Participant visits for co_participante=%s: (%s)", co_participante,visits)
+
+
+    v2_visit_tasks = next((procedures for procedures in visits if procedures.get("nome_tarefa", "") == V2_EVENT), None)
+    if not v2_visit_tasks:
         raise RuntimeError(
             f"V2: Visit '{V2_EVENT}' not found in PoloTrial for participant {co_participante}"
         )
 
-    participante_visita_id = int(v2_visit["id"])
-    v2_date = str(redcap_payload.get("elegibilidade_dt") or "").strip()
+    participante_visita_id = int(v2_visit_tasks["id"])
+    v2_date = str(redcap_payload.get(V2_DATE_FIELD) or "").strip()
     desired = {
         "data_realizada": v2_date,
         "status": 20,
