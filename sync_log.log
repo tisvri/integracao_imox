@@ -1620,3 +1620,310 @@
 2026-03-15 14:54:40,035 - INFO - DEBUG: randomization_group: Alocado
 2026-03-15 14:54:40,035 - INFO - DEBUG: Updating participant arm - co_participante=3310 randomization_group=Alocado
 2026-03-15 14:54:40,035 - INFO - DEBUG arm_info:None
+2026-03-15 15:28:33,677 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 15:28:35,412 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 15:28:35,412 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 15:28:35,412 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 15:28:35,412 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 15:28:35,413 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 15:28:35,669 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 15:28:35,670 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 15:28:35,670 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 15:28:35,670 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 15:28:35,670 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 15:28:36,675 - INFO - Polotrial: authentication successful
+2026-03-15 15:28:36,878 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 15:28:36,878 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 15:28:37,289 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 15:28:37,727 - INFO - Participant found: id=3310
+2026-03-15 15:28:37,728 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 15:28:47,728 - INFO - Lista de /participante_visita_procedimentos
+2026-03-15 15:28:48,655 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 20, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': '2025-12-26T00:00:00.000Z', 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 79, 'urgencia': 3, 'dias_do_inicio': 28, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 15:28:48,656 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "2025-12-26",
+  "status": 20
+}
+2026-03-15 15:28:48,886 - INFO - visita_2__randomiz_arm_1 already up to date (id=40472).
+2026-03-15 15:28:48,886 - INFO - DEBUG: Current Date: 2025-12-26T00:00:00.000Z | Desired Date: 2025-12-26
+2026-03-15 15:28:49,183 - INFO - DEBUG: Available procedures in visita_2__randomiz_arm_1:
+2026-03-15 15:28:49,184 - INFO -  - ID: 648133 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648134 | Proc: Exame físico | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648135 | Proc: Sinais vitais | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_sv1=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648136 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: nan | Check field: form_medico_revisao4=N/A | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648171 | Proc: Hemograma completo-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_hematocrito=45.5 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648157 | Proc: Creatinina sérica-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_creatinina=0.90 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648158 | Proc: Ureia sérica-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_ureia=39 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,184 - INFO -  - ID: 648176 | Proc: Bilirrubina sérica (total)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648160 | Proc: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648159 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648163 | Proc: Fosfatase alcalina (FA)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648161 | Proc: Gama glutamil transferase (GGT)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648168 | Proc: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648175 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648164 | Proc: Colesterol- sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648170 | Proc: Low-density lipoprotein (LDL)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648167 | Proc: High-density lipoprotein (HDL)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,185 - INFO -  - ID: 648166 | Proc: Lipoproteína a - sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_lipoproteina=293.60 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,185 - INFO -  - ID: 648177 | Proc: Testosterona total | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_testo_total=651.07 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648172 | Proc: Testosterona livre sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_testo_livre=14.89 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648174 | Proc: Hormônio folículo-estimulante (FSH)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,186 - INFO -  - ID: 648173 | Proc: Hormônio luteinizante (LH)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,186 - INFO -  - ID: 648165 | Proc: Dímero D-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_dd=360.0 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648169 | Proc: Proteína S livre-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_prot_s=119 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648162 | Proc: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,186 - INFO -  - ID: 648137 | Proc: Teste de gravidez | Data exec: nan | Check field: coleta_gravidez=N/A | Date field: coleta_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648138 | Proc: Concentração sérica de oxandrolona e farmacocinética | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,186 - INFO -  - ID: 648139 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648156 | Proc: Orientações para uso de métodos contraceptivos | Data exec: nan | Check field: form_medico_gravidez_q3=N/A | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648140 | Proc: Monitoramento de eventos adversos | Data exec: nan | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:28:49,186 - INFO -  - ID: 648141 | Proc: Inserção subdérmica do implante absorvível | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_rando_dth_pellet=2025-12-26 09:50 | Date field: form_medico_rando_dth_pellet=2025-12-26 09:50
+2026-03-15 15:28:49,186 - INFO -  - ID: 648142 | Proc: Bioimpedância | Data exec: nan | Check field: aval_corp_bioimpedancia=Não | Date field: aval_corp_dt_visita=2025-12-26
+2026-03-15 15:28:49,187 - INFO -  - ID: 648143 | Proc: Dinamometria isométrica | Data exec: nan | Check field: fisio_isometria_q5=NA | Date field: fisio_dt_visita=NA
+2026-03-15 15:28:49,187 - INFO -  - ID: 648144 | Proc: Knee Society Score (KSS) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648145 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648146 | Proc: Questionário Lysholm Knee Scoring Scale | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q3_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:28:49,187 - INFO -  - ID: 648147 | Proc: Questionário Short Form-12 (SF-36SF-36) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648148 | Proc: Questionário GAD-7 | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q5_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:28:49,187 - INFO -  - ID: 648149 | Proc: Questionário PHQ9 | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q6_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:28:49,187 - INFO -  - ID: 648150 | Proc: Questionário Patient Acceptable Symptom State (PAS) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648151 | Proc: Consulta Médica | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_rubrica=Dr. Rogério Nakasone | Date field: form_medico_dt_rubrica=2025-12-26
+2026-03-15 15:28:49,187 - INFO -  - ID: 648152 | Proc: Consulta Fisioterapeuta | Data exec: nan | Check field: fisio_dt_visita=NA | Date field: fisio_dt_visita=NA
+2026-03-15 15:28:49,187 - INFO -  - ID: 648153 | Proc: Reembolso | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648154 | Proc: Referenciamento Médico | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:28:49,187 - INFO -  - ID: 648155 | Proc: Reconsentimento | Data exec: nan | Check field: tcle_reconcentimento=N/A | Date field: tcle_dt_visita_aplicacao=N/A
+2026-03-15 15:28:49,187 - INFO - DEBUG: Procedure mapping summary:
+2026-03-15 15:28:49,187 - INFO -   Total procedures in PoloTrial: 45
+2026-03-15 15:28:49,188 - INFO -   Matched with mapping: 25
+2026-03-15 15:28:49,188 - INFO -   Unmatched: 20
+2026-03-15 15:28:49,188 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-03-15 15:28:49,188 - WARNING -   - 'Bilirrubina sérica (total)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Fosfatase alcalina (FA)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Gama glutamil transferase (GGT)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Antígeno prostático específico livre (PSA)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Colesterol- sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Low-density lipoprotein (LDL)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'High-density lipoprotein (HDL)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Hormônio folículo-estimulante (FSH)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Hormônio luteinizante (LH)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue'
+2026-03-15 15:28:49,188 - WARNING -   - 'Concentração sérica de oxandrolona e farmacocinética'
+2026-03-15 15:28:49,188 - WARNING -   - 'Knee Society Score (KSS)'
+2026-03-15 15:28:49,188 - WARNING -   - 'Questionário IPAQ (International Phyisical Ativity Questionnaire)'
+2026-03-15 15:28:49,188 - WARNING -   - 'Questionário Short Form-12 (SF-36SF-36)'
+2026-03-15 15:28:49,188 - WARNING -   - 'Questionário Patient Acceptable Symptom State (PAS)'
+2026-03-15 15:28:49,188 - WARNING -   - 'Reembolso'
+2026-03-15 15:28:49,188 - WARNING -   - 'Referenciamento Médico'
+2026-03-15 15:28:49,189 - INFO - No procedure to sync for pattern Avalia[cç][aã]o dos crit[eé]rios de inclus[aã]o/exclus[aã]o
+2026-03-15 15:28:49,190 - INFO - No procedure to sync for pattern Exame f[ií]sico
+2026-03-15 15:28:49,190 - INFO - No procedure to sync for pattern Sinais vitais
+2026-03-15 15:28:49,191 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao4 indicates not done (value = ''). Skipping....
+2026-03-15 15:28:49,191 - INFO - No date in REDCap for procedure 'Registro de uso de medicações pré-estudo e concomitantes' (check_field=form_medico_revisao4)
+2026-03-15 15:28:49,192 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping....
+2026-03-15 15:28:49,192 - INFO - No date in REDCap for procedure 'Teste de gravidez' (check_field=coleta_gravidez)
+2026-03-15 15:28:49,193 - INFO - No procedure to sync for pattern Orienta[çc][õo]es para programa fisioter[aá]pico para reabilita[cç][aã]o p[oó]s-operat[oó]ria
+2026-03-15 15:28:49,193 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping....
+2026-03-15 15:28:49,193 - INFO - No date in REDCap for procedure 'Orientações para uso de métodos contraceptivos' (check_field=form_medico_gravidez_q3)
+2026-03-15 15:28:49,194 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao7 indicates not done (value = 'não'). Skipping....
+2026-03-15 15:28:49,194 - INFO - No date in REDCap for procedure 'Monitoramento de eventos adversos' (check_field=form_medico_revisao7)
+2026-03-15 15:28:49,195 - INFO - No procedure to sync for pattern Inserç[aã]o subd[eé]rmica do implante absorv[ií]vel
+2026-03-15 15:28:49,195 - WARNING - Date exists (aval_corp_dt_visita) but check field aval_corp_bioimpedancia indicates not done (value = 'não'). Skipping....
+2026-03-15 15:28:49,195 - INFO - No date in REDCap for procedure 'Bioimpedância' (check_field=aval_corp_bioimpedancia)
+2026-03-15 15:28:49,196 - ERROR - Invalid date format in REDCap for procedure 'Dinamometria isométrica': NA (error: Could not extract date from: NA)
+2026-03-15 15:28:49,197 - INFO - No procedure to sync for pattern Question[aá]rio IPAQ (International Phyisical Ativity Questionnaire)
+2026-03-15 15:28:49,197 - INFO - No procedure to sync for pattern Question[aá]rio Lysholm Knee Scoring Scale
+2026-03-15 15:28:49,198 - INFO - No procedure to sync for pattern Question[aá]rio Short Form-12 (SF-36SF-36)
+2026-03-15 15:28:49,199 - INFO - No procedure to sync for pattern Question[aá]rio GAD-7
+2026-03-15 15:28:49,199 - INFO - No procedure to sync for pattern Question[aá]rio PHQ9
+2026-03-15 15:28:49,200 - INFO - No procedure to sync for pattern Question[aá]rio Patient Acceptable Symptom State (PAS)
+2026-03-15 15:28:49,201 - INFO - No procedure to sync for pattern Consulta M[eé]dica
+2026-03-15 15:28:49,201 - ERROR - Invalid date format in REDCap for procedure 'Consulta Fisioterapeuta': NA (error: Could not extract date from: NA)
+2026-03-15 15:28:49,202 - INFO - No date in REDCap for procedure 'Reconsentimento' (check_field=tcle_reconcentimento)
+2026-03-15 15:28:49,203 - INFO - No procedure to sync for pattern Hemograma completo-sangue
+2026-03-15 15:28:49,203 - INFO - No procedure to sync for pattern Creatinina sérica-sangue
+2026-03-15 15:28:49,204 - INFO - No procedure to sync for pattern Ureia s[eé]rica-sangue
+2026-03-15 15:28:49,204 - INFO - No procedure to sync for pattern Bilirrubina s[eé]rica (total)-sangue
+2026-03-15 15:28:49,205 - INFO - No procedure to sync for pattern Transaminase glut[aâ]mico oxalac[eé]tica/aspartato aminotransferase (TGO/AST)-sangue
+2026-03-15 15:28:49,206 - INFO - No procedure to sync for pattern Transaminase glut[aâ]mico pir[uú]vica/alanina aminotransferase (TGP/ALT)-sangue
+2026-03-15 15:28:49,207 - INFO - No procedure to sync for pattern Fosfatase alcalina (FA)-sangue
+2026-03-15 15:28:49,207 - INFO - No procedure to sync for pattern Gama glutamil transferase (GGT)-sangue
+2026-03-15 15:28:49,208 - INFO - No procedure to sync for pattern Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue
+2026-03-15 15:28:49,209 - INFO - No procedure to sync for pattern Antígeno prost[aá]tico espec[ií]fico livre (PSA)-sangue
+2026-03-15 15:28:49,209 - INFO - No procedure to sync for pattern Colesterol-sangue
+2026-03-15 15:28:49,210 - INFO - No procedure to sync for pattern Low-density lipoprotein (LDL)-sangue
+2026-03-15 15:28:49,210 - INFO - No procedure to sync for pattern High-density lipoprotein (HDL)-sangue
+2026-03-15 15:28:49,211 - INFO - No procedure to sync for pattern Lipoproteína a - sangue
+2026-03-15 15:28:49,211 - INFO - No procedure to sync for pattern Testosterona total
+2026-03-15 15:28:49,212 - INFO - No procedure to sync for pattern Testosterona livre sangue
+2026-03-15 15:28:49,213 - INFO - No procedure to sync for pattern Horm[oô]nio fol[ií]culo-estimulante (FSH)-sangue
+2026-03-15 15:28:49,213 - INFO - No procedure to sync for pattern Horm[oô]nio luteinizante (LH)-sangue
+2026-03-15 15:28:49,214 - INFO - No procedure to sync for pattern D[íi]mero D-sangue
+2026-03-15 15:28:49,214 - INFO - No procedure to sync for pattern Prote[ií]na S livre-sangue
+2026-03-15 15:28:49,215 - INFO - No procedure to sync for pattern Globulina Ligadora De Horm[oô]nios Sexuais (SHBG)-sangue
+2026-03-15 15:28:49,215 - INFO - V2 procedures synchronized: 0/41
+2026-03-15 15:28:49,215 - INFO - visita_2__randomiz_arm_1: consulta_nome_medico empty; skipping executor sync.
+2026-03-15 15:28:49,215 - INFO - DEBUG: randomization_group raw: Alocado
+2026-03-15 15:28:49,215 - WARNING - V2: Unexpected randomization value for randomizacao_alocacao_pk: 'Alocado'
+2026-03-15 15:28:49,215 - INFO - DEBUG: randomization_group: None
+2026-03-15 15:28:49,215 - INFO - V2: randomizacao_alocacao_pk not yet filled for record 57-1. Arm will not be updated at this time.
+2026-03-15 15:28:49,215 - INFO - V2 sync completed for record_id=57-1
+2026-03-15 15:51:31,748 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-15 15:51:32,601 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 15:51:32,601 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 15:51:32,601 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 15:51:32,601 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"aderencia_dt_visita","value":"2025-12-26"},{"record":"57-1","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e
+2026-03-15 15:51:32,602 - INFO - REDCap: exported record 57-1 for event visita_2__randomiz_arm_1 with 306 fields
+2026-03-15 15:51:32,878 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-15 15:51:32,878 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-15 15:51:32,879 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-15 15:51:32,879 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-15 15:51:32,879 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-15 15:51:33,859 - INFO - Polotrial: authentication successful
+2026-03-15 15:51:34,059 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-15 15:51:34,060 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-15 15:51:34,469 - INFO - Protocol found: id=2372 (site=4)
+2026-03-15 15:51:34,981 - INFO - Participant found: id=3310
+2026-03-15 15:51:34,982 - INFO - DEBUG: Data da V2: 2025-12-26 (from field revisao_dt_visita)
+2026-03-15 15:51:44,982 - INFO - Lista de /participante_visita_procedimentos
+2026-03-15 15:51:45,734 - INFO - DEBUG: Participant visits for co_participante=3310: ([{'id': 40471, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3368, 'status': 20, 'nome_tarefa': 'VS/V1', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40471', 'title': 'Oxandrolona-VS/V1-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': '2025-11-28T00:00:00.000Z', 'data_estimada_fim': None, 'data_realizada': '2025-11-28T00:00:00.000Z', 'observacoes': 'Seleção', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 107, 'urgencia': 0, 'dias_do_inicio': 0, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40472, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3369, 'status': 20, 'nome_tarefa': 'VR/V2', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40472', 'title': 'Oxandrolona-VR/V2-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': '2025-12-26T00:00:00.000Z', 'observacoes': 'Randomização', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': 79, 'urgencia': 3, 'dias_do_inicio': 28, 'semestre': 1, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': 6, 'intervalo_referencia': 4, 'soma_procedimentos_prevista': 0, 'soma_procedimentos_pago': 0, 'soma_procedimentos_condicionais': 0, 'procedimentos_extras': 0, 'intervalo_unidade': 2, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}, {'id': 40473, 'co_participante': 3310, 'co_protocolo': 2372, 'moeda': 568, 'co_coordenador': 2622, 'co_visita': 3415, 'status': 18, 'nome_tarefa': 'Data da Cirurgia de LCA', 'color': '#000000', 'url': '../participante_visita.php?operation=edit&pk0=40473', 'title': 'Oxandrolona-Data da Cirurgia de LCA-V.M.L 57-1', 'visita_extra': '-', 'data_estimada': None, 'data_estimada_fim': None, 'data_realizada': None, 'observacoes': 'Visita criada para controle de data da randomização - Sem impacto para o Financeiro.', 'valor_previsto': '0.00', 'valor_pago': None, 'data_solicitacao_pagamento': None, 'data_pagamento': None, 'status_participante': 540, 'filtro_dias': None, 'urgencia': 3, 'dias_do_inicio': None, 'semestre': None, 'co_nota_fiscal': None, 'co_status_nota_fiscal_gn': None, 'local': None, 'intervalo': None, 'intervalo_referencia': 5, 'soma_procedimentos_prevista': None, 'soma_procedimentos_pago': None, 'soma_procedimentos_condicionais': None, 'procedimentos_extras': None, 'intervalo_unidade': None, 'data_ideal': None, 'data_preenchimento_visita': None, 'data_limite_min': None, 'data_limite_max': None, 'data_preenchimento_crf': None, 'data_monitorada': None, 'responsavel': None}])
+2026-03-15 15:51:45,734 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "2025-12-26",
+  "status": 20
+}
+2026-03-15 15:51:45,938 - INFO - visita_2__randomiz_arm_1 already up to date (id=40472).
+2026-03-15 15:51:45,938 - INFO - DEBUG: Current Date: 2025-12-26T00:00:00.000Z | Desired Date: 2025-12-26
+2026-03-15 15:51:46,189 - INFO - DEBUG: Available procedures in visita_2__randomiz_arm_1:
+2026-03-15 15:51:46,190 - INFO -  - ID: 648133 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,190 - INFO -  - ID: 648134 | Proc: Exame físico | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,190 - INFO -  - ID: 648135 | Proc: Sinais vitais | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_sv1=Sim | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,190 - INFO -  - ID: 648136 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: nan | Check field: form_medico_revisao4=N/A | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,190 - INFO -  - ID: 648171 | Proc: Hemograma completo-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_hematocrito=45.5 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,190 - INFO -  - ID: 648157 | Proc: Creatinina sérica-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_creatinina=0.90 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,191 - INFO -  - ID: 648158 | Proc: Ureia sérica-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_ureia=39 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,191 - INFO -  - ID: 648176 | Proc: Bilirrubina sérica (total)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,191 - INFO -  - ID: 648160 | Proc: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,191 - INFO -  - ID: 648159 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,191 - INFO -  - ID: 648163 | Proc: Fosfatase alcalina (FA)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,191 - INFO -  - ID: 648161 | Proc: Gama glutamil transferase (GGT)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,191 - INFO -  - ID: 648168 | Proc: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648175 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648164 | Proc: Colesterol- sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648170 | Proc: Low-density lipoprotein (LDL)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648167 | Proc: High-density lipoprotein (HDL)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648166 | Proc: Lipoproteína a - sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_lipoproteina=293.60 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,192 - INFO -  - ID: 648177 | Proc: Testosterona total | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_testo_total=651.07 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,192 - INFO -  - ID: 648172 | Proc: Testosterona livre sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_testo_livre=14.89 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,192 - INFO -  - ID: 648174 | Proc: Hormônio folículo-estimulante (FSH)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648173 | Proc: Hormônio luteinizante (LH)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,192 - INFO -  - ID: 648165 | Proc: Dímero D-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_dd=360.0 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,192 - INFO -  - ID: 648169 | Proc: Proteína S livre-sangue | Data exec: 2025-12-26T00:00:00.000Z | Check field: lab_prot_s=119 | Date field: lab_dt_visita=2025-12-26
+2026-03-15 15:51:46,192 - INFO -  - ID: 648162 | Proc: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,193 - INFO -  - ID: 648137 | Proc: Teste de gravidez | Data exec: nan | Check field: coleta_gravidez=N/A | Date field: coleta_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648138 | Proc: Concentração sérica de oxandrolona e farmacocinética | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,193 - INFO -  - ID: 648139 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648156 | Proc: Orientações para uso de métodos contraceptivos | Data exec: nan | Check field: form_medico_gravidez_q3=N/A | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648140 | Proc: Monitoramento de eventos adversos | Data exec: nan | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648141 | Proc: Inserção subdérmica do implante absorvível | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_rando_dth_pellet=2025-12-26 09:50 | Date field: form_medico_rando_dth_pellet=2025-12-26 09:50
+2026-03-15 15:51:46,193 - INFO -  - ID: 648142 | Proc: Bioimpedância | Data exec: nan | Check field: aval_corp_bioimpedancia=Não | Date field: aval_corp_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648143 | Proc: Dinamometria isométrica | Data exec: nan | Check field: fisio_isometria_q5=NA | Date field: fisio_dt_visita=NA
+2026-03-15 15:51:46,193 - INFO -  - ID: 648144 | Proc: Knee Society Score (KSS) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,193 - INFO -  - ID: 648145 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,193 - INFO -  - ID: 648146 | Proc: Questionário Lysholm Knee Scoring Scale | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q3_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:51:46,193 - INFO -  - ID: 648147 | Proc: Questionário Short Form-12 (SF-36SF-36) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,193 - INFO -  - ID: 648148 | Proc: Questionário GAD-7 | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q5_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:51:46,194 - INFO -  - ID: 648149 | Proc: Questionário PHQ9 | Data exec: 2025-12-26T00:00:00.000Z | Check field: rando_q6_v2=Sim | Date field: revisao_dt_visita=2025-12-26
+2026-03-15 15:51:46,194 - INFO -  - ID: 648150 | Proc: Questionário Patient Acceptable Symptom State (PAS) | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,194 - INFO -  - ID: 648151 | Proc: Consulta Médica | Data exec: 2025-12-26T00:00:00.000Z | Check field: form_medico_rubrica=Dr. Rogério Nakasone | Date field: form_medico_dt_rubrica=2025-12-26
+2026-03-15 15:51:46,194 - INFO -  - ID: 648152 | Proc: Consulta Fisioterapeuta | Data exec: nan | Check field: fisio_dt_visita=NA | Date field: fisio_dt_visita=NA
+2026-03-15 15:51:46,194 - INFO -  - ID: 648153 | Proc: Reembolso | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,194 - INFO -  - ID: 648154 | Proc: Referenciamento Médico | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-03-15 15:51:46,194 - INFO -  - ID: 648155 | Proc: Reconsentimento | Data exec: nan | Check field: tcle_reconcentimento=N/A | Date field: tcle_dt_visita_aplicacao=N/A
+2026-03-15 15:51:46,194 - INFO - DEBUG: Procedure mapping summary:
+2026-03-15 15:51:46,194 - INFO -   Total procedures in PoloTrial: 45
+2026-03-15 15:51:46,194 - INFO -   Matched with mapping: 25
+2026-03-15 15:51:46,194 - INFO -   Unmatched: 20
+2026-03-15 15:51:46,194 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-03-15 15:51:46,194 - WARNING -   - 'Bilirrubina sérica (total)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Fosfatase alcalina (FA)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Gama glutamil transferase (GGT)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Antígeno prostático específico livre (PSA)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Colesterol- sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'Low-density lipoprotein (LDL)-sangue'
+2026-03-15 15:51:46,194 - WARNING -   - 'High-density lipoprotein (HDL)-sangue'
+2026-03-15 15:51:46,195 - WARNING -   - 'Hormônio folículo-estimulante (FSH)-sangue'
+2026-03-15 15:51:46,195 - WARNING -   - 'Hormônio luteinizante (LH)-sangue'
+2026-03-15 15:51:46,195 - WARNING -   - 'Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue'
+2026-03-15 15:51:46,195 - WARNING -   - 'Concentração sérica de oxandrolona e farmacocinética'
+2026-03-15 15:51:46,195 - WARNING -   - 'Knee Society Score (KSS)'
+2026-03-15 15:51:46,195 - WARNING -   - 'Questionário IPAQ (International Phyisical Ativity Questionnaire)'
+2026-03-15 15:51:46,195 - WARNING -   - 'Questionário Short Form-12 (SF-36SF-36)'
+2026-03-15 15:51:46,195 - WARNING -   - 'Questionário Patient Acceptable Symptom State (PAS)'
+2026-03-15 15:51:46,195 - WARNING -   - 'Reembolso'
+2026-03-15 15:51:46,195 - WARNING -   - 'Referenciamento Médico'
+2026-03-15 15:51:46,196 - INFO - No procedure to sync for pattern Avalia[cç][aã]o dos crit[eé]rios de inclus[aã]o/exclus[aã]o
+2026-03-15 15:51:46,197 - INFO - No procedure to sync for pattern Exame f[ií]sico
+2026-03-15 15:51:46,197 - INFO - No procedure to sync for pattern Sinais vitais
+2026-03-15 15:51:46,198 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao4 indicates not done (value = ''). Skipping....
+2026-03-15 15:51:46,198 - INFO - No date in REDCap for procedure 'Registro de uso de medicações pré-estudo e concomitantes' (check_field=form_medico_revisao4)
+2026-03-15 15:51:46,199 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping....
+2026-03-15 15:51:46,199 - INFO - No date in REDCap for procedure 'Teste de gravidez' (check_field=coleta_gravidez)
+2026-03-15 15:51:46,199 - INFO - No procedure to sync for pattern Orienta[çc][õo]es para programa fisioter[aá]pico para reabilita[cç][aã]o p[oó]s-operat[oó]ria
+2026-03-15 15:51:46,200 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping....
+2026-03-15 15:51:46,200 - INFO - No date in REDCap for procedure 'Orientações para uso de métodos contraceptivos' (check_field=form_medico_gravidez_q3)
+2026-03-15 15:51:46,201 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao7 indicates not done (value = 'não'). Skipping....
+2026-03-15 15:51:46,201 - INFO - No date in REDCap for procedure 'Monitoramento de eventos adversos' (check_field=form_medico_revisao7)
+2026-03-15 15:51:46,201 - INFO - No procedure to sync for pattern Inserç[aã]o subd[eé]rmica do implante absorv[ií]vel
+2026-03-15 15:51:46,202 - WARNING - Date exists (aval_corp_dt_visita) but check field aval_corp_bioimpedancia indicates not done (value = 'não'). Skipping....
+2026-03-15 15:51:46,202 - INFO - No date in REDCap for procedure 'Bioimpedância' (check_field=aval_corp_bioimpedancia)
+2026-03-15 15:51:46,203 - ERROR - Invalid date format in REDCap for procedure 'Dinamometria isométrica': NA (error: Could not extract date from: NA)
+2026-03-15 15:51:46,204 - INFO - No procedure to sync for pattern Question[aá]rio IPAQ (International Phyisical Ativity Questionnaire)
+2026-03-15 15:51:46,204 - INFO - No procedure to sync for pattern Question[aá]rio Lysholm Knee Scoring Scale
+2026-03-15 15:51:46,205 - INFO - No procedure to sync for pattern Question[aá]rio Short Form-12 (SF-36SF-36)
+2026-03-15 15:51:46,205 - INFO - No procedure to sync for pattern Question[aá]rio GAD-7
+2026-03-15 15:51:46,206 - INFO - No procedure to sync for pattern Question[aá]rio PHQ9
+2026-03-15 15:51:46,207 - INFO - No procedure to sync for pattern Question[aá]rio Patient Acceptable Symptom State (PAS)
+2026-03-15 15:51:46,207 - INFO - No procedure to sync for pattern Consulta M[eé]dica
+2026-03-15 15:51:46,208 - ERROR - Invalid date format in REDCap for procedure 'Consulta Fisioterapeuta': NA (error: Could not extract date from: NA)
+2026-03-15 15:51:46,209 - INFO - No date in REDCap for procedure 'Reconsentimento' (check_field=tcle_reconcentimento)
+2026-03-15 15:51:46,209 - INFO - No procedure to sync for pattern Hemograma completo-sangue
+2026-03-15 15:51:46,210 - INFO - No procedure to sync for pattern Creatinina sérica-sangue
+2026-03-15 15:51:46,210 - INFO - No procedure to sync for pattern Ureia s[eé]rica-sangue
+2026-03-15 15:51:46,211 - INFO - No procedure to sync for pattern Bilirrubina s[eé]rica (total)-sangue
+2026-03-15 15:51:46,212 - INFO - No procedure to sync for pattern Transaminase glut[aâ]mico oxalac[eé]tica/aspartato aminotransferase (TGO/AST)-sangue
+2026-03-15 15:51:46,213 - INFO - No procedure to sync for pattern Transaminase glut[aâ]mico pir[uú]vica/alanina aminotransferase (TGP/ALT)-sangue
+2026-03-15 15:51:46,213 - INFO - No procedure to sync for pattern Fosfatase alcalina (FA)-sangue
+2026-03-15 15:51:46,214 - INFO - No procedure to sync for pattern Gama glutamil transferase (GGT)-sangue
+2026-03-15 15:51:46,215 - INFO - No procedure to sync for pattern Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue
+2026-03-15 15:51:46,215 - INFO - No procedure to sync for pattern Antígeno prost[aá]tico espec[ií]fico livre (PSA)-sangue
+2026-03-15 15:51:46,216 - INFO - No procedure to sync for pattern Colesterol-sangue
+2026-03-15 15:51:46,216 - INFO - No procedure to sync for pattern Low-density lipoprotein (LDL)-sangue
+2026-03-15 15:51:46,217 - INFO - No procedure to sync for pattern High-density lipoprotein (HDL)-sangue
+2026-03-15 15:51:46,217 - INFO - No procedure to sync for pattern Lipoproteína a - sangue
+2026-03-15 15:51:46,218 - INFO - No procedure to sync for pattern Testosterona total
+2026-03-15 15:51:46,219 - INFO - No procedure to sync for pattern Testosterona livre sangue
+2026-03-15 15:51:46,219 - INFO - No procedure to sync for pattern Horm[oô]nio fol[ií]culo-estimulante (FSH)-sangue
+2026-03-15 15:51:46,220 - INFO - No procedure to sync for pattern Horm[oô]nio luteinizante (LH)-sangue
+2026-03-15 15:51:46,220 - INFO - No procedure to sync for pattern D[íi]mero D-sangue
+2026-03-15 15:51:46,221 - INFO - No procedure to sync for pattern Prote[ií]na S livre-sangue
+2026-03-15 15:51:46,222 - INFO - No procedure to sync for pattern Globulina Ligadora De Horm[oô]nios Sexuais (SHBG)-sangue
+2026-03-15 15:51:46,222 - INFO - V2 procedures synchronized: 0/41
+2026-03-15 15:51:46,222 - INFO - visita_2__randomiz_arm_1: consulta_nome_medico empty; skipping executor sync.
+2026-03-15 15:51:46,222 - INFO - DEBUG: randomization_group raw value from REDCap: Alocado
+2026-03-15 15:51:46,222 - INFO - DEBUG: Updating participant arm - co_participante=3310 randomization_group=2 (parsed from 'Alocado')
+2026-03-15 15:51:46,222 - INFO - DEBUG arm_info:{'pattern': 'IMOX Versão nº1 - SUBGRUPO PK', 'label': 'Alocado'}
+2026-03-15 15:51:46,222 - INFO - DEBUG: Looking for arm - randomization_group=2 pattern=IMOX Versão nº1 - SUBGRUPO PK label=Alocado
+2026-03-15 15:51:46,654 - INFO - DEBUG: Sending arm update payload:
+{
+  "co_braco": 241,
+  "atualizar_agenda": "1",
+  "data_randomizacao": "2025-12-26"
+}
+2026-03-15 15:51:48,090 - INFO - visita_2__randomiz_arm_1: participant 3310 arm updated 242 → 241 (Alocado). data_randomizacao=2025-12-26
+2026-03-15 15:51:48,090 - INFO - V2 sync completed for record_id=57-1

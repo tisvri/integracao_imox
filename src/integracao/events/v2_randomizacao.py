@@ -17,8 +17,15 @@ from integracao.utils import get_date_from_redcap
 import os
 import dotenv
 
+from integracao.config.arm_config import (
+    ARM_MAPPING,
+    ARM_POLOTRIAL_PATTERNS,
+    parse_randomization_group,
+)
+
 dotenv.load_dotenv(override=True)
-V1_EVENT = os.getenv("V1_EVENT_NAME")
+
+
 
 
 logger = logging.getLogger(__name__)
@@ -35,24 +42,6 @@ DT_RANDOMIZATION_FIELD = os.getenv("DT_RANDOMIZACAO")
 
 V2_POLOTRIAL_VISIT_NAME = os.getenv("V2_POLTRIAL_EVENT_NAME")  # = "VR/V2"
 
-ARM_MAPPING: Dict[str, int] = {
-    "1": 1,
-    "Não alocado": 1,
-    "2": 2,
-    "Alocado": 2,
-    
-}
-
-ARM_POLOTRIAL_PATTERNS: Dict[int, Dict[str, str]] = {
-    1: {
-        "pattern": os.getenv("OTHER_ARM_NAME"),
-        "label": "Não alocado",
-    },
-    2: {
-        "pattern": os.getenv("PK_ARM_NAME"),
-        "label": "Alocado",
-    },
-}
 
 
 # ── Helpers ────────────────────────────────────────────────────────────
@@ -207,30 +196,31 @@ def sync_v2_randomization(
     #    atualizar_agenda no mesmo PUT /participantes/{id}.
     #    Enviar data_randomizacao sozinha causava 404
     #    ("ParticipanteVisita not found!").
-    #
-    randomization_group = redcap_payload.get(RANDOMIZATION_FIELD)
+    
+    raw_randomization = redcap_payload.get(RANDOMIZATION_FIELD)
+    logger.info("DEBUG: randomization_group raw value from REDCap: %s", raw_randomization)
 
-    logger.info("DEBUG: randomization_group: %s", randomization_group)
+    # ← CORREÇÃO: converter string do REDCap para int (1 ou 2)
+    randomization_group = parse_randomization_group(raw_randomization)
 
     if randomization_group is None:
         logger.info(
-            "V2: %s not yet filled for record %s. "
+            "V2: %s not yet filled (or unrecognized value %r) for record %s. "
             "Arm will not be updated at this time.",
-            RANDOMIZATION_FIELD, record_id,
+            RANDOMIZATION_FIELD, raw_randomization, record_id,
         )
     else:
         logger.info(
-            "DEBUG: Updating participant arm - co_participante=%s randomization_group=%s",
-            co_participante, randomization_group,
+            "DEBUG: Updating participant arm - co_participante=%s "
+            "randomization_group=%s (parsed from %r)",
+            co_participante, randomization_group, raw_randomization,
         )
         update_participant_arm_if_needed(
-            randomization_group=randomization_group,
+            randomization_group=randomization_group,  # ← agora é int (1 ou 2) ✅
             co_participante=co_participante,
             co_protocolo=co_protocolo,
             polotrial=polotrial,
-            data_randomizacao=v2_date_for_participant,  # ← passa a data junto
-            # # Atualizar agenda
-            # atualizar_agenda={"atualizar_agenda": "1"},
+            data_randomizacao=v2_date_for_participant,
         )
 
     logger.info("V2 sync completed for record_id=%s", record_id)
