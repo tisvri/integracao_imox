@@ -122,6 +122,13 @@ V1_POLOTRIAL_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "redcap_check_field": "lab_psa",
         "redcap_date_field": "lab_dt_visita"
     },
+
+    {
+        "procedure_name": r"Concentra[cç][aã]'o s[eé]rica de oxandrolona e farmacocin[eé]tica",
+        "co_procedimento": "129",
+        "redcap_check_field": "",
+        "redcap_date_field": ""
+    }
     
 
 ]
@@ -265,6 +272,151 @@ V2_POLOTRIAL_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Hemograma completo-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_hematocrito",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    {
+        "procedure_name": r"Creatinina sérica-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_creatinina",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Ureia s[eé]rica-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_ureia",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Bilirrubina s[eé]rica (total)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_bilirrubina",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Transaminase glut[aâ]mico oxalac[eé]tica/aspartato aminotransferase (TGO/AST)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_tgo",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Transaminase glut[aâ]mico pir[uú]vica/alanina aminotransferase (TGP/ALT)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_tgp",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Fosfatase alcalina (FA)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_fa",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Gama glutamil transferase (GGT)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_ggt",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_cpk",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Antígeno prost[aá]tico espec[ií]fico livre (PSA)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_psa",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Colesterol-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_colesterol",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Low-density lipoprotein (LDL)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_ldl",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"High-density lipoprotein (HDL)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_hdl",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Lipoproteína a - sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_lipoproteina",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Testosterona total",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_testo_total",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Testosterona livre sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_testo_livre",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Horm[oô]nio fol[ií]culo-estimulante (FSH)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_fsh",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Horm[oô]nio luteinizante (LH)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_lh",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"D[íi]mero D-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_dd",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Prote[ií]na S livre-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_prot_s",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Globulina Ligadora De Horm[oô]nios Sexuais (SHBG)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_shbg",
+        "redcap_date_field": "lab_dt_visita"
     }
 ]
 
@@ -361,7 +513,7 @@ V3_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Colesterol- sangue",
+        "procedure_name": r"Colesterol-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_colesterol",
         "redcap_date_field": "lab_dt_visita"
@@ -574,7 +726,7 @@ V4_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Colesterol- sangue",
+        "procedure_name": r"Colesterol-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_colesterol",
         "redcap_date_field": "lab_dt_visita"
@@ -858,7 +1010,7 @@ V5_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Colesterol- sangue",
+        "procedure_name": r"Colesterol-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_colesterol",
         "redcap_date_field": "lab_dt_visita"
@@ -1424,7 +1576,7 @@ VISITA_NAO_PROGRAMADA_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Colesterol- sangue",
+        "procedure_name": r"Colesterol-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_colesterol",
         "redcap_date_field": "lab_dt_visita"

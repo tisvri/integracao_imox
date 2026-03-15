@@ -33,6 +33,8 @@ V2_DATE_FIELD =  os.getenv("DT_VISITA")
 RANDOMIZATION_FIELD = os.getenv("RANDOMIZACAO")
 DT_RANDOMIZATION_FIELD = os.getenv("DT_RANDOMIZACAO")
 
+V2_POLOTRIAL_VISIT_NAME = os.getenv("V2_POLTRIAL_EVENT_NAME")  # = "VR/V2"
+
 ARM_MAPPING: Dict[str, int] = {
     "1": 1,
     "Não alocado": 1,
@@ -160,10 +162,10 @@ def sync_v2_randomization(
     logger.info("DEBUG: Participant visits for co_participante=%s: (%s)", co_participante,visits)
 
 
-    v2_visit_tasks = next((procedures for procedures in visits if procedures.get("nome_tarefa", "") == V2_EVENT), None)
+    v2_visit_tasks = next((procedures for procedures in visits if procedures.get("nome_tarefa", "") == V2_POLOTRIAL_VISIT_NAME), None)
     if not v2_visit_tasks:
         raise RuntimeError(
-            f"V2: Visit '{V2_EVENT}' not found in PoloTrial for participant {co_participante}"
+            f"V2: Visit '{V2_POLOTRIAL_VISIT_NAME}' not found in PoloTrial for participant {co_participante}"
         )
 
     participante_visita_id = int(v2_visit_tasks["id"])
@@ -172,7 +174,7 @@ def sync_v2_randomization(
         "data_realizada": v2_date,
         "status": 20,
     }
-    logger.info("DEBUG: Desired %s visit update payload:\n%s", V2_EVENT, json.dumps(desired, indent=2))
+    logger.info("DEBUG: Desired %s visit update payload:\n%s", V2_POLOTRIAL_VISIT_NAME, json.dumps(desired, indent=2))
 
     current = polotrial.get_participant_visit(participante_visita_id)
     # Compare only what matters
@@ -206,9 +208,10 @@ def sync_v2_randomization(
     #    Enviar data_randomizacao sozinha causava 404
     #    ("ParticipanteVisita not found!").
     #
-    randomization_group = parse_randomization_group(
-        redcap_payload.get(RANDOMIZATION_FIELD),
-    )
+    randomization_group = redcap_payload.get(RANDOMIZATION_FIELD)
+
+    logger.info("DEBUG: randomization_group: %s", randomization_group)
+
     if randomization_group is None:
         logger.info(
             "V2: %s not yet filled for record %s. "
@@ -475,15 +478,18 @@ def update_participant_arm_if_needed(
     Moves the participant to the correct arm after V2 randomization
     and sets data_randomizacao in the same PUT request.
 
-        randomizacao_q3 == 1 → Grupo 1 - Sérum Ultra Repositor
-        randomizacao_q3 == 2 → Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo
-        randomizacao_q3 == 3 → Grupo 3 - Tratamento Intensivo Noturno
+        randomizacao_alocacao_pk == 1 → Não alocado
+        randomizacao_alocacao_pk == 2 → Alocado
+        
     """
     arm_info = ARM_POLOTRIAL_PATTERNS.get(randomization_group)
+    
+    logger.info("DEBUG arm_info:%s", arm_info)
+    
     if not arm_info:
         raise ValueError(
             f"Unknown randomization_group={randomization_group}. "
-            "Expected 1, 2 or 3."
+            "Expected 1 or 2."
         )
 
     target_arm_pattern = arm_info["pattern"]
