@@ -72,14 +72,26 @@ def sync_participant_status_update(
     logger.info(f"Retrieved REDCap data for record_id: {record_id}, event_name: {event_name}")
 
     v1_payload = redcap.export_record_eav(record_id, V1_EVENT)
+    if not v1_payload:
+        logger.warning(
+            "No V1 data found for record_id=%s (event=%s). "
+            "Cannot determine site code. Skipping status update.",
+            record_id, V1_EVENT,
+        )
+        return
 
     # Step 2: Mapping fields REDCap -> PoloTrial
     co_centro_raw = str(v1_payload.get(CENTER_FIELD) or "").strip()
     site_code = SITE_CODE_MAPPING.get(co_centro_raw)
     if not site_code:
-        raise RuntimeError(
+        logger.info(
             f"Could not map {CENTER_FIELD}={co_centro_raw!r} "
             "to PoloTrial site code"
+        )
+        co_centro_raw = str(redcap_payload.get(CENTER_FIELD) or "").strip()
+        logger.info(
+            f"Retrying with {CENTER_FIELD} from participant status event: "
+            f"{CENTER_FIELD}={co_centro_raw!r}"
         )
     
     # Step 3: Volunteer (presupposes V1 already ran)
