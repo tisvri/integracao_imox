@@ -1929,3 +1929,9 @@
 2026-03-15 15:51:48,090 - INFO - V2 sync completed for record_id=57-1
 2026-03-15 16:01:24,544 - INFO - Webhook initialized for protocol: oxandrolona
 2026-03-15 16:03:16,095 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-16 11:35:58,003 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:01:30,939 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:03:32,911 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:04:56,390 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:10:34,678 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:10:39,918 - WARNING - No handlers implemented for event: status_atualization.py

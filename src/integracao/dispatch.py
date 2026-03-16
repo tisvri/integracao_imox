@@ -4,6 +4,7 @@ import logging
 
 from integracao.events.v1_screening import sync_v1_screening
 from integracao.events.v2_randomizacao import V2_EVENT, sync_v2_randomization
+from integracao.events.status_atualization import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
 from integracao.events.generic_visit import sync_generic_visit
 from integracao.visits_catalog import VISITS_CATALOG
 from integracao.polotrial_client import PoloTrialClient
@@ -14,6 +15,7 @@ import dotenv
 dotenv.load_dotenv(override=True)
 V1_EVENT = os.getenv("V1_EVENT_NAME")
 V2_EVENT = os.getenv("V2_EVENT_NAME")
+PARTICIPANT_STATUS_EVENT = os.getenv("PARTICIPANT_STATUS_EVENT_NAME")
 
 logger = logging.getLogger(__name__)
 
@@ -72,6 +74,17 @@ def dispatch_event(
             record_id=record_id,
             event_name=event_name,
             visit_config=visit_config,
+            redcap=redcap,
+            polotrial=polotrial,
+            protocol_nickname=protocol_nickname,
+        )
+        return
+    
+    if event_name == PARTICIPANT_STATUS_EVENT:
+        logger.info("Dispatching to participant status update handler: %s", event_name)
+        sync_participant_status_update(
+            record_id=record_id,
+            event_name=event_name,
             redcap=redcap,
             polotrial=polotrial,
             protocol_nickname=protocol_nickname,
