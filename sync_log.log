@@ -1935,3 +1935,87 @@
 2026-03-16 13:04:56,390 - WARNING - No handlers implemented for event: status_atualization.py
 2026-03-16 13:10:34,678 - WARNING - No handlers implemented for event: status_atualization.py
 2026-03-16 13:10:39,918 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:30:25,149 - WARNING - No handlers implemented for event: status_atualization.py
+2026-03-16 13:35:36,114 - INFO - Dispatching to participant status update handler: status_do_particip_arm_1
+2026-03-16 13:35:37,025 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 13:35:37,025 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 13:35:37,025 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 13:35:37,025 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Status do Participante","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"record_id","value":"57-1"},{"record":"57-1","redcap_event_name":"S
+2026-03-16 13:35:37,025 - INFO - REDCap: exported record 57-1 for event status_do_particip_arm_1 with 5 fields
+2026-03-16 13:35:37,026 - INFO - Retrieved REDCap data for record_id: 57-1, event_name: status_do_particip_arm_1
+2026-03-16 13:35:37,294 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 13:35:37,294 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 13:35:37,294 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 13:35:37,295 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-16 13:35:37,296 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-16 13:35:37,999 - INFO - Polotrial: authentication successful
+2026-03-16 13:35:38,183 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-16 13:36:13,487 - INFO - Dispatching to participant status update handler: status_do_particip_arm_1
+2026-03-16 13:36:14,137 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 13:36:14,137 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 13:36:14,138 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 13:36:14,138 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Status do Participante","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"record_id","value":"57-1"},{"record":"57-1","redcap_event_name":"S
+2026-03-16 13:36:14,138 - INFO - REDCap: exported record 57-1 for event status_do_particip_arm_1 with 5 fields
+2026-03-16 13:36:14,138 - INFO - Retrieved REDCap data for record_id: 57-1, event_name: status_do_particip_arm_1
+2026-03-16 13:36:14,412 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 13:36:14,412 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 13:36:14,412 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 13:36:14,412 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-16 13:36:14,413 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-16 13:36:15,093 - INFO - Polotrial: authentication successful
+2026-03-16 13:36:15,279 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-16 13:36:15,605 - INFO - Protocol found: id=2372 (site=4)
+2026-03-16 14:13:27,277 - INFO - Dispatching to participant status update handler: status_do_particip_arm_1
+2026-03-16 14:13:28,092 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:13:28,092 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:13:28,092 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:13:28,092 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Status do Participante","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"record_id","value":"57-1"},{"record":"57-1","redcap_event_name":"S
+2026-03-16 14:13:28,093 - INFO - REDCap: exported record 57-1 for event status_do_particip_arm_1 with 5 fields
+2026-03-16 14:13:28,093 - INFO - Retrieved REDCap data for record_id: 57-1, event_name: status_do_particip_arm_1
+2026-03-16 14:13:28,420 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:13:28,420 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:13:28,420 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:13:28,420 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-16 14:13:28,421 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-16 14:13:29,020 - INFO - Polotrial: authentication successful
+2026-03-16 14:13:29,215 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-16 14:13:29,597 - INFO - Protocol found: id=2372 (site=4)
+2026-03-16 14:13:30,073 - INFO - Participant found: id=3310 (volunteer id=3336)
+2026-03-16 14:13:30,073 - INFO - Mapped REDCap status 'Ativo' to PoloTrial status code '11' for record_id=57-1, event_name=status_do_particip_arm_1
+2026-03-16 14:13:31,980 - INFO - Updated participant id=3310 status in PoloTrial from '540' to '11'.
+2026-03-16 14:15:46,994 - INFO - Dispatching to participant status update handler: status_do_particip_arm_1
+2026-03-16 14:15:47,658 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:15:47,658 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:15:47,658 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:15:47,659 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Status do Participante","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"record_id","value":"57-1"},{"record":"57-1","redcap_event_name":"S
+2026-03-16 14:15:47,659 - INFO - REDCap: exported record 57-1 for event status_do_particip_arm_1 with 5 fields
+2026-03-16 14:15:47,659 - INFO - Retrieved REDCap data for record_id: 57-1, event_name: status_do_particip_arm_1
+2026-03-16 14:15:47,950 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:15:47,950 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:15:47,950 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:15:47,950 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-16 14:15:47,951 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-16 14:15:48,572 - INFO - Polotrial: authentication successful
+2026-03-16 14:15:48,763 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-16 14:15:49,124 - INFO - Protocol found: id=2372 (site=4)
+2026-03-16 14:15:49,733 - INFO - Participant found: id=3310 (volunteer id=3336)
+2026-03-16 14:15:49,733 - INFO - Mapped REDCap status 'Falha de seleção' to PoloTrial status code '310' for record_id=57-1, event_name=status_do_particip_arm_1
+2026-03-16 14:15:51,636 - INFO - Updated participant id=3310 status in PoloTrial from '11' to '310'.
+2026-03-16 14:16:24,419 - INFO - Dispatching to participant status update handler: status_do_particip_arm_1
+2026-03-16 14:16:25,206 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:16:25,206 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:16:25,206 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:16:25,206 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Status do Participante","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"record_id","value":"57-1"},{"record":"57-1","redcap_event_name":"S
+2026-03-16 14:16:25,207 - INFO - REDCap: exported record 57-1 for event status_do_particip_arm_1 with 5 fields
+2026-03-16 14:16:25,207 - INFO - Retrieved REDCap data for record_id: 57-1, event_name: status_do_particip_arm_1
+2026-03-16 14:16:25,487 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-16 14:16:25,487 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-16 14:16:25,487 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-16 14:16:25,487 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"57-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-16 14:16:25,488 - INFO - REDCap: exported record 57-1 for event visita_1__screenin_arm_1 with 179 fields
+2026-03-16 14:16:26,195 - INFO - Polotrial: authentication successful
+2026-03-16 14:16:26,382 - INFO - Volunteer found: 57-1 -> id=3336
+2026-03-16 14:16:26,762 - INFO - Protocol found: id=2372 (site=4)
+2026-03-16 14:16:27,305 - INFO - Participant found: id=3310 (volunteer id=3336)
+2026-03-16 14:16:27,305 - INFO - Mapped REDCap status 'Ativo' to PoloTrial status code '11' for record_id=57-1, event_name=status_do_particip_arm_1
+2026-03-16 14:16:29,610 - INFO - Updated participant id=3310 status in PoloTrial from '310' to '11'.

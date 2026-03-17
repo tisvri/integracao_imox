@@ -67,6 +67,17 @@ def dispatch_event(
         
         return
     
+    if event_name == PARTICIPANT_STATUS_EVENT:
+        logger.info("Dispatching to participant status update handler: %s", event_name)
+        sync_participant_status_update(
+            record_id=record_id,
+            event_name=event_name,
+            redcap=redcap,
+            polotrial=polotrial,
+            protocol_nickname=protocol_nickname,
+        )
+        return
+    
     if  event_name in VISITS_CATALOG:
         visit_config = VISITS_CATALOG[event_name]
         logger.info("Dispatching to generic handler: %s (task=%s)", event_name, visit_config.polotrial_visit_name)
@@ -80,16 +91,7 @@ def dispatch_event(
         )
         return
     
-    if event_name == PARTICIPANT_STATUS_EVENT:
-        logger.info("Dispatching to participant status update handler: %s", event_name)
-        sync_participant_status_update(
-            record_id=record_id,
-            event_name=event_name,
-            redcap=redcap,
-            polotrial=polotrial,
-            protocol_nickname=protocol_nickname,
-        )
-        return
+    
     
     logger.warning("No handlers implemented for event: %s", event_name)
     raise RuntimeError(f"No handler implemented for event: {event_name}")

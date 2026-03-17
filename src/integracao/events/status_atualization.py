@@ -31,6 +31,7 @@ logger = logging.getLogger(__name__)
 #====================================================================================================
 
 PARTICIPANT_STATUS_EVENT = os.getenv("PARTICIPANT_STATUS_EVENT_NAME")
+PARTICIPANT_STATUS_FIELD = os.getenv("PARTICIPANT_STATUS")
 
 
 #====================================================================================================
@@ -85,12 +86,51 @@ def sync_participant_status_update(
     if not volunteer:
         raise RuntimeError(
             f"Volunteer not found in PoloTrial for record_id={record_id}. "
-            "Cannot sync V2 randomization."
+            "Cannot sync participant status update."
         )
     co_voluntario = int(volunteer["id"])
     logger.info("Volunteer found: %s -> id=%s", record_id, co_voluntario)
 
+    # Step 4: Protocol
+    protocol = polotrial.get_protocol(co_centro=site_code, apelido_protocolo = protocol_nickname)
+    if not protocol:
+        raise RuntimeError(
+            f"Protocol {protocol_nickname!r} not found for site {site_code!r} in PoloTrial. Cannot sync participant status update."
+        )
+    co_protocolo = int(protocol["id"])
+    logger.info("Protocol found: id=%s (site=%s)", co_protocolo, site_code)
 
+    #Step 5: Participant
+    participant = polotrial.find_participant(co_voluntario=co_voluntario, co_protocolo=co_protocolo)
+    if not participant:
+        raise RuntimeError(
+            f"Participant not found in PoloTrial for volunteer id={co_voluntario}. Cannot sync participant status update."
+        )
+    co_participante = int(participant["id"])
+    logger.info("Participant found: id=%s (volunteer id=%s)", co_participante, co_voluntario)
 
+    # Step 6: Extract status from Redcap and map to Polotrial
+    redcap_status_raw = str(redcap_payload.get(PARTICIPANT_STATUS_FIELD) or "").strip()
+    if not redcap_status_raw:
+        logger.info("No participant status found in REDCap for record_id=%s, event_name=%s. Skipping status update.", record_id, event_name)
+        return
+    polotrial_status_code = STATUS_CODE_MAPPING.get(redcap_status_raw)
+    if not polotrial_status_code:
+        logger.warning(
+            f"Unmapped participant status code from REDCap: {redcap_status_raw!r} for record_id={record_id}, event_name={event_name}. Skipping status update."
+        )
+        return
+    logger.info(f"Mapped REDCap status {redcap_status_raw!r} to PoloTrial status code {polotrial_status_code!r} for record_id={record_id}, event_name={event_name}")
 
+    # Step 7: Update participant sztatus in Polotrial
+    current_participant = polotrial.get_participant(co_participante)
+    current_status = str(current_participant.get("status_participante", ""))
+
+    if current_status == polotrial_status_code:
+        logger.info(f"Participant status in PoloTrial already up-to-date for participant id={co_participante}. Current status: {current_status!r}. No update needed.")
+        return 
     
+    polotrial.update_participant(co_participante, {
+        "status_participante": polotrial_status_code
+    })
+    logger.info(f"Updated participant id={co_participante} status in PoloTrial from {current_status!r} to {polotrial_status_code!r}.")
