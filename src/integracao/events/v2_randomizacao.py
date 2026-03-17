@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 # ── Constants ──────────────────────────────────────────────────────────
 V1_EVENT = "vsv1_arm_1"
-CENTER_FIELD = os.getenv("CENTRO")
+CENTER_FIELD = "dados_pessoais_site"
 
 V2_EVENT = "vrv2_arm_1"
 V2_DATE_FIELD = "revisao_dt_visita"
@@ -38,20 +38,15 @@ ARM_MAPPING: Dict[str, int] = {
 
 ARM_POLOTRIAL_PATTERNS: Dict[int, Dict[str, str]] = {
     1: {
-        "pattern": r"Grupo.*S[eé]rum Ultra Repositor",
+        "pattern": r"Grupo.*S[eé]rum.*Ultra.*Repositor",
         "label": "Grupo 1 - Sérum Ultra Repositor",
     },
     2: {
-        "pattern": r"Grupo.*Hidra.*Ultra Refres.*Hidra.*[IÍií]ntimo",
+        "pattern": r"Grupo.*Hidra.*Ultra.*Refres.*Hidra.*[IÍií]ntimo",
         "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
     },
-    # 2: {
-    #     "pattern": r"Grupo Hidra. Ultra. Refres. e Hidra. Intimo",
-    #     "label": "Grupo 2 - Hidratante Ultra Refrescante e Hidratante Íntimo",
-    # },
-
     3: {
-        "pattern": r"Grupo.*Trat.*Intensivo Noturno",
+        "pattern": r"Grupo.*Trat.*Intensivo.*Noturno",
         "label": "Grupo 3 - Tratamento Intensivo Noturno",
     },
 }
@@ -112,6 +107,7 @@ def sync_v2_randomization(
 
     # 2. Mapping fields REDCap -> PoloTrial
     co_centro_raw = str(v1_payload.get(CENTER_FIELD) or "").strip()
+    logger.info("Mapping REDCap center to PoloTrial site code: %s=%r", CENTER_FIELD, co_centro_raw)
     site_code = SITE_CODE_MAPPING.get(co_centro_raw)
     if not site_code:
         raise RuntimeError(
@@ -224,7 +220,7 @@ def sync_v2_randomization(
             polotrial=polotrial,
             data_randomizacao=v2_date_for_participant,  # ← passa a data junto
             # # Atualizar agenda
-            # atualizar_agenda={"atualizar_agenda": "1"},
+            # atualizar_agenda=1 #{"atualizar_agenda": "1"},
         )
 
     logger.info("V2 sync completed for record_id=%s", record_id)
