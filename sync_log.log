@@ -6194,3 +6194,6 @@ RuntimeError: V2: Visit 'VR/V2' not found in PoloTrial for participant 3320
 2026-03-18 14:33:35,276 - INFO - Mapped REDCap status 'Triagem' to PoloTrial status code '540' for record_id=79-2, event_name=status_do_particip_arm_1
 2026-03-18 14:33:36,910 - INFO - Updated participant id=3320 status in PoloTrial from '11' to '540'.
 2026-03-18 14:33:36,910 - INFO - Successfully processed DET for record_id=79-2, event_name=status_do_particip_arm_1
+2026-03-18 15:07:48,203 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-18 15:28:23,888 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-18 15:28:24,419 - INFO - Webhook initialized for protocol: oxandrolona
