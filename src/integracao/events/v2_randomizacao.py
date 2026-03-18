@@ -148,7 +148,7 @@ def sync_v2_randomization(
     logger.info("Lista de /participante_visita_procedimentos")
     visits = polotrial.list_participant_visits(co_participante=co_participante)
     #Logger de visitas
-    logger.info("DEBUG: Participant visits for co_participante=%s: (%s)", co_participante,visits)
+    # logger.info("DEBUG: Participant visits for co_participante=%s: (%s)", co_participante,visits)
 
 
     v2_visit_tasks = next((procedures for procedures in visits if procedures.get("nome_tarefa", "") == V2_POLOTRIAL_VISIT_NAME), None)
