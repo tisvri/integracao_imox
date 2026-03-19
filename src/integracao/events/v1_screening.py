@@ -163,7 +163,7 @@ def sync_v1_screening(
     visits = polotrial.list_participant_visits(co_participante = co_participante)
     logger.info("Participant visits retrieved: %d, for participant %d", len(visits), co_participante)
 
-    v1_visit_name = config.V1_POLTRIAL_EVENT_NAME.strip()
+    v1_visit_name = config.V1_POLOTRIAL_EVENT_NAME.strip()
 
     v1 = next((v for v in visits if v.get("nome_tarefa","") == v1_visit_name), None)
     logger.info("Lokking for visit #1 with name %r among: %s", v1_visit_name, [v.get("nome_tarefa") for v in visits])

@@ -56,6 +56,7 @@ def sync_generic_visit(
                 visit_config.polotrial_visit_name,
                 pp_randomized,
             )
+            return
     #2. Get participant info from PoloTrial.
     redcap_payload = redcap.export_record_eav(record_id, event_name)
     

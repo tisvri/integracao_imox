@@ -128,7 +128,7 @@ VISITS_CATALOG = {
     # H24_EVENT
     H24_EVENT: VisitConfig(
         redcap_event_name = H24_EVENT,
-        polotrial_visit_name = "H24",
+        polotrial_visit_name = "H24_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_24H_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -142,7 +142,7 @@ VISITS_CATALOG = {
     # W1_EVENT_NAME
     W1_EVENT: VisitConfig(
         redcap_event_name = W1_EVENT,
-        polotrial_visit_name = "W1",
+        polotrial_visit_name = "W1_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_1_SEMANA_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -156,7 +156,7 @@ VISITS_CATALOG = {
     # W2_EVENT_NAME
     W2_EVENT: VisitConfig(
         redcap_event_name = W2_EVENT,
-        polotrial_visit_name = "W2",
+        polotrial_visit_name = "W2_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_2_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -170,7 +170,7 @@ VISITS_CATALOG = {
     # W3_EVENT_NAME
     W3_EVENT: VisitConfig(
         redcap_event_name = W3_EVENT,
-        polotrial_visit_name = "W3",
+        polotrial_visit_name = "W3_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_3_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -184,7 +184,7 @@ VISITS_CATALOG = {
     # W4_EVENT_NAME
     W4_EVENT: VisitConfig(
         redcap_event_name = W4_EVENT,
-        polotrial_visit_name = "W4",
+        polotrial_visit_name = "W4_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_4_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -198,7 +198,7 @@ VISITS_CATALOG = {
     # W8_EVENT_NAME
     W8_EVENT: VisitConfig(
         redcap_event_name = W8_EVENT,
-        polotrial_visit_name = "W8",
+        polotrial_visit_name = "W8_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_8_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -212,7 +212,7 @@ VISITS_CATALOG = {
     # W12_EVENT_NAME
     W12_EVENT: VisitConfig(
         redcap_event_name = W12_EVENT,
-        polotrial_visit_name = "W12",
+        polotrial_visit_name = "W12_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_12_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -226,7 +226,7 @@ VISITS_CATALOG = {
     # W16_EVENT_NAME
     W16_EVENT: VisitConfig(
         redcap_event_name = W16_EVENT,
-        polotrial_visit_name = "W16",
+        polotrial_visit_name = "W16_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_16_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -240,7 +240,7 @@ VISITS_CATALOG = {
     # W20_EVENT_NAME
     W20_EVENT: VisitConfig(
         redcap_event_name = W20_EVENT,
-        polotrial_visit_name = "W20",
+        polotrial_visit_name = "W20_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_20_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -254,7 +254,7 @@ VISITS_CATALOG = {
     # W24_EVENT_NAME
     W24_EVENT: VisitConfig(
         redcap_event_name = W24_EVENT,
-        polotrial_visit_name = "W24",
+        polotrial_visit_name = "W24_POLOTRIAL_EVENT_NAME",
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_24_SEMANAS_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
@@ -270,7 +270,7 @@ VISITS_CATALOG = {
     # Unscheduled Visit
     VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
         redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
-        polotrial_visit_name= "Não Programada",
+        polotrial_visit_name= "VNP_POLOTRIAL_EVENT_NAME",
         date_field = "form_medico_dt_visita",
         procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
         requires_pk=None,
