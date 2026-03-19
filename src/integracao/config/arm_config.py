@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import os
 from typing import Dict, Optional
-
+from integracao.config import config
 import dotenv
 
 dotenv.load_dotenv(override=True)
@@ -26,7 +26,7 @@ def load_arm_mapping() -> Dict[str, int]:
     Example: "1:1,Não alocado:1,2:2,Alocado:2"
     """
 
-    raw = os.getenv("ARM_MAPPING", "")
+    raw = config.ARM_MAPPING
     mapping: Dict[str, int] = {}
     for pair in raw.split(","):
         pair = pair.strip()
@@ -45,11 +45,11 @@ def load_arm_polotrial_patterns() -> Dict[int, Dict[str, str]]:
     patterns: Dict[int, Dict[str,str]] = {}
     n = 1
     while True:
-        pattern_env_key = os.getenv(f"ARM_{n}_PATTERN_ENV")
-        label = os.getenv(f"ARM_{n}_LABEL")
+        pattern_env_key = config(f"ARM_{n}_PATTERN_ENV")
+        label = config(f"ARM_{n}_LABEL")
         if not pattern_env_key or not label:
             break
-        pattern_value = os.getenv(pattern_env_key, "")
+        pattern_value = config(pattern_env_key, "")
         patterns[n] = {"pattern": pattern_value, "label": label}
         n += 1
     return patterns

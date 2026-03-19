@@ -17,6 +17,8 @@ import time
 import dotenv
 import os
 
+from integracao.config import config
+
 dotenv.load_dotenv(override=True)
 
 logger = logging.getLogger(__name__)
@@ -47,7 +49,7 @@ def sync_v1_screening(
         Helper function to read field value from REDCap payload using .env variable as reference.
         It first reads the field name from the environment variable specified by `env_var`. If the environment variable is not set or empty, it returns the provided `fallback` value. If the environment variable is set, it retrieves the corresponding value from the `redcap_payload` using the field name. If the field name is "record_id", it returns the `record_id` directly. Otherwise, it returns the value as a string if it exists, or the `fallback` if the value is empty or not present in the payload.
         """
-        field_name = os.getenv(env_var, "").strip().strip('"').strip("'")
+        field_name = config(env_var, "").strip().strip('"').strip("'")
         if not field_name:
             return fallback
         value = redcap_payload.get(field_name, fallback)
@@ -65,8 +67,8 @@ def sync_v1_screening(
     site_code = SITE_CODE_MAPPING.get(rc("CENTRO").strip(), None)
     logger.info("Mapped site: %r -> %r", rc("CENTRO"), site_code)# Ponto de checagem
 
-    race_code = RACE_CODE_MAPPING.get(rc("RAÇA").strip(), None)
-    logger.info("Mapped race: %r -> %r", rc("RAÇA"), race_code)# Ponto de checagem
+    race_code = RACE_CODE_MAPPING.get(rc("RACA").strip(), None)
+    logger.info("Mapped race: %r -> %r", rc("RACA"), race_code)# Ponto de checagem
     
     volunteer_payload = {
         "nome": rc("NOME", record_id),
@@ -108,7 +110,7 @@ def sync_v1_screening(
     
     # 6. Protocol Arm
     arms = polotrial.list_arms(co_protocolo)
-    triagem_arm_name = os.getenv("TRIAGEM_ARM_NAME", "").strip()
+    triagem_arm_name = config.TRIAGEM_ARM_NAME.strip()
 
     if not triagem_arm_name:
         raise RuntimeError("TRIAGEM_ARM_NAME not set")
@@ -122,7 +124,7 @@ def sync_v1_screening(
         None,
     )
     #Checagem de braços
-    logger.info("DEBUG: Arms matched for Triagem: %s", [a.get("nome") for a in arms if re.search(rc("TRIAGEM_ARM_NAME"), str(a.get("nome", "")), re.IGNORECASE)])
+    logger.info("DEBUG: Arms matched for Triagem: %s", [a.get("nome") for a in arms if re.search(re.escape(triagem_arm_name), str(a.get("nome", "")), re.IGNORECASE)])
     
     if not arm_match:
         raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
@@ -166,7 +168,7 @@ def sync_v1_screening(
     visits = polotrial.list_participant_visits(co_participante = co_participante)
     logger.info("Participant visits retrieved: %d, for participant %d", len(visits), co_participante)
 
-    v1_visit_name = os.getenv("V1_POLTRIAL_EVENT_NAME", "").strip()
+    v1_visit_name = config.V1_POLTRIAL_EVENT_NAME.strip()
 
     v1 = next((v for v in visits if v.get("nome_tarefa","") == v1_visit_name), None)
     logger.info("Lokking for visit #1 with name %r among: %s", v1_visit_name, [v.get("nome_tarefa") for v in visits])

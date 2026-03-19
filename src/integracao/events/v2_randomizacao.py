@@ -22,6 +22,7 @@ from integracao.config.arm_config import (
     ARM_POLOTRIAL_PATTERNS,
     parse_randomization_group,
 )
+from integracao.config import config
 
 dotenv.load_dotenv(override=True)
 
@@ -31,16 +32,16 @@ dotenv.load_dotenv(override=True)
 logger = logging.getLogger(__name__)
 
 # ── Constants ──────────────────────────────────────────────────────────
-V1_EVENT = os.getenv("V1_EVENT_NAME")
-CENTER_FIELD = os.getenv("CENTRO")
+V1_EVENT = config.V1_EVENT_NAME
+CENTER_FIELD = config.CENTRO
 
-V2_EVENT = os.getenv("V2_EVENT_NAME")
-V2_DATE_FIELD =  os.getenv("DT_VISITA")
+V2_EVENT = config.V2_EVENT_NAME
+V2_DATE_FIELD =  config.DT_VISITA
 
-RANDOMIZATION_FIELD = os.getenv("RANDOMIZACAO")
-DT_RANDOMIZATION_FIELD = os.getenv("DT_RANDOMIZACAO")
+RANDOMIZATION_FIELD = config.RANDOMIZACAO
+DT_RANDOMIZATION_FIELD = config.DT_RANDOMIZACAO
 
-V2_POLOTRIAL_VISIT_NAME = os.getenv("V2_POLTRIAL_EVENT_NAME")  # = "VR/V2"
+V2_POLOTRIAL_VISIT_NAME = config.V2_POLTRIAL_EVENT_NAME  # = "VR/V2"
 
 
 

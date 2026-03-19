@@ -6197,3 +6197,262 @@ RuntimeError: V2: Visit 'VR/V2' not found in PoloTrial for participant 3320
 2026-03-18 15:07:48,203 - INFO - Webhook initialized for protocol: oxandrolona
 2026-03-18 15:28:23,888 - INFO - Shutting down webhook for protocol: oxandrolona
 2026-03-18 15:28:24,419 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-19 09:34:20,010 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-19 09:41:24,719 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_2__randomiz_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:24,723 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-19 09:41:25,208 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:25,209 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-19 09:41:25,347 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:25,347 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:25,347 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:25,347 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"randomizacao_randomizacao","value":"Randomizado"},{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u
+2026-03-19 09:41:25,348 - INFO - REDCap: exported record 79-10 for event visita_2__randomiz_arm_1 with 3 fields
+2026-03-19 09:41:25,585 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:25,586 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:25,586 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:25,586 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:25,586 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:25,848 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:25,848 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:25,848 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:25,848 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:25,848 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:25,848 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-19 09:41:25,849 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-19 09:41:25,849 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-03-19 09:41:25,849 - INFO - Volunteer payload prepared: {'nome': '79-10', 'iniciais': 'J.F.C', 'data_nascimento': '1980-06-30', 'sexo': '603', 'email': '', 'data_inclusao': '', 'centro': '4', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-03-19 09:41:26,261 - INFO - Polotrial: authentication successful
+2026-03-19 09:41:26,589 - INFO - Volunteer found: 79-10 -> id=3352
+2026-03-19 09:41:26,589 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:26,595 - INFO - Polotrial: authentication successful
+2026-03-19 09:41:26,778 - INFO - Volunteer exists: 79-10 -> id=3352
+2026-03-19 09:41:26,778 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:26,921 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:27,117 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:27,357 - INFO - Participant found: id=3328
+2026-03-19 09:41:27,357 - INFO - DEBUG: Data da V2:  (from field revisao_dt_visita)
+2026-03-19 09:41:27,385 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-19 09:41:27,385 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-19 09:41:27,798 - INFO - Participant exists: id=3328
+2026-03-19 09:41:32,312 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_2__randomiz_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:32,313 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-19 09:41:32,810 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:32,810 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-19 09:41:32,942 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:32,943 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:32,943 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:32,943 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"randomizacao_ampolas","value":"14 \/ 20"},{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00
+2026-03-19 09:41:32,943 - INFO - REDCap: exported record 79-10 for event visita_2__randomiz_arm_1 with 4 fields
+2026-03-19 09:41:33,196 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:33,197 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:33,197 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:33,197 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:33,197 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:33,384 - INFO - Volunteer found: 79-10 -> id=3352
+2026-03-19 09:41:33,384 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:33,463 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:33,463 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:33,463 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:33,463 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:33,464 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:33,464 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-19 09:41:33,464 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-19 09:41:33,464 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-03-19 09:41:33,464 - INFO - Volunteer payload prepared: {'nome': '79-10', 'iniciais': 'J.F.C', 'data_nascimento': '1980-06-30', 'sexo': '603', 'email': '', 'data_inclusao': '', 'centro': '4', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-03-19 09:41:33,641 - INFO - Volunteer exists: 79-10 -> id=3352
+2026-03-19 09:41:33,641 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:33,715 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:33,987 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:34,190 - INFO - Participant found: id=3328
+2026-03-19 09:41:34,190 - INFO - DEBUG: Data da V2:  (from field revisao_dt_visita)
+2026-03-19 09:41:34,230 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-19 09:41:34,231 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-19 09:41:34,869 - INFO - Participant exists: id=3328
+2026-03-19 09:41:37,357 - INFO - Lista de /participante_visita_procedimentos
+2026-03-19 09:41:38,095 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "",
+  "status": 20
+}
+2026-03-19 09:41:38,536 - INFO - visita_2__randomiz_arm_1 updated (id=40680).
+2026-03-19 09:41:38,536 - INFO - DEBUG: Current Date: None | Desired Date: 
+2026-03-19 09:41:38,700 - ERROR - Error processing DET for record_id=79-10, event_name=visita_2__randomiz_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 59, in dispatch_event
+    sync_v2_randomization(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 179, in sync_v2_randomization
+    pvp_df = sync_v2_procedures(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 243, in sync_v2_procedures
+    pvp_raw = polotrial.list_participant_visit_procedures(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 264, in list_participant_visit_procedures
+    raise RuntimeError(f"Error fetching participant visit procedures: {procedures_request.status_code} - {procedures_request.text}")
+RuntimeError: Error fetching participant visit procedures: 500 - {"status":"error","message":"Internal server error"}
+2026-03-19 09:41:44,190 - INFO - Lista de /participante_visita_procedimentos
+2026-03-19 09:41:44,923 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "",
+  "status": 20
+}
+2026-03-19 09:41:45,349 - INFO - visita_2__randomiz_arm_1 updated (id=40680).
+2026-03-19 09:41:45,349 - INFO - DEBUG: Current Date: None | Desired Date: 
+2026-03-19 09:41:45,518 - ERROR - Error processing DET for record_id=79-10, event_name=visita_2__randomiz_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 59, in dispatch_event
+    sync_v2_randomization(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 179, in sync_v2_randomization
+    pvp_df = sync_v2_procedures(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 243, in sync_v2_procedures
+    pvp_raw = polotrial.list_participant_visit_procedures(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 264, in list_participant_visit_procedures
+    raise RuntimeError(f"Error fetching participant visit procedures: {procedures_request.status_code} - {procedures_request.text}")
+RuntimeError: Error fetching participant visit procedures: 500 - {"status":"error","message":"Internal server error"}
+2026-03-19 09:41:47,151 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_2__randomiz_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:47,152 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-19 09:41:47,645 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:41:47,646 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-03-19 09:41:47,915 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:47,915 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:47,915 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:47,916 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"randomizacao_aceita_grupopk","value":"Sim"},{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u
+2026-03-19 09:41:47,916 - INFO - REDCap: exported record 79-10 for event visita_2__randomiz_arm_1 with 6 fields
+2026-03-19 09:41:48,184 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:48,184 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:48,184 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:48,184 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:48,184 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:48,291 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:41:48,291 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:41:48,291 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:41:48,291 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:41:48,291 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:41:48,291 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-03-19 09:41:48,291 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-03-19 09:41:48,291 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-03-19 09:41:48,291 - INFO - Volunteer payload prepared: {'nome': '79-10', 'iniciais': 'J.F.C', 'data_nascimento': '1980-06-30', 'sexo': '603', 'email': '', 'data_inclusao': '', 'centro': '4', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-03-19 09:41:48,355 - INFO - Volunteer found: 79-10 -> id=3352
+2026-03-19 09:41:48,355 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:48,535 - INFO - Volunteer exists: 79-10 -> id=3352
+2026-03-19 09:41:48,535 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:41:48,547 - INFO - Participant visits retrieved: 3, for participant 3328
+2026-03-19 09:41:48,547 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'Data da Cirurgia de LCA', 'VR/V2']
+2026-03-19 09:41:48,547 - INFO - Participant visit found: id=40612
+2026-03-19 09:41:48,708 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:48,892 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:41:49,156 - INFO - Participant found: id=3328
+2026-03-19 09:41:49,156 - INFO - DEBUG: Data da V2:  (from field revisao_dt_visita)
+2026-03-19 09:41:49,184 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1', 'IMOX Versão nº1 - SUBGRUPO PK', 'IMOX Versão nº1 - TRIAGEM']
+2026-03-19 09:41:49,184 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-03-19 09:41:49,195 - ERROR - Error processing DET for record_id=79-10, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 45, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 189, in sync_v1_screening
+    polotrial.update_participant_visit(
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 363, in update_participant_visit
+    raise RuntimeError(f"Error updating participant visit {participante_visita_id}: {request.status_code} {request.text}")
+RuntimeError: Error updating participant visit 40612: 400 {"status":"error","message":"O campo data_estimada não pode ser nulo."}
+2026-03-19 09:41:49,623 - INFO - Participant exists: id=3328
+2026-03-19 09:41:55,562 - INFO - Participant visits retrieved: 3, for participant 3328
+2026-03-19 09:41:55,563 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'Data da Cirurgia de LCA', 'VR/V2']
+2026-03-19 09:41:55,563 - INFO - Participant visit found: id=40612
+2026-03-19 09:41:55,888 - ERROR - Error processing DET for record_id=79-10, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 45, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 189, in sync_v1_screening
+    polotrial.update_participant_visit(
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 363, in update_participant_visit
+    raise RuntimeError(f"Error updating participant visit {participante_visita_id}: {request.status_code} {request.text}")
+RuntimeError: Error updating participant visit 40612: 400 {"status":"error","message":"O campo data_estimada não pode ser nulo."}
+2026-03-19 09:41:59,156 - INFO - Lista de /participante_visita_procedimentos
+2026-03-19 09:41:59,891 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "",
+  "status": 20
+}
+2026-03-19 09:42:00,348 - INFO - visita_2__randomiz_arm_1 updated (id=40680).
+2026-03-19 09:42:00,348 - INFO - DEBUG: Current Date: None | Desired Date: 
+2026-03-19 09:42:00,519 - ERROR - Error processing DET for record_id=79-10, event_name=visita_2__randomiz_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 59, in dispatch_event
+    sync_v2_randomization(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 179, in sync_v2_randomization
+    pvp_df = sync_v2_procedures(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 243, in sync_v2_procedures
+    pvp_raw = polotrial.list_participant_visit_procedures(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 264, in list_participant_visit_procedures
+    raise RuntimeError(f"Error fetching participant visit procedures: {procedures_request.status_code} - {procedures_request.text}")
+RuntimeError: Error fetching participant visit procedures: 500 - {"status":"error","message":"Internal server error"}
+2026-03-19 09:42:10,320 - INFO - Participant visits retrieved: 3, for participant 3328
+2026-03-19 09:42:10,320 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'Data da Cirurgia de LCA', 'VR/V2']
+2026-03-19 09:42:10,320 - INFO - Participant visit found: id=40612
+2026-03-19 09:42:10,649 - ERROR - Error processing DET for record_id=79-10, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 45, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 189, in sync_v1_screening
+    polotrial.update_participant_visit(
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 363, in update_participant_visit
+    raise RuntimeError(f"Error updating participant visit {participante_visita_id}: {request.status_code} {request.text}")
+RuntimeError: Error updating participant visit 40612: 400 {"status":"error","message":"O campo data_estimada não pode ser nulo."}
+2026-03-19 09:42:17,854 - INFO - Received DET: project_id=57, username=gabrielaprazeressvri, instrument=randomizao, record=79-10, event_name=visita_2__randomiz_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-03-19 09:42:17,856 - INFO - Dispatching to V2 handler: visita_2__randomiz_arm_1
+2026-03-19 09:42:18,548 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:42:18,548 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:42:18,548 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:42:18,548 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u00e3o","field_name":"randomizacao_aceita_grupopk","value":"Sim"},{"record":"79-10","redcap_event_name":"Visita 2 - Randomiza\u00e7\u
+2026-03-19 09:42:18,548 - INFO - REDCap: exported record 79-10 for event visita_2__randomiz_arm_1 with 8 fields
+2026-03-19 09:42:18,821 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-19 09:42:18,821 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-19 09:42:18,821 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-19 09:42:18,821 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"79-10","redcap_event_name":"Visita 1 - Screening","field_name":"demografia_centro","value":"Irmandade da Santa Casa de Miseric\u00f3rdia de Santos"},{"record":"79-10","redcap_event_name":"
+2026-03-19 09:42:18,821 - INFO - REDCap: exported record 79-10 for event visita_1__screenin_arm_1 with 39 fields
+2026-03-19 09:42:19,259 - INFO - Volunteer found: 79-10 -> id=3352
+2026-03-19 09:42:19,259 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-03-19 09:42:19,602 - INFO - Protocol found: id=2372 (site=4)
+2026-03-19 09:42:20,113 - INFO - Participant found: id=3328
+2026-03-19 09:42:20,113 - INFO - DEBUG: Data da V2:  (from field revisao_dt_visita)
+2026-03-19 09:42:30,114 - INFO - Lista de /participante_visita_procedimentos
+2026-03-19 09:42:30,828 - INFO - DEBUG: Desired VR/V2 visit update payload:
+{
+  "data_realizada": "",
+  "status": 20
+}
+2026-03-19 09:42:31,284 - INFO - visita_2__randomiz_arm_1 updated (id=40680).
+2026-03-19 09:42:31,284 - INFO - DEBUG: Current Date: None | Desired Date: 
+2026-03-19 09:42:31,458 - ERROR - Error processing DET for record_id=79-10, event_name=visita_2__randomiz_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 59, in dispatch_event
+    sync_v2_randomization(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 179, in sync_v2_randomization
+    pvp_df = sync_v2_procedures(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v2_randomizacao.py", line 243, in sync_v2_procedures
+    pvp_raw = polotrial.list_participant_visit_procedures(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/polotrial_client.py", line 264, in list_participant_visit_procedures
+    raise RuntimeError(f"Error fetching participant visit procedures: {procedures_request.status_code} - {procedures_request.text}")
+RuntimeError: Error fetching participant visit procedures: 500 - {"status":"error","message":"Internal server error"}
+2026-03-19 11:36:39,231 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-19 11:36:39,929 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-19 11:41:04,298 - INFO - Shutting down webhook for protocol: oxandrolona

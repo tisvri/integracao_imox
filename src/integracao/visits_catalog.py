@@ -4,22 +4,24 @@ from typing import Dict, Any, Optional
 import os
 import dotenv
 
-V3_EVENT = os.getenv("V3_EVENT_NAME")
-V4_EVENT = os.getenv("V4_EVENT_NAME")
-V5_EVENT = os.getenv("V5_EVENT_NAME")
-PRE_INSERTION_EVENT = os.getenv("PRE_INSERTION_EVENT_NAME")
-PARTICIPANT_STATUS_EVENT = os.getenv("PARTICIPANT_STATUS_EVENT_NAME")
-H24_EVENT = os.getenv("H24_EVENT_NAME")
-W1_EVENT = os.getenv("W1_EVENT_NAME")
-W2_EVENT = os.getenv("W2_EVENT_NAME")
-W3_EVENT = os.getenv("W3_EVENT_NAME")
-W4_EVENT = os.getenv("W4_EVENT_NAME")
-W8_EVENT = os.getenv("W8_EVENT_NAME")
-W12_EVENT = os.getenv("W12_EVENT_NAME")
-W16_EVENT = os.getenv("W16_EVENT_NAME")
-W20_EVENT = os.getenv("W20_EVENT_NAME")
-W24_EVENT = os.getenv("W24_EVENT_NAME")
-VISITA_NAO_PROGRAMADA_EVENT = os.getenv("NP_EVENT_NAME")
+from integracao.config import config
+
+V3_EVENT = config.V3_EVENT_NAME
+V4_EVENT = config.V4_EVENT_NAME
+V5_EVENT = config.V5_EVENT_NAME
+PRE_INSERTION_EVENT = config.PRE_INSERTION_EVENT_NAME
+PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
+H24_EVENT = config.H24_EVENT_NAME
+W1_EVENT = config.W1_EVENT_NAME
+W2_EVENT = config.W2_EVENT_NAME
+W3_EVENT = config.W3_EVENT_NAME
+W4_EVENT = config.W4_EVENT_NAME
+W8_EVENT = config.W8_EVENT_NAME
+W12_EVENT = config.W12_EVENT_NAME
+W16_EVENT = config.W16_EVENT_NAME
+W20_EVENT = config.W20_EVENT_NAME
+W24_EVENT = config.W24_EVENT_NAME
+VISITA_NAO_PROGRAMADA_EVENT = config.NP_EVENT_NAME
 
 
 # Importing procedure mapping from sync_engine to avoid circular dependency

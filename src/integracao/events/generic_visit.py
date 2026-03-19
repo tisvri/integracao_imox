@@ -14,12 +14,14 @@ from integracao.sync_engine import (
     sync_executor
 )
 
+from integracao.config import config
+
 from integracao.visits_catalog import VisitConfig
 
 import os
 import dotenv
 dotenv.load_dotenv(override=True)
-V2_EVENT = os.getenv("V2_EVENT_NAME")
+V2_EVENT = config.V2_EVENT_NAME
 
 
 logger = logging.getLogger(__name__)

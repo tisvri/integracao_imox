@@ -21,6 +21,8 @@ from integracao.utils import get_date_from_redcap
 import os
 import dotenv
 
+from integracao.config import config
+
 
 dotenv.load_dotenv(override=True)
 
@@ -30,8 +32,8 @@ logger = logging.getLogger(__name__)
 # Constants
 #====================================================================================================
 
-PARTICIPANT_STATUS_EVENT = os.getenv("PARTICIPANT_STATUS_EVENT_NAME")
-PARTICIPANT_STATUS_FIELD = os.getenv("PARTICIPANT_STATUS")
+PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
+PARTICIPANT_STATUS_FIELD = config.PARTICIPANT_STATUS
 
 
 #====================================================================================================

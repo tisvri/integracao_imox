@@ -14,9 +14,10 @@ from integracao.redcap_client import RedcapClient
 from integracao.mappings.site_code_maps import SITE_CODE_MAPPING
 import os
 import dotenv
+from integracao.config import config
 
 dotenv.load_dotenv(override=True)
-V1_EVENT = os.getenv("V1_EVENT_NAME")
+V1_EVENT = config.V1_EVENT_NAME
 
 
 logger = logging.getLogger(__name__)

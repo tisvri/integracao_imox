@@ -11,11 +11,12 @@ from integracao.polotrial_client import PoloTrialClient
 from integracao.redcap_client import RedcapClient
 import os
 import dotenv
+from integracao.config import config
 
 dotenv.load_dotenv(override=True)
-V1_EVENT = os.getenv("V1_EVENT_NAME")
-V2_EVENT = os.getenv("V2_EVENT_NAME")
-PARTICIPANT_STATUS_EVENT = os.getenv("PARTICIPANT_STATUS_EVENT_NAME")
+V1_EVENT = config.V1_EVENT_NAME
+V2_EVENT = config.V2_EVENT_NAME
+PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
 
 logger = logging.getLogger(__name__)
 
@@ -62,7 +63,7 @@ def dispatch_event(
             redcap=redcap,
             polotrial=polotrial,
             protocol_nickname=protocol_nickname,
-            v2_date_field=os.getenv("DT_VISITA"),
+            v2_date_field=config.DT_VISITA,
         )
         
         return
