@@ -9154,3 +9154,5 @@ RuntimeError: Volunteer not found in PoloTrial for record_id=101-3. Cannot sync 
 2026-03-19 14:50:36,437 - INFO - Mapped REDCap status 'Triagem' to PoloTrial status code '540' for record_id=101-3, event_name=status_do_particip_arm_1
 2026-03-19 14:50:36,608 - INFO - Participant status in PoloTrial already up-to-date for participant id=3378. Current status: '540'. No update needed.
 2026-03-19 14:50:36,608 - INFO - Successfully processed DET for record_id=101-3, event_name=status_do_particip_arm_1
+2026-03-19 15:26:30,132 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-19 15:26:30,712 - INFO - Webhook initialized for protocol: oxandrolona
