@@ -9162,3 +9162,5 @@ RuntimeError: Volunteer not found in PoloTrial for record_id=101-3. Cannot sync 
 2026-03-19 15:42:53,327 - INFO - Webhook initialized for protocol: oxandrolona
 2026-03-19 15:43:29,339 - INFO - Shutting down webhook for protocol: oxandrolona
 2026-03-19 15:43:29,856 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-19 15:58:22,655 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-19 15:58:23,196 - INFO - Webhook initialized for protocol: oxandrolona
