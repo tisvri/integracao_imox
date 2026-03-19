@@ -9,14 +9,14 @@ import re
 from datetime import datetime
 import time
 
-from integracao.events.v2_randomizacao import CENTER_FIELD
+
 from integracao.mappings.site_code_maps import SITE_CODE_MAPPING
 from integracao.polotrial_client import PoloTrialClient
 from integracao.redcap_client import RedcapClient
 
 from integracao.mappings.status_maps import STATUS_CODE_MAPPING 
 
-from integracao.sync_engine import V1_EVENT
+
 from integracao.utils import get_date_from_redcap
 import os
 import dotenv
@@ -31,7 +31,8 @@ logger = logging.getLogger(__name__)
 #====================================================================================================
 # Constants
 #====================================================================================================
-
+V1_EVENT = config.V1_EVENT_NAME
+CENTER_FIELD = config.CENTRO
 PARTICIPANT_STATUS_EVENT = config.PARTICIPANT_STATUS_EVENT_NAME
 PARTICIPANT_STATUS_FIELD = config.PARTICIPANT_STATUS
 

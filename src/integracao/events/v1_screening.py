@@ -2,9 +2,8 @@ from __future__ import annotations
 import logging
 import json
 import re
-from dataclasses import dataclass
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 import pandas as pd
 from integracao.polotrial_client import PoloTrialClient
 from integracao.redcap_client import RedcapClient
@@ -12,14 +11,10 @@ from integracao.utils import get_date_from_redcap
 from integracao.mappings.procedures_maps import V1_POLOTRIAL_PROCEDURES_MAP
 from integracao.mappings.site_code_maps import SITE_CODE_MAPPING
 from integracao.mappings.race_code_maps import RACE_CODE_MAPPING
-from integracao.mappings.gender_maps import GENDER_MAPPING 
+from integracao.mappings.gender_maps import GENDER_MAPPING
 import time
-import dotenv
-import os
 
 from integracao.config import config
-
-dotenv.load_dotenv(override=True)
 
 logger = logging.getLogger(__name__)
 
@@ -42,34 +37,34 @@ def sync_v1_screening(
     # 2. Helper: read field name from .env and get value from redcap payload
     def rc(
         
-        env_var: str,
+        config_attr: str,
         fallback: str = ""
     ) -> str:
         """
         Helper function to read field value from REDCap payload using .env variable as reference.
-        It first reads the field name from the environment variable specified by `env_var`. If the environment variable is not set or empty, it returns the provided `fallback` value. If the environment variable is set, it retrieves the corresponding value from the `redcap_payload` using the field name. If the field name is "record_id", it returns the `record_id` directly. Otherwise, it returns the value as a string if it exists, or the `fallback` if the value is empty or not present in the payload.
+        It first reads the field name from the environment variable specified by `config_attr`. If the environment variable is not set or empty, it returns the provided `fallback` value. If the environment variable is set, it retrieves the corresponding value from the `redcap_payload` using the field name. If the field name is "record_id", it returns the `record_id` directly. Otherwise, it returns the value as a string if it exists, or the `fallback` if the value is empty or not present in the payload.
         """
-        field_name = config(env_var, "").strip().strip('"').strip("'")
+        field_name = getattr(config, config_attr, "")
         if not field_name:
             return fallback
-        value = redcap_payload.get(field_name, fallback)
-
+        
         if field_name == "record_id":
             return record_id
+        
         value = redcap_payload.get(field_name, "")
-        logger.debug("rc(%s) → field=%r, value=%r", env_var, field_name, value)
-        return str(value).strip() if value else fallback
+        logger.debug("rc(%s) ➡ field_name=%r value=%r", config_attr, field_name, value)
+        return str(value) if value else fallback
     
     # 3. Mapping fields REDCap -> PoloTrial
     gender_code = GENDER_MAPPING.get(rc("GENERO").strip(), None)
-    logger.info("Mapped gender: %r -> %r", rc("GENERO"), gender_code)# Ponto de checagem
+    logger.info("Mapped gender: %r -> %r", rc("GENERO"), gender_code)
 
     site_code = SITE_CODE_MAPPING.get(rc("CENTRO").strip(), None)
-    logger.info("Mapped site: %r -> %r", rc("CENTRO"), site_code)# Ponto de checagem
+    logger.info("Mapped site: %r -> %r", rc("CENTRO"), site_code)
 
     race_code = RACE_CODE_MAPPING.get(rc("RACA").strip(), None)
-    logger.info("Mapped race: %r -> %r", rc("RACA"), race_code)# Ponto de checagem
-    
+    logger.info("Mapped race: %r -> %r", rc("RACA"), race_code)
+
     volunteer_payload = {
         "nome": rc("NOME", record_id),
         "iniciais": rc("INICIAIS"),
@@ -81,10 +76,10 @@ def sync_v1_screening(
         "raca_cor": race_code,
         "contatos": "11111111111",
     }
-    logger.info("Volunteer payload prepared: %s", volunteer_payload) # Ponto de checagem
-    
+    logger.info("Volunteer payload prepared: %s", volunteer_payload)
+
     if not site_code:
-        raw_centro = rc("FIELD_CENTRO")
+        raw_centro = rc("CENTRO")
         raise RuntimeError(
             f"Could not map site ({raw_centro!r}) to polotrial co_centro. "
             f"Check SITE_CODE_MAPPING keys."

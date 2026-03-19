@@ -43,16 +43,27 @@ def load_arm_polotrial_patterns() -> Dict[int, Dict[str, str]]:
     """
 
     patterns: Dict[int, Dict[str,str]] = {}
-    n = 1
-    while True:
-        pattern_env_key = config(f"ARM_{n}_PATTERN_ENV")
-        label = config(f"ARM_{n}_LABEL")
+
+    # Fixed mapping: retrieves attributes directly from config.py
+
+    arm_definitions = {
+        1: ("ARM_1_PATTERN_ENV", "ARM_1_LABEL"),
+        2: ("ARM_2_PATTERN_ENV", "ARM_2_LABEL"),
+    }
+
+    for n, (pattern_env_attr, label_attr) in arm_definitions.items():
+        pattern_env_key = getattr(config, pattern_env_attr, None)
+        label = getattr(config, label_attr, None)
         if not pattern_env_key or not label:
-            break
-        pattern_value = config(pattern_env_key, "")
-        patterns[n] = {"pattern": pattern_value, "label": label}
-        n += 1
+            continue
+        # pattern_env_key is the name of the environment variable that contains the pattern to match for this arm (e.g. "PK_ARM_NAME")
+        pattern_value = getattr(config, pattern_env_key, "")
+        patterns[n] = {
+            "pattern" : pattern_value,
+            "label": label
+        }
     return patterns
+
 
 # Singletons loaded only once at module import
 ARM_MAPPING = load_arm_mapping()

@@ -71,7 +71,7 @@ VISITS_CATALOG = {
     #V3
     # This code snippet is defining a specific configuration for a visit in the `VISITS_CATALOG`
     # dictionary within the `VisitConfig` class.
-    "V3_EVENT": VisitConfig(
+    V3_EVENT: VisitConfig(
         redcap_event_name = V3_EVENT,
         polotrial_visit_name = "V3",
         date_field = "revisao_dt_visita",
@@ -84,7 +84,7 @@ VISITS_CATALOG = {
         },        
     ),
     #V4
-    "V4_EVENT": VisitConfig(
+    V4_EVENT: VisitConfig(
         redcap_event_name = V4_EVENT,
         polotrial_visit_name = "V4",
         date_field = "revisao_dt_visita",
@@ -98,7 +98,7 @@ VISITS_CATALOG = {
     ),
 
     # V5
-    "V5_EVENT": VisitConfig(
+    V5_EVENT: VisitConfig(
         redcap_event_name = V5_EVENT,
         polotrial_visit_name = "V5",
         date_field = "revisao_dt_visita",
@@ -112,7 +112,7 @@ VISITS_CATALOG = {
     ),
 
     # PRE_INSERTION_EVENT_NAME
-    "PRE_INSERTION_EVENT": VisitConfig(
+    PRE_INSERTION_EVENT: VisitConfig(
         redcap_event_name = PRE_INSERTION_EVENT,
         polotrial_visit_name = "Pré-inserção",
         date_field = "revisao_dt_visita",
@@ -126,7 +126,7 @@ VISITS_CATALOG = {
     ),
 
     # H24_EVENT
-    "H24_EVENT": VisitConfig(
+    H24_EVENT: VisitConfig(
         redcap_event_name = H24_EVENT,
         polotrial_visit_name = "H24",
         date_field = "revisao_dt_visita",
@@ -140,7 +140,7 @@ VISITS_CATALOG = {
     ),
     
     # W1_EVENT_NAME
-    "W1_EVENT": VisitConfig(
+    W1_EVENT: VisitConfig(
         redcap_event_name = W1_EVENT,
         polotrial_visit_name = "W1",
         date_field = "revisao_dt_visita",
@@ -154,7 +154,7 @@ VISITS_CATALOG = {
     ),
     
     # W2_EVENT_NAME
-    "W2_EVENT": VisitConfig(
+    W2_EVENT: VisitConfig(
         redcap_event_name = W2_EVENT,
         polotrial_visit_name = "W2",
         date_field = "revisao_dt_visita",
@@ -168,7 +168,7 @@ VISITS_CATALOG = {
     ),
     
     # W3_EVENT_NAME
-    "W3_EVENT": VisitConfig(
+    W3_EVENT: VisitConfig(
         redcap_event_name = W3_EVENT,
         polotrial_visit_name = "W3",
         date_field = "revisao_dt_visita",
@@ -182,7 +182,7 @@ VISITS_CATALOG = {
     ),
     
     # W4_EVENT_NAME
-    "W4_EVENT": VisitConfig(
+    W4_EVENT: VisitConfig(
         redcap_event_name = W4_EVENT,
         polotrial_visit_name = "W4",
         date_field = "revisao_dt_visita",
@@ -196,7 +196,7 @@ VISITS_CATALOG = {
     ),
     
     # W8_EVENT_NAME
-    "W8_EVENT": VisitConfig(
+    W8_EVENT: VisitConfig(
         redcap_event_name = W8_EVENT,
         polotrial_visit_name = "W8",
         date_field = "revisao_dt_visita",
@@ -210,7 +210,7 @@ VISITS_CATALOG = {
     ),
     
     # W12_EVENT_NAME
-    "W12_EVENT": VisitConfig(
+    W12_EVENT: VisitConfig(
         redcap_event_name = W12_EVENT,
         polotrial_visit_name = "W12",
         date_field = "revisao_dt_visita",
@@ -224,7 +224,7 @@ VISITS_CATALOG = {
     ),
     
     # W16_EVENT_NAME
-    "W16_EVENT": VisitConfig(
+    W16_EVENT: VisitConfig(
         redcap_event_name = W16_EVENT,
         polotrial_visit_name = "W16",
         date_field = "revisao_dt_visita",
@@ -238,7 +238,7 @@ VISITS_CATALOG = {
     ),
     
     # W20_EVENT_NAME
-    "W20_EVENT": VisitConfig(
+    W20_EVENT: VisitConfig(
         redcap_event_name = W20_EVENT,
         polotrial_visit_name = "W20",
         date_field = "revisao_dt_visita",
@@ -252,7 +252,7 @@ VISITS_CATALOG = {
     ),
     
     # W24_EVENT_NAME
-    "W24_EVENT": VisitConfig(
+    W24_EVENT: VisitConfig(
         redcap_event_name = W24_EVENT,
         polotrial_visit_name = "W24",
         date_field = "revisao_dt_visita",
@@ -268,7 +268,7 @@ VISITS_CATALOG = {
 
 
     # Unscheduled Visit
-    "VISITA_NAO_PROGRAMADA_EVENT": VisitConfig(
+    VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
         redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
         polotrial_visit_name= "Não Programada",
         date_field = "form_medico_dt_visita",
