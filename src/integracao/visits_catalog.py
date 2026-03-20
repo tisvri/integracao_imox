@@ -132,7 +132,7 @@ VISITS_CATALOG = {
     # PRE_INSERTION_EVENT_NAME
     PRE_INSERTION_EVENT: VisitConfig(
         redcap_event_name = PRE_INSERTION_EVENT,
-        polotrial_visit_name = "Pré-inserção",
+        polotrial_visit_name = PRE_INSERTION_POLOTRIAL_EVENT_NAME,
         date_field = "sub_pk_dt_visita",
         procedures_map = PK_PRE_INSERCAO_PROCEDURES_MAP, # No procedures to sync
         requires_pk=None,
