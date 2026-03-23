@@ -101,7 +101,7 @@ def update_visit_status(
     participante_visita_id = int(visit['id'])
     
     desired={
-        "data_estimada": visit_date,
+        # "data_estimada": visit_date,
         "data_realizada": visit_date,
         "status": 20 # 20 = Completed(realizada)
     }
