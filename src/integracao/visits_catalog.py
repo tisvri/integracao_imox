@@ -8,6 +8,8 @@ from integracao.mappings.procedures_maps import (
     VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
 )
 
+from integracao.mappings.v3_visit_name_maps import V3_VISITA_NAME_BY_GROUP
+
 class VisitConfig:
     """
     Configuring an generic visit
@@ -21,7 +23,8 @@ class VisitConfig:
         date_field: str,
         procedures_map: list,
         requires_pk: Optional[Dict[str, Any]] = None,
-        executor_config: Optional[Dict[str, Any]] = None
+        executor_config: Optional[Dict[str, Any]] = None,
+        visit_name_by_group: Optional[Dict[int, str]] = None,
     ):
         self.redcap_event_name = redcap_event_name
         self.polotrial_visit_name = polotrial_visit_name
@@ -29,6 +32,8 @@ class VisitConfig:
         self.procedures_map = procedures_map
         self.requires_pk = requires_pk or {}
         self.executor_config = executor_config or {} # {field, date_field, procedure_pattern}
+        self.visit_name_by_group = visit_name_by_group or {}
+
     
     
 # Visits catalog
@@ -38,8 +43,8 @@ VISITS_CATALOG = {
     # dictionary within the `VisitConfig` class.
     "v3vf_arm_1": VisitConfig(
         redcap_event_name = 'v3vf_arm_1',
-        polotrial_visit_name = "V3",
-        date_field = "revisao_dt_visita",
+        polotrial_visit_name = "VF/V3",
+        date_field = "exame_fisico_dt",
         procedures_map = V3_PROCEDURES_MAP,
         requires_pk=None,
         executor_config={
