@@ -96,7 +96,9 @@ async def health():
         1. Define a GET endpoint at the path "/health".
         2. When this endpoint is accessed, it returns a JSON response with a key "status" and a value of "ok", indicating that the webhook is healthy and running.
     """
-    return {"status": "ok"}
+    return {"status": "ok ✅"}
+
+
 
 
 #============================================================================================================================
