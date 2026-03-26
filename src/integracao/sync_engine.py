@@ -126,12 +126,12 @@ def sync_procedures(
     redcap_payload: Dict[str, Any],
     polotrial: PoloTrialClient,
     visit_label: str,
-) -> int:
+) -> pd.DataFrame:
     """
     Syncs procedures execution dates from Redcap to Polotrial
     
     Returns:
-        count of procedures synced
+        DataFrame with procedures
     """
     
     #1. Identifying procedures to sync based on the procedures_map (with nested=true to get the procedure name)
@@ -142,28 +142,29 @@ def sync_procedures(
     #2. Converting to dataframe and name procedures extraction
     pvp_df = pd.DataFrame(pvp_raw)
 
-    #2.1. Extract 'procedure_procedure_study' from the field in this 'data_protocol_procedure'
+    #2.1. Extract 'nome_procedimento_estudo' from the field 'dados_protocolo_procedimento'
     if 'dados_protocolo_procedimento' in pvp_df.columns:
         pvp_df['nome_procedimento_estudo'] = pvp_df['dados_protocolo_procedimento'].apply(
             lambda x: x.get('nome_procedimento_estudo') if isinstance(x, dict) else None
         )
     else:
-        # Fallback: try to extract from 'dados_protocolo_procedimento' string if it's not already a dict
+        # Fallback: merge via protocol procedures endpoint
         logger.warning("dados_protocolo_procedimento not in response, fetching from protocolo_procedimento")
         proto_proc = polotrial.list_protocol_procedures(co_protocolo = co_protocolo)
         proto_df = pd.DataFrame(proto_proc)[['id', 'nome_procedimento_estudo']].rename(
             columns={'id': 'co_protocolo_procedimento'}
         )
         pvp_df = pd.merge(pvp_df, proto_df, on="co_protocolo_procedimento", how="left")
-    # Add mapping fields to dataframe
-    # Convert Mapping to dataframe
-    mapping_df = pd.DataFrame(procedures_map)
 
-    # Add regex patterns to the mapping dataframe
+    # ============================================================
+    # CORREÇÃO: Todo o código abaixo estava dentro do else.
+    # Agora está no nível da função, igual V1 e V2.
+    # ============================================================
+
+    # Add mapping fields to dataframe
     pvp_df['redcap_check_field'] = None
     pvp_df['redcap_date_field'] = None
     pvp_df['procedure_pattern'] = None
-
 
     # Match procedures with mapping using regex
     matched_count = 0
@@ -182,7 +183,7 @@ def sync_procedures(
                 pvp_df.at[idx, 'procedure_pattern'] = pattern
                 matched = True
                 matched_count += 1
-                break # stop at first match
+                break
         if not matched:
             unmatched_procedures.append(proc_name)
     
@@ -193,20 +194,19 @@ def sync_procedures(
         date_field = row.get('redcap_date_field')
         pattern = row.get('procedure_pattern')
 
-        # Get actual values from REDCap
         check_value = redcap_payload.get(check_field, 'N/A') if check_field else 'N/A'
         date_value = redcap_payload.get(date_field, 'N/A') if date_field else 'N/A'
 
         logger.info(
-            " - ID: %s | Name: %s | Pattern: %s | Check Field: %s (Value: %s) | Date Field: %s (Value: %s)",
+            " - ID: %s | Name: %s | Data exec: %s | Pattern: %s | Check Field: %s (Value: %s) | Date Field: %s (Value: %s)",
             row.get('id'),
             row.get('nome_procedimento_estudo'),
             row.get('data_executada'),
             pattern,
             check_field,
-            check_value, # ← VALOR do campo
+            check_value,
             date_field,
-            date_value # ← VALOR da data
+            date_value
         )
     
     logger.info("DEBUG: Procedure mapping summary for visit %s: %d matched, %d unmatched", visit_label, matched_count, len(unmatched_procedures))
@@ -246,11 +246,10 @@ def sync_procedures(
             continue
 
         if len(to_sync) > 1:
-            logger.warning("Multiple procedures matched patter %s, using first: %s",pattern, to_sync.iloc[0]['nome_procedimento_estudo'])
+            logger.warning("Multiple procedures matched pattern %s, using first: %s", pattern, to_sync.iloc[0]['nome_procedimento_estudo'])
         
         procedure_id = int(to_sync['id'].iloc[0])
         procedure_name = to_sync['nome_procedimento_estudo'].iloc[0]
-
 
         # Get date from REDCap
         redcap_date = get_date_from_redcap(redcap_payload, check_field, date_field)
@@ -263,14 +262,11 @@ def sync_procedures(
 
         # Validate and extract date (handles both YYYY-MM-DD and YYYY-MM-DD HH:MM:SS formats)
         try:
-            # Try to extract YYYY-MM-DD part using regex
             date_match = re.match(r'(\d{4}-\d{2}-\d{2})', redcap_date)
             if not date_match:
                 raise ValueError(f"Could not extract date from {redcap_date} for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}")
             
             formatted_date = date_match.group(1)
-
-            # Validate if it's a real date
             datetime.strptime(formatted_date, "%Y-%m-%d")
         except Exception as e:
             logger.error(f"Invalid date format for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}: {redcap_date}. Error: {e}")
@@ -283,15 +279,10 @@ def sync_procedures(
         )
         logger.info("✅ %s: Synced procedure '%s' (pattern %s) with date %s", visit_label, procedure_name, pattern, formatted_date)
 
-        total_synced +=1
+        total_synced += 1
 
-        logger.info("%s: Total procedures synced so far: %d", visit_label, total_synced)
-
-    
-        # Dataframe do payload do REDCap para debug
-        redcap_df = pd.DataFrame([redcap_payload])
-        logger.info(redcap_df)
-
+    # CORREÇÃO: return FORA do for loop (antes estava dentro, saía no 1º procedimento)
+    logger.info("%s: Total procedures synced: %d", visit_label, total_synced)
 
     return pvp_df
 
