@@ -663,7 +663,7 @@ V4_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Creatinina s[eé]rica-sangue",
+        "procedure_name": r"Creatinina\s+s[eé]rica-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_creatinina",
         "redcap_date_field": "lab_dt_visita"
@@ -947,7 +947,7 @@ V5_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Creatinina s[eé]rica-sangue",
+        "procedure_name": r"Creatinina\s+s[eé]rica-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_creatinina",
         "redcap_date_field": "lab_dt_visita"
@@ -1513,7 +1513,7 @@ VISITA_NAO_PROGRAMADA_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     },
     
     {
-        "procedure_name": r"Creatinina s[eé]rica-sangue",
+        "procedure_name": r"Creatinina\s+s[eé]rica-sangue",
         "co_procedimento": "298",
         "redcap_check_field": "lab_creatinina",
         "redcap_date_field": "lab_dt_visita"

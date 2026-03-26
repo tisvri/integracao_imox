@@ -155,139 +155,145 @@ def sync_procedures(
             columns={'id': 'co_protocolo_procedimento'}
         )
         pvp_df = pd.merge(pvp_df, proto_df, on="co_protocolo_procedimento", how="left")
-        # Add mapping fields to dataframe
-        # Convert Mapping to dataframe
-        mapping_df = pd.DataFrame(procedures_map)
+    # Add mapping fields to dataframe
+    # Convert Mapping to dataframe
+    mapping_df = pd.DataFrame(procedures_map)
 
-        # Add regex patterns to the mapping dataframe
-        pvp_df['redcap_check_field'] = None
-        pvp_df['redcap_date_field'] = None
-        pvp_df['procedure_pattern'] = None
+    # Add regex patterns to the mapping dataframe
+    pvp_df['redcap_check_field'] = None
+    pvp_df['redcap_date_field'] = None
+    pvp_df['procedure_pattern'] = None
 
 
-        # Match procedures with mapping using regex
-        matched_count = 0
-        unmatched_procedures = []
+    # Match procedures with mapping using regex
+    matched_count = 0
+    unmatched_procedures = []
 
-        for idx, row in pvp_df.iterrows():
-            proc_name = str(row.get('nome_procedimento_estudo', '')).strip()
-            matched = False
-            
-            #Find matching pattern in mapping
-            for cfg in procedures_map:
-                pattern = cfg['procedure_name']
-                if re.search(pattern, proc_name, re.IGNORECASE):
-                    pvp_df.at[idx, 'redcap_check_field'] = cfg['redcap_check_field']
-                    pvp_df.at[idx, 'redcap_date_field'] = cfg['redcap_date_field']
-                    pvp_df.at[idx, 'procedure_pattern'] = pattern
-                    matched = True
-                    matched_count += 1
-                    break # stop at first match
-            if not matched:
-                unmatched_procedures.append(proc_name)
+    for idx, row in pvp_df.iterrows():
+        proc_name = str(row.get('nome_procedimento_estudo', '')).strip()
+        matched = False
         
-        # DEBUG: Show procedures with mapping info
-        logger.info("DEBUG: Available procedures in visit %s", visit_label)
-        for idx, row in pvp_df.iterrows():
-            check_field = row.get('redcap_check_field')
-            date_field = row.get('redcap_date_field')
-            pattern = row.get('procedure_pattern')
-
-            # Get actual values from REDCap
-            check_value = redcap_payload.get(check_field, 'N/A') if check_field else 'N/A'
-            date_value = redcap_payload.get(date_field, 'N/A') if date_field else 'N/A'
-
-            logger.info(
-                " - ID: %s | Name: %s | Pattern: %s | Check Field: %s (Value: %s) | Date Field: %s (Value: %s)",
-                row.get('id'),
-                row.get('nome_procedimento_estudo'),
-                row.get('data_executada'),
-                pattern,
-                check_field,
-                check_value, # ← VALOR do campo
-                date_field,
-                date_value # ← VALOR da data
-            )
-        
-        logger.info("DEBUG: Procedure mapping summary for visit %s: %d matched, %d unmatched", visit_label, matched_count, len(unmatched_procedures))
-        logger.info(" Total procedures in Polotrial: %d", len(pvp_df))
-        logger.info(" Matched procedures: %d", matched_count)
-        logger.info(" Unmatched procedures: %d", len(unmatched_procedures))
-
-        if unmatched_procedures:
-            logger.warning(
-                "DEBUG: Unmatched procedures in visit %s: %s (no mapping found in procedures_map for these procedure names)",
-                visit_label,
-                unmatched_procedures
-            )
-            for proc in unmatched_procedures:
-                logger.warning(" - Unmatched procedure name: %s", proc)
-        
-        #3. For each procedure in mapping, search and update
-        total_synced = 0
-
+        #Find matching pattern in mapping
         for cfg in procedures_map:
             pattern = cfg['procedure_name']
-            check_field = cfg['redcap_check_field']
-            date_field = cfg['redcap_date_field']
+            if re.search(pattern, proc_name, re.IGNORECASE):
+                pvp_df.at[idx, 'redcap_check_field'] = cfg['redcap_check_field']
+                pvp_df.at[idx, 'redcap_date_field'] = cfg['redcap_date_field']
+                pvp_df.at[idx, 'procedure_pattern'] = pattern
+                matched = True
+                matched_count += 1
+                break # stop at first match
+        if not matched:
+            unmatched_procedures.append(proc_name)
+    
+    # DEBUG: Show procedures with mapping info
+    logger.info("DEBUG: Available procedures in visit %s", visit_label)
+    for idx, row in pvp_df.iterrows():
+        check_field = row.get('redcap_check_field')
+        date_field = row.get('redcap_date_field')
+        pattern = row.get('procedure_pattern')
 
-            if not (pattern and check_field and date_field):
-                logger.warning("%s: Incomplete mapping configuration for pattern %r. Skipping this mapping entry.", visit_label, pattern)
-                continue
+        # Get actual values from REDCap
+        check_value = redcap_payload.get(check_field, 'N/A') if check_field else 'N/A'
+        date_value = redcap_payload.get(date_field, 'N/A') if date_field else 'N/A'
 
-            # Filter procedures that do not yet have a date_executed and match the pattern
-            to_sync = pvp_df[
-                pvp_df["nome_procedimento_estudo"].str.contains(pattern, regex=True, na=False, flags=re.IGNORECASE) & 
-                (pvp_df["data_executada"].isna() | (pvp_df["data_executada"] == ""))
-            ]
+        logger.info(
+            " - ID: %s | Name: %s | Pattern: %s | Check Field: %s (Value: %s) | Date Field: %s (Value: %s)",
+            row.get('id'),
+            row.get('nome_procedimento_estudo'),
+            row.get('data_executada'),
+            pattern,
+            check_field,
+            check_value, # ← VALOR do campo
+            date_field,
+            date_value # ← VALOR da data
+        )
+    
+    logger.info("DEBUG: Procedure mapping summary for visit %s: %d matched, %d unmatched", visit_label, matched_count, len(unmatched_procedures))
+    logger.info(" Total procedures in Polotrial: %d", len(pvp_df))
+    logger.info(" Matched procedures: %d", matched_count)
+    logger.info(" Unmatched procedures: %d", len(unmatched_procedures))
 
-            if to_sync.empty:
-                logger.info("No procedures to sync for pattern %s in visit %s", pattern, visit_label)
-                continue
+    if unmatched_procedures:
+        logger.warning(
+            "DEBUG: Unmatched procedures in visit %s: %s (no mapping found in procedures_map for these procedure names)",
+            visit_label,
+            unmatched_procedures
+        )
+        for proc in unmatched_procedures:
+            logger.warning(" - Unmatched procedure name: %s", proc)
+    
+    #3. For each procedure in mapping, search and update
+    total_synced = 0
 
-            if len(to_sync) > 1:
-                logger.warning("Multiple procedures matched patter %s, using first: %s",pattern, to_sync.iloc[0]['nome_procedimento_estudo'])
+    for cfg in procedures_map:
+        pattern = cfg['procedure_name']
+        check_field = cfg['redcap_check_field']
+        date_field = cfg['redcap_date_field']
+
+        if not (pattern and check_field and date_field):
+            logger.warning("%s: Incomplete mapping configuration for pattern %r. Skipping this mapping entry.", visit_label, pattern)
+            continue
+
+        # Filter procedures that do not yet have a date_executed and match the pattern
+        to_sync = pvp_df[
+            pvp_df["nome_procedimento_estudo"].str.contains(pattern, regex=True, na=False, flags=re.IGNORECASE) & 
+            (pvp_df["data_executada"].isna() | (pvp_df["data_executada"] == ""))
+        ]
+
+        if to_sync.empty:
+            logger.info("No procedures to sync for pattern %s in visit %s", pattern, visit_label)
+            continue
+
+        if len(to_sync) > 1:
+            logger.warning("Multiple procedures matched patter %s, using first: %s",pattern, to_sync.iloc[0]['nome_procedimento_estudo'])
+        
+        procedure_id = int(to_sync['id'].iloc[0])
+        procedure_name = to_sync['nome_procedimento_estudo'].iloc[0]
+
+
+        # Get date from REDCap
+        redcap_date = get_date_from_redcap(redcap_payload, check_field, date_field)
+        if not redcap_date:
+            logger.info("%s: No valid date found in REDCap for procedure %s (pattern %s). Skipping sync for this procedure.", visit_label, procedure_name, pattern)
+            continue
+
+        #Clean and normalize date
+        redcap_date = str(redcap_date).strip()
+
+        # Validate and extract date (handles both YYYY-MM-DD and YYYY-MM-DD HH:MM:SS formats)
+        try:
+            # Try to extract YYYY-MM-DD part using regex
+            date_match = re.match(r'(\d{4}-\d{2}-\d{2})', redcap_date)
+            if not date_match:
+                raise ValueError(f"Could not extract date from {redcap_date} for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}")
             
-            procedure_id = int(to_sync['id'].iloc[0])
-            procedure_name = to_sync['nome_procedimento_estudo'].iloc[0]
+            formatted_date = date_match.group(1)
+
+            # Validate if it's a real date
+            datetime.strptime(formatted_date, "%Y-%m-%d")
+        except Exception as e:
+            logger.error(f"Invalid date format for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}: {redcap_date}. Error: {e}")
+            continue
+        
+        # Update procedure in PoloTrial
+        polotrial.update_participant_visit_procedure(
+            procedure_id,
+            {"data_executada": formatted_date}
+        )
+        logger.info("✅ %s: Synced procedure '%s' (pattern %s) with date %s", visit_label, procedure_name, pattern, formatted_date)
+
+        total_synced +=1
+
+        logger.info("%s: Total procedures synced so far: %d", visit_label, total_synced)
+
+    
+        # Dataframe do payload do REDCap para debug
+        redcap_df = pd.DataFrame([redcap_payload])
+        logger.info(redcap_df)
 
 
-            # Get date from REDCap
-            redcap_date = get_date_from_redcap(redcap_payload, check_field, date_field)
-            if not redcap_date:
-                logger.info("%s: No valid date found in REDCap for procedure %s (pattern %s). Skipping sync for this procedure.", visit_label, procedure_name, pattern)
-                continue
-
-            #Clean and normalize date
-            redcap_date = str(redcap_date).strip()
-
-            # Validate and extract date (handles both YYYY-MM-DD and YYYY-MM-DD HH:MM:SS formats)
-            try:
-                # Try to extract YYYY-MM-DD part using regex
-                date_match = re.match(r'(\d{4}-\d{2}-\d{2})', redcap_date)
-                if not date_match:
-                    raise ValueError(f"Could not extract date from {redcap_date} for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}")
-                
-                formatted_date = date_match.group(1)
-
-                # Validate if it's a real date
-                datetime.strptime(formatted_date, "%Y-%m-%d")
-            except Exception as e:
-                logger.error(f"Invalid date format for procedure {procedure_name} (pattern {pattern}) in visit {visit_label}: {redcap_date}. Error: {e}")
-                continue
-            
-            # Update procedure in PoloTrial
-            polotrial.update_participant_visit_procedure(
-                procedure_id,
-                {"data_executada": formatted_date}
-            )
-            logger.info("✅ %s: Synced procedure '%s' (pattern %s) with date %s", visit_label, procedure_name, pattern, formatted_date)
-
-            total_synced +=1
-
-            logger.info("%s: Total procedures synced so far: %d", visit_label, total_synced)
-
-            return pvp_df
+    return pvp_df
 
 
 
@@ -311,7 +317,7 @@ def get_date_from_redcap(
     if date_field in payload and payload.get(date_field):
         check_value = str(payload.get(check_field, "")).strip().lower()
         
-        if check_field != date_field and check_value in {"", "nao", "não", "0"}:
+        if check_field != date_field and check_value in {""}: #, "nao", "não", "0"
             logger.warning(
                 "Date exists (%s) but check field %s indicates not done (value = %r). Skipping",
                 date_field,
