@@ -450,6 +450,7 @@ def sync_consulta_medica_executor(
     }
     created = polotrial.create_procedure_executor(payload)
     logger.info(
+        "EDUARDO "
         "%s: executor linked to Consulta Médica. "
         "procedure=%s executor=%s response_id=%s",
         V2_EVENT, procedure_id, executor_id, created.get("id"),
