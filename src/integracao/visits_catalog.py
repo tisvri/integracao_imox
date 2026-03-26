@@ -94,7 +94,7 @@ VISITS_CATALOG = {
         polotrial_visit_name = "V3",
         date_field = "revisao_dt_visita",
         procedures_map = V3_PROCEDURES_MAP,
-        requires_pk=None,
+        # requires_pk=None,
         executor_config={
             "field": "consulta_nome_medico",
             'date_field': 'consulta_dt',

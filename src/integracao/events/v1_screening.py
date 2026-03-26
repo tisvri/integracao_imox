@@ -353,7 +353,7 @@ def sync_v1_procedures(
             # try to extract YYYY-MM-DD part using regex
             date_match = re.match(r'(\d{4}-\d{2}-\d{2})', redcap_date)
             if not date_match:
-                raise ValueError(f"Coud not extract date from: {redcap_date}")
+                raise ValueError(f"Could not extract date from: {redcap_date}")
             
             formatted_date = date_match.group(1)
             
