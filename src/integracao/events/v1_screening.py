@@ -383,20 +383,21 @@ def sync_consulta_medica_executor(
     volunteer_payload: Dict[str, Any],
     polotrial: PoloTrialClient,
 ) -> None:
-    executor_name = str(volunteer_payload.get("consulta_nome_medico") or "").strip()
+    executor_name = str(volunteer_payload.get("form_medico_rubrica") or "").strip()
+    logger.info("executor_name: %s", executor_name)
     if not executor_name:
-        logger.info("V1: consulta_nome_medico vazio; não é possível atribuir executor (Consulta Médica).")
+        logger.info("V1: form_medico_rubrica vazio; não é possível atribuir executor (Consulta Médica).")
         return
 
-    data_realizada = str(volunteer_payload.get("consulta_dt") or "").strip()
+    data_realizada = str(volunteer_payload.get("form_medico_dt_rubrica") or "").strip()
     if not data_realizada:
-        logger.info("V1: consulta_dt vazio; não é possível atribuir executor (Consulta Médica).")
+        logger.info("V1: form_medico_dt_rubrica vazio; não é possível atribuir executor (Consulta Médica).")
         return
 
     cm = merged_procedures_df[
         merged_procedures_df["nome_procedimento_estudo"]
         .astype(str)
-        .str.contains(r"^Consulta [Mm][eéEÉ]dica$", regex=True, na=False)
+        .str.contains(r"^Consulta\s+[Mm][eéEÉ]dica$", regex=True, na=False)
     ]
     if cm.empty:
         logger.warning("V1: procedimento 'Consulta Médica' não encontrado na visita (PoloTrial).")

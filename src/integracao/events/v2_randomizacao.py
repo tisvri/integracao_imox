@@ -388,25 +388,26 @@ def sync_consulta_medica_executor(
     the consulta_nome_medico field in REDCap.
     """
     executor_name = str(
-        volunteer_payload.get("consulta_nome_medico") or "",
+        volunteer_payload.get("form_medico_rubrica") or "",
     ).strip()
+    logger.info("executor_name: %s", executor_name)
     if not executor_name:
         logger.info(
-            "%s: consulta_nome_medico empty; skipping executor sync.", V2_EVENT
+            "%s: form_medico_rubrica empty; skipping executor sync.", V2_EVENT
         )
         return
 
     data_realizada = str(
-        volunteer_payload.get("consulta_dt") or "",
+        volunteer_payload.get("form_medico_dt_rubrica") or "",
     ).strip()
     if not data_realizada:
-        logger.info("%s: consulta_dt empty; skipping executor sync.", V2_EVENT)
+        logger.info("%s: form_medico_dt_rubrica empty; skipping executor sync.", V2_EVENT)
         return
 
     cm = merged_procedures_df[
         merged_procedures_df["nome_procedimento_estudo"]
         .astype(str)
-        .str.contains(r"Consulta [mM][eéEÉ]dica", regex=True, na=False)
+        .str.contains(r"Consulta\s+[mM][eéEÉ]dica$", regex=True, na=False)
     ]
     if cm.empty:
         logger.warning(
@@ -448,6 +449,7 @@ def sync_consulta_medica_executor(
         "valor_total_procedimento": "",
         "observacoes": "",
     }
+    logger.info("DEBUG PAYLOAD: %s", json.dumps(payload, indent=2))
     created = polotrial.create_procedure_executor(payload)
     logger.info(
         "EDUARDO "
