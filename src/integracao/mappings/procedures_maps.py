@@ -417,6 +417,34 @@ V2_POLOTRIAL_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "298",
         "redcap_check_field": "lab_shbg",
         "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Testosterona\s+total",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_testo_total",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Testosterona\s+livre\s+sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_testo_livre",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Horm[oô]nio\s+fol[ií]culo-estimulante\s+(FSH)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_fsh",
+        "redcap_date_field": "lab_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Horm[oô]nio\s+luteinizante\s+(LH)-sangue",
+        "co_procedimento": "298",
+        "redcap_check_field": "lab_lh",
+        "redcap_date_field": "lab_dt_visita"
     }
 ]
 

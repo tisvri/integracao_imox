@@ -15690,3 +15690,5 @@ RuntimeError: Arm Triagem not found for protocol 2651
 2026-03-30 13:44:24,444 - INFO - V1: executor já está vinculado à Consulta Médica. procedure_id=656018 executor_id=4562
 2026-03-30 13:44:24,444 - INFO - V1 sync completed for record_id=78-3
 2026-03-30 13:44:24,445 - INFO - Successfully processed DET for record_id=78-3, event_name=visita_1__screenin_arm_1
+2026-03-30 14:12:49,849 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-30 14:12:50,784 - INFO - Webhook initialized for protocol: oxandrolona
