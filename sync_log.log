@@ -15102,3 +15102,193 @@ Traceback (most recent call last):
   File "/home/edu/Python/integracao_imox/src/integracao/sync_engine.py", line 99, in update_visit_status
     raise RuntimeError(f"Participant visit with task name {nome_tarefa!r} not found for participant {co_participante!r} in Polotrial")
 RuntimeError: Participant visit with task name '2 Semanas após a inserção do implante de oxandrolona' not found for participant 3331 in Polotrial
+2026-03-30 11:33:37,877 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=1_semana_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:33:37,878 - INFO - Dispatching to generic handler: 1_semana_arm_1 (task=1 Semana após a inserção do implante de oxandrolona)
+2026-03-30 11:33:38,564 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:33:38,564 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:33:38,564 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:33:38,564 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"1 semana","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"1 semana","field_name":"sub_pk_iniciais","value":"L.F.A"
+2026-03-30 11:33:38,564 - INFO - REDCap: exported record 78-1 for event 1_semana_arm_1 with 13 fields
+2026-03-30 11:33:39,071 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:33:39,071 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:33:39,071 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:33:39,071 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:33:39,072 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:33:40,905 - INFO - 1 Semana após a inserção do implante de oxandrolona: already up to date (id=40734)
+2026-03-30 11:33:41,110 - INFO - DEBUG: Available procedures in visit 1 Semana após a inserção do implante de oxandrolona
+2026-03-30 11:33:41,110 - INFO -  - ID: 654603 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern: Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:33:41,110 - INFO -  - ID: 654604 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:33:41,110 - INFO -  - ID: 654605 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:33:41,110 - INFO -  - ID: 654606 | Name: Reembolso | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:33:41,110 - INFO -  - ID: 654607 | Name: Reconsentimento | Data exec: None | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-03-30 11:33:41,110 - INFO - DEBUG: Procedure mapping summary for visit 1 Semana após a inserção do implante de oxandrolona: 3 matched, 2 unmatched
+2026-03-30 11:33:41,110 - INFO -  Total procedures in Polotrial: 5
+2026-03-30 11:33:41,110 - INFO -  Matched procedures: 3
+2026-03-30 11:33:41,110 - INFO -  Unmatched procedures: 2
+2026-03-30 11:33:41,110 - WARNING - DEBUG: Unmatched procedures in visit 1 Semana após a inserção do implante de oxandrolona: ['Concentração sérica de oxandrolona e farmacocinética', 'Reembolso'] (no mapping found in procedures_map for these procedure names)
+2026-03-30 11:33:41,110 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-03-30 11:33:41,110 - WARNING -  - Unmatched procedure name: Reembolso
+2026-03-30 11:33:41,110 - WARNING - 1 Semana após a inserção do implante de oxandrolona: Incomplete mapping configuration for pattern "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica". Skipping this mapping entry.
+2026-03-30 11:33:41,112 - INFO - 1 Semana após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Monitoramento de eventos adversos (pattern Monitoramento\s+de\s+eventos\s+adversos). Skipping sync for this procedure.
+2026-03-30 11:33:41,113 - INFO - 1 Semana após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes). Skipping sync for this procedure.
+2026-03-30 11:33:41,113 - INFO - 1 Semana após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-03-30 11:33:41,114 - INFO - No procedures to sync for pattern Consulta\s+M[eé]dica in visit 1 Semana após a inserção do implante de oxandrolona
+2026-03-30 11:33:41,114 - INFO - 1 Semana após a inserção do implante de oxandrolona: Total procedures synced: 0
+2026-03-30 11:33:41,488 - INFO - 1 Semana após a inserção do implante de oxandrolona: consulta_nome_medico is empty, skipping executor sync
+2026-03-30 11:33:41,488 - INFO - Successfully processed DET for record_id=78-1, event_name=1_semana_arm_1
+2026-03-30 11:33:49,578 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=2_semanas_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:33:49,578 - INFO - Dispatching to generic handler: 2_semanas_arm_1 (task=2 Semanas após a inserção do implante de oxandrolona)
+2026-03-30 11:33:50,282 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:33:50,282 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:33:50,282 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:33:50,282 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"2 semanas","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"2 semanas","field_name":"sub_pk_iniciais","value":"L.F.
+2026-03-30 11:33:50,282 - INFO - REDCap: exported record 78-1 for event 2_semanas_arm_1 with 13 fields
+2026-03-30 11:33:50,756 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:33:50,756 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:33:50,756 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:33:50,756 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:33:50,757 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:33:52,220 - ERROR - Error processing DET for record_id=78-1, event_name=2_semanas_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 85, in dispatch_event
+    sync_generic_visit(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/generic_visit.py", line 88, in sync_generic_visit
+    participant_visit_id = update_visit_status(
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/edu/Python/integracao_imox/src/integracao/sync_engine.py", line 99, in update_visit_status
+    raise RuntimeError(f"Participant visit with task name {nome_tarefa!r} not found for participant {co_participante!r} in Polotrial")
+RuntimeError: Participant visit with task name '2 Semanas após a inserção do implante de oxandrolona' not found for participant 3331 in Polotrial
+2026-03-30 11:40:35,344 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-03-30 11:40:35,955 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-30 11:40:51,557 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=2_semanas_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:40:51,562 - INFO - Dispatching to generic handler: 2_semanas_arm_1 (task=2 semanas após a inserção do implante de oxandrolona)
+2026-03-30 11:40:52,251 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:40:52,251 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:40:52,251 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:40:52,251 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"2 semanas","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"2 semanas","field_name":"sub_pk_iniciais","value":"L.F.
+2026-03-30 11:40:52,251 - INFO - REDCap: exported record 78-1 for event 2_semanas_arm_1 with 13 fields
+2026-03-30 11:40:53,025 - INFO - Polotrial: authentication successful
+2026-03-30 11:40:53,505 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:40:53,505 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:40:53,505 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:40:53,505 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:40:53,505 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:40:55,140 - INFO - 2 semanas após a inserção do implante de oxandrolona: already up to date (id=40735)
+2026-03-30 11:40:55,486 - INFO - DEBUG: Available procedures in visit 2 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:40:55,486 - INFO -  - ID: 654608 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern: Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:40:55,486 - INFO -  - ID: 654609 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:40:55,486 - INFO -  - ID: 654610 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:40:55,486 - INFO -  - ID: 654611 | Name: Reembolso | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:40:55,486 - INFO -  - ID: 654612 | Name: Reconsentimento | Data exec: None | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-03-30 11:40:55,486 - INFO - DEBUG: Procedure mapping summary for visit 2 semanas após a inserção do implante de oxandrolona: 3 matched, 2 unmatched
+2026-03-30 11:40:55,486 - INFO -  Total procedures in Polotrial: 5
+2026-03-30 11:40:55,486 - INFO -  Matched procedures: 3
+2026-03-30 11:40:55,486 - INFO -  Unmatched procedures: 2
+2026-03-30 11:40:55,486 - WARNING - DEBUG: Unmatched procedures in visit 2 semanas após a inserção do implante de oxandrolona: ['Concentração sérica de oxandrolona e farmacocinética', 'Reembolso'] (no mapping found in procedures_map for these procedure names)
+2026-03-30 11:40:55,487 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-03-30 11:40:55,487 - WARNING -  - Unmatched procedure name: Reembolso
+2026-03-30 11:40:55,487 - WARNING - 2 semanas após a inserção do implante de oxandrolona: Incomplete mapping configuration for pattern "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica". Skipping this mapping entry.
+2026-03-30 11:40:55,488 - INFO - 2 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Monitoramento de eventos adversos (pattern Monitoramento\s+de\s+eventos\s+adversos). Skipping sync for this procedure.
+2026-03-30 11:40:55,489 - INFO - 2 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes). Skipping sync for this procedure.
+2026-03-30 11:40:55,489 - INFO - 2 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-03-30 11:40:55,490 - INFO - No procedures to sync for pattern Consulta\s+M[eé]dica in visit 2 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:40:55,490 - INFO - 2 semanas após a inserção do implante de oxandrolona: Total procedures synced: 0
+2026-03-30 11:40:55,855 - INFO - 2 semanas após a inserção do implante de oxandrolona: consulta_nome_medico is empty, skipping executor sync
+2026-03-30 11:40:55,855 - INFO - Successfully processed DET for record_id=78-1, event_name=2_semanas_arm_1
+2026-03-30 11:41:07,417 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=3_semanas_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:41:07,418 - INFO - Dispatching to generic handler: 3_semanas_arm_1 (task=3 semanas após a inserção do implante de oxandrolona)
+2026-03-30 11:41:08,055 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:08,055 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:08,055 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:08,055 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"3 semanas","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"3 semanas","field_name":"sub_pk_iniciais","value":"L.F.
+2026-03-30 11:41:08,055 - INFO - REDCap: exported record 78-1 for event 3_semanas_arm_1 with 13 fields
+2026-03-30 11:41:08,514 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:08,515 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:08,515 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:08,515 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:41:08,515 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:41:10,188 - INFO - 3 semanas após a inserção do implante de oxandrolona: already up to date (id=40736)
+2026-03-30 11:41:10,381 - INFO - DEBUG: Available procedures in visit 3 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:10,381 - INFO -  - ID: 654613 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern:  | Check Field:  (Value: N/A) | Date Field:  (Value: N/A)
+2026-03-30 11:41:10,381 - INFO -  - ID: 654614 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern:  | Check Field:  (Value: N/A) | Date Field:  (Value: N/A)
+2026-03-30 11:41:10,382 - INFO -  - ID: 654615 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern:  | Check Field:  (Value: N/A) | Date Field:  (Value: N/A)
+2026-03-30 11:41:10,382 - INFO -  - ID: 654616 | Name: Reembolso | Data exec: None | Pattern:  | Check Field:  (Value: N/A) | Date Field:  (Value: N/A)
+2026-03-30 11:41:10,382 - INFO -  - ID: 654617 | Name: Reconsentimento | Data exec: None | Pattern:  | Check Field:  (Value: N/A) | Date Field:  (Value: N/A)
+2026-03-30 11:41:10,382 - INFO - DEBUG: Procedure mapping summary for visit 3 semanas após a inserção do implante de oxandrolona: 5 matched, 0 unmatched
+2026-03-30 11:41:10,382 - INFO -  Total procedures in Polotrial: 5
+2026-03-30 11:41:10,382 - INFO -  Matched procedures: 5
+2026-03-30 11:41:10,382 - INFO -  Unmatched procedures: 0
+2026-03-30 11:41:10,382 - WARNING - 3 semanas após a inserção do implante de oxandrolona: Incomplete mapping configuration for pattern ''. Skipping this mapping entry.
+2026-03-30 11:41:10,382 - INFO - 3 semanas após a inserção do implante de oxandrolona: Total procedures synced: 0
+2026-03-30 11:41:10,752 - INFO - 3 semanas após a inserção do implante de oxandrolona: consulta_nome_medico is empty, skipping executor sync
+2026-03-30 11:41:10,753 - INFO - Successfully processed DET for record_id=78-1, event_name=3_semanas_arm_1
+2026-03-30 11:41:18,406 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=4_semanas_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:41:18,407 - INFO - Dispatching to generic handler: 4_semanas_arm_1 (task=4 semanas após a inserção do implante de oxandrolona)
+2026-03-30 11:41:19,052 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:19,052 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:19,052 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:19,052 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"4 semanas","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"4 semanas","field_name":"sub_pk_iniciais","value":"L.F.
+2026-03-30 11:41:19,052 - INFO - REDCap: exported record 78-1 for event 4_semanas_arm_1 with 13 fields
+2026-03-30 11:41:19,500 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:19,500 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:19,500 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:19,500 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:41:19,501 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:41:21,134 - INFO - 4 semanas após a inserção do implante de oxandrolona: already up to date (id=40885)
+2026-03-30 11:41:21,334 - INFO - DEBUG: Available procedures in visit 4 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:21,334 - INFO -  - ID: 657619 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern: Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:41:21,334 - INFO -  - ID: 657620 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:41:21,334 - INFO -  - ID: 657621 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:41:21,334 - INFO -  - ID: 657622 | Name: Reembolso | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:41:21,334 - INFO -  - ID: 657623 | Name: Reconsentimento | Data exec: None | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-03-30 11:41:21,334 - INFO - DEBUG: Procedure mapping summary for visit 4 semanas após a inserção do implante de oxandrolona: 3 matched, 2 unmatched
+2026-03-30 11:41:21,334 - INFO -  Total procedures in Polotrial: 5
+2026-03-30 11:41:21,335 - INFO -  Matched procedures: 3
+2026-03-30 11:41:21,335 - INFO -  Unmatched procedures: 2
+2026-03-30 11:41:21,335 - WARNING - DEBUG: Unmatched procedures in visit 4 semanas após a inserção do implante de oxandrolona: ['Concentração sérica de oxandrolona e farmacocinética', 'Reembolso'] (no mapping found in procedures_map for these procedure names)
+2026-03-30 11:41:21,335 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-03-30 11:41:21,335 - WARNING -  - Unmatched procedure name: Reembolso
+2026-03-30 11:41:21,335 - WARNING - 4 semanas após a inserção do implante de oxandrolona: Incomplete mapping configuration for pattern "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica". Skipping this mapping entry.
+2026-03-30 11:41:21,335 - INFO - 4 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Monitoramento de eventos adversos (pattern Monitoramento\s+de\s+eventos\s+adversos). Skipping sync for this procedure.
+2026-03-30 11:41:21,336 - INFO - 4 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes). Skipping sync for this procedure.
+2026-03-30 11:41:21,337 - INFO - 4 semanas após a inserção do implante de oxandrolona: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-03-30 11:41:21,337 - INFO - No procedures to sync for pattern Consulta\s+M[eé]dica in visit 4 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:21,337 - INFO - 4 semanas após a inserção do implante de oxandrolona: Total procedures synced: 0
+2026-03-30 11:41:21,706 - INFO - 4 semanas após a inserção do implante de oxandrolona: consulta_nome_medico is empty, skipping executor sync
+2026-03-30 11:41:21,706 - INFO - Successfully processed DET for record_id=78-1, event_name=4_semanas_arm_1
+2026-03-30 11:41:23,809 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=subgrupo_pk, record=78-1, event_name=8_semanas_arm_1, data_access_group=hospital_e_materni, repeat_instance=None, repeat_instrument=None
+2026-03-30 11:41:23,810 - INFO - Dispatching to generic handler: 8_semanas_arm_1 (task=8 semanas após a inserção do implante de oxandrolona)
+2026-03-30 11:41:24,103 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:24,103 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:24,103 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:24,103 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"8 semanas","field_name":"sub_pk_instrumento","value":"Subgrupo PK"},{"record":"78-1","redcap_event_name":"8 semanas","field_name":"sub_pk_iniciais","value":"L.F.
+2026-03-30 11:41:24,103 - INFO - REDCap: exported record 78-1 for event 8_semanas_arm_1 with 13 fields
+2026-03-30 11:41:24,543 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-03-30 11:41:24,543 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-03-30 11:41:24,543 - INFO - DEBUG REDCAP STATUS: 200
+2026-03-30 11:41:24,543 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"78-1","redcap_event_name":"Visita 1 - Screening","field_name":"co
+2026-03-30 11:41:24,544 - INFO - REDCap: exported record 78-1 for event visita_1__screenin_arm_1 with 188 fields
+2026-03-30 11:41:26,116 - INFO - 8 semanas após a inserção do implante de oxandrolona: already up to date (id=40886)
+2026-03-30 11:41:26,316 - INFO - DEBUG: Available procedures in visit 8 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:26,316 - INFO -  - ID: 657624 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: 2026-03-20T00:00:00.000Z | Pattern: Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:41:26,316 - INFO -  - ID: 657625 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: 2026-03-20T00:00:00.000Z | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:41:26,316 - INFO -  - ID: 657626 | Name: Monitoramento de eventos adversos | Data exec: 2026-03-20T00:00:00.000Z | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-03-30 11:41:26,317 - INFO -  - ID: 657627 | Name: Reembolso | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-03-30 11:41:26,317 - INFO -  - ID: 657628 | Name: Reconsentimento | Data exec: 2026-03-20T00:00:00.000Z | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-03-30 11:41:26,317 - INFO - DEBUG: Procedure mapping summary for visit 8 semanas após a inserção do implante de oxandrolona: 3 matched, 2 unmatched
+2026-03-30 11:41:26,317 - INFO -  Total procedures in Polotrial: 5
+2026-03-30 11:41:26,317 - INFO -  Matched procedures: 3
+2026-03-30 11:41:26,317 - INFO -  Unmatched procedures: 2
+2026-03-30 11:41:26,317 - WARNING - DEBUG: Unmatched procedures in visit 8 semanas após a inserção do implante de oxandrolona: ['Concentração sérica de oxandrolona e farmacocinética', 'Reembolso'] (no mapping found in procedures_map for these procedure names)
+2026-03-30 11:41:26,317 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-03-30 11:41:26,317 - WARNING -  - Unmatched procedure name: Reembolso
+2026-03-30 11:41:26,317 - WARNING - 8 semanas após a inserção do implante de oxandrolona: Incomplete mapping configuration for pattern "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica". Skipping this mapping entry.
+2026-03-30 11:41:26,318 - INFO - No procedures to sync for pattern Monitoramento\s+de\s+eventos\s+adversos in visit 8 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:26,318 - INFO - No procedures to sync for pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes in visit 8 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:26,319 - INFO - No procedures to sync for pattern Reconsentimento in visit 8 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:26,320 - INFO - No procedures to sync for pattern Consulta\s+M[eé]dica in visit 8 semanas após a inserção do implante de oxandrolona
+2026-03-30 11:41:26,320 - INFO - 8 semanas após a inserção do implante de oxandrolona: Total procedures synced: 0
+2026-03-30 11:41:26,712 - INFO - 8 semanas após a inserção do implante de oxandrolona: consulta_nome_medico is empty, skipping executor sync
+2026-03-30 11:41:26,712 - INFO - Successfully processed DET for record_id=78-1, event_name=8_semanas_arm_1
