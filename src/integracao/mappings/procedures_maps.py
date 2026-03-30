@@ -1221,6 +1221,12 @@ PK_PRE_INSERCAO_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "144", 
         "redcap_check_field": "form_medico_revisao4",
         "redcap_date_field": "form_medico_dt_visita"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
     
 ]
@@ -1252,6 +1258,12 @@ PK_24H_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
 
@@ -1282,9 +1294,14 @@ PK_1_SEMANA_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
-
 PK_2_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     {
         "procedure_name": r"Concentra[cç][aã]'o\s+s[eé]rica\s+de\s+oxandrolona\s+e\s+farmacocin[eé]tica",
@@ -1312,6 +1329,12 @@ PK_2_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
 
@@ -1351,6 +1374,12 @@ PK_4_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
 
@@ -1381,7 +1410,14 @@ PK_8_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
+
 ]
 
 PK_12_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
@@ -1411,16 +1447,49 @@ PK_12_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
 
 PK_16_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
     {
-        "procedure_name": r"",
-        "co_procedimento": "",
+        "procedure_name": r"Concentra[cç][aã]'o\s+s[eé]rica\s+de\s+oxandrolona\s+e\s+farmacocin[eé]tica",
+        "co_procedimento": "129",
         "redcap_check_field": "",
         "redcap_date_field": ""
     },
+    
+    {
+        "procedure_name": r"Monitoramento\s+de\s+eventos\s+adversos",
+        "co_procedimento": "86", 
+        "redcap_check_field": "form_medico_revisao7",
+        "redcap_date_field": "form_medico_dt_visita"
+    },
+    
+    { # regex Registro de uso de medicações pré-estudo e concomitantes - ok
+        "procedure_name": r"Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes",
+        "co_procedimento": "144", 
+        "redcap_check_field": "form_medico_revisao4",
+        "redcap_date_field": "form_medico_dt_visita"
+    },
+    
+    {
+        "procedure_name": r"Reconsentimento",
+        "co_procedimento": "1",
+        "redcap_check_field": "tcle_reconcentimento",
+        "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
+    }
 ]
 
 PK_20_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
@@ -1450,6 +1519,12 @@ PK_20_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
 
@@ -1480,6 +1555,12 @@ PK_24_SEMANAS_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "co_procedimento": "1",
         "redcap_check_field": "tcle_reconcentimento",
         "redcap_date_field": "tcle_dt_visita_aplicacao"
+    },
+    {
+        "procedure_name": r"Consulta\s+M[eé]dica",
+        "co_procedimento": "70",
+        "redcap_check_field": "sub_pk_executor",
+        "redcap_date_field": "sub_pk_dt_visita"
     }
 ]
     
