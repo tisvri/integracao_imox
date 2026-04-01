@@ -1,5 +1,5 @@
 
-# Integração REDCap ↔ PoloTrial (IMOX)
+# Integração REDCap ↔ PoloTrial (IMOX) Novo
 
 Script para integração automatizada entre o sistema REDCap e PoloTrial, com ativação via webhook e CLI para sincronização de dados de participantes e eventos de estudo clínico.
 
