@@ -16016,3 +16016,177 @@ RuntimeError: Arm Triagem not found for protocol 2651
 2026-04-01 14:05:27,678 - INFO - V1 sync completed for record_id=105-5
 2026-04-01 14:05:27,889 - INFO - Visita 'Data da Cirurgia de LCA' atualizada (id=41808, data=2026-03-30).
 2026-04-01 14:05:27,889 - INFO - Successfully processed DET for record_id=105-5, event_name=visita_1__screenin_arm_1
+2026-04-01 14:15:36,089 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 14:15:37,348 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 14:19:00,278 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 14:19:00,898 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 14:19:22,816 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=formulrio_mdico, record=105-5, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 14:19:22,822 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 14:19:23,555 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 14:19:23,555 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 14:19:23,555 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 14:19:23,555 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-5","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-5","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 14:19:23,555 - INFO - REDCap: exported record 105-5 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 14:19:23,556 - INFO - Mapped gender: 'Feminino' -> '604'
+2026-04-01 14:19:23,556 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-04-01 14:19:23,556 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 14:19:23,556 - INFO - Volunteer payload prepared: {'nome': '105-5', 'iniciais': 'B.R.M', 'data_nascimento': '1980-04-25', 'sexo': '604', 'email': '', 'data_inclusao': '2026-03-31', 'centro': '4', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 14:19:24,147 - INFO - Polotrial: authentication successful
+2026-04-01 14:19:24,334 - INFO - Volunteer exists: 105-5 -> id=3419
+2026-04-01 14:19:24,334 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-04-01 14:19:24,741 - INFO - Protocol found: id=2372 (site=4)
+2026-04-01 14:19:24,933 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1 - TRIAGEM']
+2026-04-01 14:19:24,933 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-04-01 14:19:25,402 - INFO - Participant exists: id=3397
+2026-04-01 14:19:46,075 - INFO - Participant visits retrieved: 3, for participant 3397
+2026-04-01 14:19:46,075 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-04-01 14:19:46,075 - INFO - Participant visit found: id=41806
+2026-04-01 14:19:46,235 - INFO - VS/V1 already up to date (id=41806).
+2026-04-01 14:19:46,499 - INFO - DEBUG: Available procedures in VS/V1:
+2026-04-01 14:19:46,499 - INFO -  - ID: 677911 | Proc: Termo de consentimento Livre e Esclarecido | Data exec: 2026-03-31T00:00:00.000Z | Check field: tcle_pergunta_c=Sim | Date field: tcle_dt_visita_aplicacao=2026-03-31 09:40
+2026-04-01 14:19:46,499 - INFO -  - ID: 677912 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,499 - INFO -  - ID: 677913 | Proc: Dados demográficos | Data exec: 2026-03-31T00:00:00.000Z | Check field: demografia_dt_visita=2026-03-31 | Date field: demografia_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677914 | Proc: Exame físico | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677915 | Proc: História médica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao6=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677916 | Proc: Sinais vitais | Data exec: nan | Check field: form_medico_sv1=N/A | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677917 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao4=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677928 | Proc: Hemograma completo-sangue | Data exec: nan | Check field: lab_hematocrito=N/A | Date field: hematocrito_dt=N/A
+2026-04-01 14:19:46,500 - INFO -  - ID: 677926 | Proc: Creatinina sérica-sangue | Data exec: nan | Check field: lab_creatinina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677930 | Proc: Bilirrubina sérica (total)-sangue | Data exec: nan | Check field: lab_bilirrubina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677927 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: nan | Check field: lab_tgp=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677931 | Proc: Albumina-Sangue | Data exec: nan | Check field: lab_albumina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677929 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: nan | Check field: lab_psa=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:19:46,500 - INFO -  - ID: 677918 | Proc: Teste de gravidez | Data exec: 2026-03-31T00:00:00.000Z | Check field: coleta_gravidez=Sim | Date field: coleta_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677919 | Proc: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao1=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677920 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: 2026-03-31T00:00:00.000Z | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677925 | Proc: Orientações para uso de métodos contraceptivos | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_gravidez_q3=NA | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677921 | Proc: Monitoramento de eventos adversos | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677922 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: 2026-03-31T00:00:00.000Z | Check field: ipaq_dt_visita=2026-03-31 | Date field: ipaq_dt_visita=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677923 | Proc: Consulta Médica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_dt_rubrica=2026-03-31 | Date field: form_medico_dt_rubrica=2026-03-31
+2026-04-01 14:19:46,501 - INFO -  - ID: 677924 | Proc: Reembolso | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-04-01 14:19:46,501 - INFO - DEBUG: Procedure mapping summary:
+2026-04-01 14:19:46,501 - INFO -   Total procedures in PoloTrial: 21
+2026-04-01 14:19:46,501 - INFO -   Matched with mapping: 20
+2026-04-01 14:19:46,501 - INFO -   Unmatched: 1
+2026-04-01 14:19:46,501 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-04-01 14:19:46,501 - WARNING -   - 'Reembolso'
+2026-04-01 14:19:46,503 - INFO - No procedure to sync for pattern Teste\s+de\s+gravidez
+2026-04-01 14:19:46,503 - INFO - No procedure to sync for pattern Exame\s+f[ií]sico
+2026-04-01 14:19:46,504 - INFO - No procedure to sync for pattern Consulta\s+M[eéEÉ]dica
+2026-04-01 14:19:46,505 - INFO - No procedure to sync for pattern Hist[oóOÓ]ria\s+M[éeEÉ]dica
+2026-04-01 14:19:46,506 - INFO - No procedure to sync for pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes
+2026-04-01 14:19:46,507 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_sv1 indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,507 - INFO - No date in REDCap for procedure 'Sinais vitais' (check_field=form_medico_sv1)
+2026-04-01 14:19:46,507 - INFO - No procedure to sync for pattern Dados\s+demogr[aáàâãäå]ficos
+2026-04-01 14:19:46,508 - INFO - No procedure to sync for pattern Termo\s+de\s+consentimento\s+Livre\s+e\s+Esclarecido
+2026-04-01 14:19:46,509 - INFO - No procedure to sync for pattern Avalia[cç][aã]o\s+dos\s+crit[eé]rios\s+de\s+inclus[aã]o/exclus[aã]o
+2026-04-01 14:19:46,509 - INFO - No procedure to sync for pattern Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria
+2026-04-01 14:19:46,510 - INFO - No procedure to sync for pattern Monitoramento\s+de\s+eventos\s+adversos
+2026-04-01 14:19:46,511 - INFO - No procedure to sync for pattern Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[eé]todos\s+contraceptivos
+2026-04-01 14:19:46,512 - INFO - No procedure to sync for pattern Dispensa[cç][aã]o\s+de\s+medica[cç][aã]o\s+para\s+tromboprofilaxia\s+p[oó]s-cirurgica
+2026-04-01 14:19:46,512 - INFO - No procedure to sync for pattern Question[aá]rio\s+IPAQ
+2026-04-01 14:19:46,513 - INFO - No procedure to sync for pattern Globulina\s+Ligadora\s+De\s+Hormonios\s+Sexuais
+2026-04-01 14:19:46,514 - INFO - No date in REDCap for procedure 'Hemograma completo-sangue' (check_field=lab_hematocrito)
+2026-04-01 14:19:46,515 - WARNING - Date exists (lab_dt_visita) but check field lab_creatinina indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,515 - INFO - No date in REDCap for procedure 'Creatinina sérica-sangue' (check_field=lab_creatinina)
+2026-04-01 14:19:46,515 - WARNING - Date exists (lab_dt_visita) but check field lab_bilirrubina indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,515 - INFO - No date in REDCap for procedure 'Bilirrubina sérica (total)-sangue' (check_field=lab_bilirrubina)
+2026-04-01 14:19:46,516 - WARNING - Date exists (lab_dt_visita) but check field lab_tgp indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,516 - INFO - No date in REDCap for procedure 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue' (check_field=lab_tgp)
+2026-04-01 14:19:46,517 - WARNING - Date exists (lab_dt_visita) but check field lab_albumina indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,517 - INFO - No date in REDCap for procedure 'Albumina-Sangue' (check_field=lab_albumina)
+2026-04-01 14:19:46,518 - WARNING - Date exists (lab_dt_visita) but check field lab_psa indicates not done (value = ''). Skipping....
+2026-04-01 14:19:46,518 - INFO - No date in REDCap for procedure 'Antígeno prostático específico livre (PSA)-sangue' (check_field=lab_psa)
+2026-04-01 14:19:46,518 - WARNING - Invalid procedure config: {'procedure_name': "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica", 'co_procedimento': '129', 'redcap_check_field': '', 'redcap_date_field': ''}. Skipping...
+2026-04-01 14:19:46,518 - INFO - V1 procedures synchronized: 0/22
+2026-04-01 14:19:46,518 - INFO - executor_name: 
+2026-04-01 14:19:46,518 - INFO - V1: form_medico_rubrica vazio; não é possível atribuir executor (Consulta Médica).
+2026-04-01 14:19:46,518 - INFO - V1 sync completed for record_id=105-5
+2026-04-01 14:19:46,717 - INFO - Visita 'Data da Cirurgia de LCA' atualizada (id=41808, data=2026-03-30).
+2026-04-01 14:19:46,717 - INFO - Successfully processed DET for record_id=105-5, event_name=visita_1__screenin_arm_1
+2026-04-01 14:21:32,945 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 14:21:33,617 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 14:21:39,325 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=formulrio_mdico, record=105-5, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 14:21:39,330 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 14:21:40,075 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 14:21:40,075 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 14:21:40,075 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 14:21:40,075 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-5","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-5","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 14:21:40,075 - INFO - REDCap: exported record 105-5 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 14:21:40,075 - INFO - Mapped gender: 'Feminino' -> '604'
+2026-04-01 14:21:40,076 - INFO - Mapped site: 'Irmandade da Santa Casa de Misericórdia de Santos' -> '4'
+2026-04-01 14:21:40,076 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 14:21:40,076 - INFO - Volunteer payload prepared: {'nome': '105-5', 'iniciais': 'B.R.M', 'data_nascimento': '1980-04-25', 'sexo': '604', 'email': '', 'data_inclusao': '2026-03-31', 'centro': '4', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 14:21:40,639 - INFO - Polotrial: authentication successful
+2026-04-01 14:21:40,820 - INFO - Volunteer exists: 105-5 -> id=3419
+2026-04-01 14:21:40,820 - INFO - DEBUG: Searching protocol - co_centro=4, apelido_protocolo=oxandrolona
+2026-04-01 14:21:41,147 - INFO - Protocol found: id=2372 (site=4)
+2026-04-01 14:21:41,332 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1 - TRIAGEM']
+2026-04-01 14:21:41,332 - INFO - Arm matched for Triagem: id=242 name=IMOX Versão nº1 - TRIAGEM
+2026-04-01 14:21:41,805 - INFO - Participant exists: id=3397
+2026-04-01 14:22:02,500 - INFO - Participant visits retrieved: 3, for participant 3397
+2026-04-01 14:22:02,500 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-04-01 14:22:02,500 - INFO - Participant visit found: id=41806
+2026-04-01 14:22:02,666 - INFO - VS/V1 already up to date (id=41806).
+2026-04-01 14:22:02,903 - INFO - DEBUG: Available procedures in VS/V1:
+2026-04-01 14:22:02,903 - INFO -  - ID: 677911 | Proc: Termo de consentimento Livre e Esclarecido | Data exec: 2026-03-31T00:00:00.000Z | Check field: tcle_pergunta_c=Sim | Date field: tcle_dt_visita_aplicacao=2026-03-31 09:40
+2026-04-01 14:22:02,903 - INFO -  - ID: 677912 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,903 - INFO -  - ID: 677913 | Proc: Dados demográficos | Data exec: 2026-03-31T00:00:00.000Z | Check field: demografia_dt_visita=2026-03-31 | Date field: demografia_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677914 | Proc: Exame físico | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677915 | Proc: História médica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao6=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677916 | Proc: Sinais vitais | Data exec: nan | Check field: form_medico_sv1=N/A | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677917 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao4=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677928 | Proc: Hemograma completo-sangue | Data exec: nan | Check field: lab_hematocrito=N/A | Date field: hematocrito_dt=N/A
+2026-04-01 14:22:02,904 - INFO -  - ID: 677926 | Proc: Creatinina sérica-sangue | Data exec: nan | Check field: lab_creatinina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677930 | Proc: Bilirrubina sérica (total)-sangue | Data exec: nan | Check field: lab_bilirrubina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677927 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: nan | Check field: lab_tgp=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677931 | Proc: Albumina-Sangue | Data exec: nan | Check field: lab_albumina=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677929 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: nan | Check field: lab_psa=N/A | Date field: lab_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677918 | Proc: Teste de gravidez | Data exec: 2026-03-31T00:00:00.000Z | Check field: coleta_gravidez=Sim | Date field: coleta_dt_visita=2026-03-31
+2026-04-01 14:22:02,904 - INFO -  - ID: 677919 | Proc: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao1=Sim | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677920 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: 2026-03-31T00:00:00.000Z | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677925 | Proc: Orientações para uso de métodos contraceptivos | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_gravidez_q3=NA | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677921 | Proc: Monitoramento de eventos adversos | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677922 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: 2026-03-31T00:00:00.000Z | Check field: ipaq_dt_visita=2026-03-31 | Date field: ipaq_dt_visita=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677923 | Proc: Consulta Médica | Data exec: 2026-03-31T00:00:00.000Z | Check field: form_medico_dt_rubrica=2026-03-31 | Date field: form_medico_dt_rubrica=2026-03-31
+2026-04-01 14:22:02,905 - INFO -  - ID: 677924 | Proc: Reembolso | Data exec: nan | Check field: None=N/A | Date field: None=N/A
+2026-04-01 14:22:02,905 - INFO - DEBUG: Procedure mapping summary:
+2026-04-01 14:22:02,905 - INFO -   Total procedures in PoloTrial: 21
+2026-04-01 14:22:02,905 - INFO -   Matched with mapping: 20
+2026-04-01 14:22:02,905 - INFO -   Unmatched: 1
+2026-04-01 14:22:02,905 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-04-01 14:22:02,905 - WARNING -   - 'Reembolso'
+2026-04-01 14:22:02,906 - INFO - No procedure to sync for pattern Teste\s+de\s+gravidez
+2026-04-01 14:22:02,907 - INFO - No procedure to sync for pattern Exame\s+f[ií]sico
+2026-04-01 14:22:02,908 - INFO - No procedure to sync for pattern Consulta\s+M[eéEÉ]dica
+2026-04-01 14:22:02,908 - INFO - No procedure to sync for pattern Hist[oóOÓ]ria\s+M[éeEÉ]dica
+2026-04-01 14:22:02,909 - INFO - No procedure to sync for pattern Registro\s+de\s+uso\s+de\s+Medicações\s+Pr[éÉ]-Estudo\s+e\s+Concomitantes
+2026-04-01 14:22:02,910 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_sv1 indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,910 - INFO - No date in REDCap for procedure 'Sinais vitais' (check_field=form_medico_sv1)
+2026-04-01 14:22:02,910 - INFO - No procedure to sync for pattern Dados\s+demogr[aáàâãäå]ficos
+2026-04-01 14:22:02,911 - INFO - No procedure to sync for pattern Termo\s+de\s+consentimento\s+Livre\s+e\s+Esclarecido
+2026-04-01 14:22:02,912 - INFO - No procedure to sync for pattern Avalia[cç][aã]o\s+dos\s+crit[eé]rios\s+de\s+inclus[aã]o/exclus[aã]o
+2026-04-01 14:22:02,912 - INFO - No procedure to sync for pattern Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria
+2026-04-01 14:22:02,913 - INFO - No procedure to sync for pattern Monitoramento\s+de\s+eventos\s+adversos
+2026-04-01 14:22:02,914 - INFO - No procedure to sync for pattern Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[eé]todos\s+contraceptivos
+2026-04-01 14:22:02,914 - INFO - No procedure to sync for pattern Dispensa[cç][aã]o\s+de\s+medica[cç][aã]o\s+para\s+tromboprofilaxia\s+p[oó]s-cirurgica
+2026-04-01 14:22:02,915 - INFO - No procedure to sync for pattern Question[aá]rio\s+IPAQ
+2026-04-01 14:22:02,916 - INFO - No procedure to sync for pattern Globulina\s+Ligadora\s+De\s+Hormonios\s+Sexuais
+2026-04-01 14:22:02,917 - INFO - No date in REDCap for procedure 'Hemograma completo-sangue' (check_field=lab_hematocrito)
+2026-04-01 14:22:02,917 - WARNING - Date exists (lab_dt_visita) but check field lab_creatinina indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,917 - INFO - No date in REDCap for procedure 'Creatinina sérica-sangue' (check_field=lab_creatinina)
+2026-04-01 14:22:02,918 - WARNING - Date exists (lab_dt_visita) but check field lab_bilirrubina indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,918 - INFO - No date in REDCap for procedure 'Bilirrubina sérica (total)-sangue' (check_field=lab_bilirrubina)
+2026-04-01 14:22:02,919 - WARNING - Date exists (lab_dt_visita) but check field lab_tgp indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,919 - INFO - No date in REDCap for procedure 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue' (check_field=lab_tgp)
+2026-04-01 14:22:02,920 - WARNING - Date exists (lab_dt_visita) but check field lab_albumina indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,920 - INFO - No date in REDCap for procedure 'Albumina-Sangue' (check_field=lab_albumina)
+2026-04-01 14:22:02,921 - WARNING - Date exists (lab_dt_visita) but check field lab_psa indicates not done (value = ''). Skipping....
+2026-04-01 14:22:02,921 - INFO - No date in REDCap for procedure 'Antígeno prostático específico livre (PSA)-sangue' (check_field=lab_psa)
+2026-04-01 14:22:02,921 - WARNING - Invalid procedure config: {'procedure_name': "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica", 'co_procedimento': '129', 'redcap_check_field': '', 'redcap_date_field': ''}. Skipping...
+2026-04-01 14:22:02,921 - INFO - V1 procedures synchronized: 0/22
+2026-04-01 14:22:02,921 - INFO - executor_name: 
+2026-04-01 14:22:02,921 - INFO - V1: form_medico_rubrica vazio; não é possível atribuir executor (Consulta Médica).
+2026-04-01 14:22:02,921 - INFO - V1 sync completed for record_id=105-5
+2026-04-01 14:22:03,127 - INFO - Visita 'Data da Cirurgia de LCA' atualizada (id=41808, data=2026-03-30).
+2026-04-01 14:22:03,127 - INFO - Successfully processed DET for record_id=105-5, event_name=visita_1__screenin_arm_1

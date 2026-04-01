@@ -222,7 +222,7 @@ def sync_v1_screening(
             polotrial.update_participant_visit(
                 cirurgia_visit_id,
                 {
-                    "data__realizada":str(cirurgia_date).strip()[:10],
+                    "data_realizada":str(cirurgia_date).strip()[:10],
                     "status": 20,
                 }
             )

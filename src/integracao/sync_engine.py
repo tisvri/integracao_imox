@@ -105,6 +105,10 @@ def update_visit_status(
         "data_realizada": visit_date,
         "status": 20 # 20 = Completed(realizada)
     }
+
+    if not visit_date:
+        logger.warning("%s: visit_date is empty, skipping update for participant_visita_id=%s", nome_tarefa, participante_visita_id)
+        return participante_visita_id
     
     current = polotrial.get_participant_visit(participante_visita_id)
     if (
@@ -114,7 +118,7 @@ def update_visit_status(
         logger.info("%s: already up to date (id=%s)", nome_tarefa, participante_visita_id)
     else:
         polotrial.update_participant_visit(participante_visita_id, desired)
-        logger.info("%s: updated (id=%s)", nome_tarefa, participante_visita_id)
+        logger.info("%s: updated (id=%s, data=%s)", nome_tarefa, participante_visita_id, visit_date)
     
     return participante_visita_id
 
