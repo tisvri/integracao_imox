@@ -1874,3 +1874,4 @@ VISITA_NAO_PROGRAMADA_PROCEDURES_MAP: List[Dict[str, Optional[str]]] = [
         "redcap_date_field": "fisio_dt_visita"
     }
 ]
+

@@ -23,6 +23,7 @@ W16_EVENT = config.W16_EVENT_NAME
 W20_EVENT = config.W20_EVENT_NAME
 W24_EVENT = config.W24_EVENT_NAME
 VISITA_NAO_PROGRAMADA_EVENT = config.NP_EVENT_NAME
+CIRURGIA_DT_REDCAP_EVENT = config.V1_EVENT_NAME
 
 #Polotrial Events
 V3_POLOTRIAL_EVENT_NAME = config.V3_POLOTRIAL_EVENT_NAME
@@ -297,5 +298,19 @@ VISITS_CATALOG = {
             'date_field': 'consulta_dt',
             "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
         },        
-    )
+    ),
+
+    # LCA Surgery Date
+    CIRURGIA_DT_REDCAP_EVENT: VisitConfig(
+        redcap_event_name=CIRURGIA_DT_REDCAP_EVENT,
+        polotrial_visit_name = config.CIRURGIA_DT_EVENT_NAME,
+        #LCA surgery date
+        date_field="form_medico_ruptura_lca_q4",
+        # Redcap fields
+        procedures_map = [],
+        # No procedures or executors to sync, this visit is only to sync the surgery date from Redcap to PoloTrial
+        requires_pk=None,
+        executor_config=None
+
+    ),
 }

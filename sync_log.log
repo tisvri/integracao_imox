@@ -15692,3 +15692,243 @@ RuntimeError: Arm Triagem not found for protocol 2651
 2026-03-30 13:44:24,445 - INFO - Successfully processed DET for record_id=78-3, event_name=visita_1__screenin_arm_1
 2026-03-30 14:12:49,849 - INFO - Shutting down webhook for protocol: oxandrolona
 2026-03-30 14:12:50,784 - INFO - Webhook initialized for protocol: oxandrolona
+2026-03-30 17:47:51,680 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 10:43:37,767 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 10:45:30,737 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:45:30,743 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:45:31,465 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:45:31,466 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:45:31,466 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:45:31,466 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:45:31,466 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:45:31,466 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:45:31,466 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:45:31,466 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:45:31,466 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:45:32,035 - INFO - Polotrial: authentication successful
+2026-04-01 10:45:32,242 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:45:32,243 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:45:32,612 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:45:32,807 - INFO - DEBUG: Arms matched for Triagem: []
+2026-04-01 10:45:32,808 - ERROR - Error processing DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 46, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 125, in sync_v1_screening
+    raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+RuntimeError: Arm Triagem not found for protocol 2651
+2026-04-01 10:48:13,595 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:48:13,598 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:48:14,324 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:48:14,324 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:48:14,324 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:48:14,324 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:48:14,325 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:48:14,325 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:48:14,325 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:48:14,325 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:48:14,325 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:48:14,541 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:48:14,541 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:48:14,983 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:48:15,252 - INFO - DEBUG: Arms matched for Triagem: []
+2026-04-01 10:48:15,252 - ERROR - Error processing DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 46, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 125, in sync_v1_screening
+    raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+RuntimeError: Arm Triagem not found for protocol 2651
+2026-04-01 10:48:29,862 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:48:29,863 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:48:30,583 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:48:30,583 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:48:30,583 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:48:30,583 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:48:30,584 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:48:30,584 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:48:30,584 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:48:30,584 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:48:30,584 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:48:30,897 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:48:30,897 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:48:31,239 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:48:31,435 - INFO - DEBUG: Arms matched for Triagem: []
+2026-04-01 10:48:31,435 - ERROR - Error processing DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 46, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 125, in sync_v1_screening
+    raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+RuntimeError: Arm Triagem not found for protocol 2651
+2026-04-01 10:54:33,852 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 10:54:34,835 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 10:54:43,701 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:54:43,707 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:54:44,408 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:54:44,408 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:54:44,408 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:54:44,408 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:54:44,408 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:54:44,408 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:54:44,408 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:54:44,408 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:54:44,408 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:54:45,007 - INFO - Polotrial: authentication successful
+2026-04-01 10:54:45,188 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:54:45,188 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:54:45,555 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:54:45,749 - INFO - DEBUG: Arms matched for Triagem: []
+2026-04-01 10:54:45,749 - ERROR - Error processing DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 46, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 126, in sync_v1_screening
+    raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+RuntimeError: Arm Triagem not found for protocol 2651
+2026-04-01 10:55:29,249 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:55:29,251 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:55:29,935 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:55:29,935 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:55:29,935 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:55:29,935 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:55:29,937 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:55:29,937 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:55:29,937 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:55:29,937 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:55:29,937 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:55:30,144 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:55:30,144 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:55:30,508 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:55:30,713 - INFO - DEBUG: Arms matched for Triagem: []
+2026-04-01 10:55:30,713 - ERROR - Error processing DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+Traceback (most recent call last):
+  File "/home/edu/Python/integracao_imox/src/integracao/webhook.py", line 207, in _run_sync
+    dispatch_event(
+  File "/home/edu/Python/integracao_imox/src/integracao/dispatch.py", line 46, in dispatch_event
+    sync_v1_screening(
+  File "/home/edu/Python/integracao_imox/src/integracao/events/v1_screening.py", line 126, in sync_v1_screening
+    raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
+RuntimeError: Arm Triagem not found for protocol 2651
+2026-04-01 10:57:01,016 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=demografia, record=105-1, event_name=visita_1__screenin_arm_1, data_access_group=irmandade_da_santa, repeat_instance=None, repeat_instrument=None
+2026-04-01 10:57:01,016 - INFO - Dispatching to V1 handler: visita_1__screenin_arm_1
+2026-04-01 10:57:01,769 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-04-01 10:57:01,770 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-04-01 10:57:01,770 - INFO - DEBUG REDCAP STATUS: 200
+2026-04-01 10:57:01,770 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"105-1","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-04-01 10:57:01,770 - INFO - REDCap: exported record 105-1 for event visita_1__screenin_arm_1 with 182 fields
+2026-04-01 10:57:01,770 - INFO - Mapped gender: 'Masculino' -> '603'
+2026-04-01 10:57:01,770 - INFO - Mapped site: 'Centro de Oncologia do Paraná' -> '68'
+2026-04-01 10:57:01,770 - INFO - Mapped race: 'Morena ou Parda' -> '9178'
+2026-04-01 10:57:01,770 - INFO - Volunteer payload prepared: {'nome': '105-1', 'iniciais': 'R.A.S', 'data_nascimento': '1977-08-19', 'sexo': '603', 'email': '', 'data_inclusao': '2026-03-16', 'centro': '68', 'raca_cor': '9178', 'contatos': '11111111111'}
+2026-04-01 10:57:01,965 - INFO - Volunteer exists: 105-1 -> id=3414
+2026-04-01 10:57:01,965 - INFO - DEBUG: Searching protocol - co_centro=68, apelido_protocolo=oxandrolona
+2026-04-01 10:57:02,309 - INFO - Protocol found: id=2651 (site=68)
+2026-04-01 10:57:02,502 - INFO - DEBUG: Arms matched for Triagem: ['IMOX Versão nº1 - TRIAGEM']
+2026-04-01 10:57:02,502 - INFO - Arm matched for Triagem: id=320 name=IMOX Versão nº1 - TRIAGEM
+2026-04-01 10:57:03,013 - INFO - DEBUG: Sending participant payload:
+{
+  "co_voluntario": 3414,
+  "co_protocolo": 2651,
+  "data_inclusao": "2026-03-16",
+  "id_participante": "105-1",
+  "numero_de_screening": "105-1",
+  "status_participante": "540",
+  "co_braco": 320,
+  "atualizar_agenda": "1",
+  "apagar_visitas_pendentes": "0"
+}
+2026-04-01 10:57:10,716 - INFO - DEBUG: Received participant response:
+{
+  "id": 3390,
+  "apagar_visitas_pendentes": 0,
+  "id_participante": "105-1",
+  "numero_de_screening": "105-1",
+  "co_protocolo": 2651,
+  "atualizar_agenda": 1,
+  "co_braco": 320,
+  "data_inclusao": "2026-03-16T00:00:00.000Z",
+  "status_participante": 540,
+  "co_voluntario": "3414",
+  "user_id_log": 196
+}
+2026-04-01 10:57:10,716 - INFO - Participant created: id=3390
+2026-04-01 10:57:31,479 - INFO - Participant visits retrieved: 3, for participant 3390
+2026-04-01 10:57:31,479 - INFO - Lokking for visit #1 with name 'VS/V1' among: ['VS/V1', 'VR/V2', 'Data da Cirurgia de LCA']
+2026-04-01 10:57:31,479 - INFO - Participant visit found: id=41771
+2026-04-01 10:57:31,860 - INFO - VS/V1 updated (id=41771).
+2026-04-01 10:57:32,085 - INFO - DEBUG: Available procedures in VS/V1:
+2026-04-01 10:57:32,086 - INFO -  - ID: 676644 | Proc: Termo de consentimento Livre e Esclarecido | Data exec: None | Check field: tcle_pergunta_c=Sim | Date field: tcle_dt_visita_aplicacao=2026-03-16 11:00
+2026-04-01 10:57:32,086 - INFO -  - ID: 676645 | Proc: Avaliação dos critérios de inclusão/exclusão | Data exec: None | Check field: form_medico_revisao=Sim | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,086 - INFO -  - ID: 676646 | Proc: Dados demográficos | Data exec: None | Check field: demografia_dt_visita=2026-03-16 | Date field: demografia_dt_visita=2026-03-16
+2026-04-01 10:57:32,086 - INFO -  - ID: 676647 | Proc: Exame físico | Data exec: None | Check field: form_medico_ex_fisico_q0=Sim | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,086 - INFO -  - ID: 676648 | Proc: História médica | Data exec: None | Check field: form_medico_revisao6=Não | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,086 - INFO -  - ID: 676649 | Proc: Sinais vitais | Data exec: None | Check field: form_medico_sv1=Sim | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676650 | Proc: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Check field: form_medico_revisao4=Sim | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676661 | Proc: Hemograma completo-sangue | Data exec: None | Check field: lab_hematocrito=41.7 | Date field: hematocrito_dt=N/A
+2026-04-01 10:57:32,087 - INFO -  - ID: 676659 | Proc: Creatinina sérica-sangue | Data exec: None | Check field: lab_creatinina=0.80 | Date field: lab_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676663 | Proc: Bilirrubina sérica (total)-sangue | Data exec: None | Check field: lab_bilirrubina=0.80 | Date field: lab_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676660 | Proc: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: None | Check field: lab_tgp=33 | Date field: lab_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676664 | Proc: Albumina-Sangue | Data exec: None | Check field: lab_albumina=4.7 | Date field: lab_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676662 | Proc: Antígeno prostático específico livre (PSA)-sangue | Data exec: None | Check field: lab_psa=0.35 | Date field: lab_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676651 | Proc: Teste de gravidez | Data exec: None | Check field: coleta_gravidez=N/A | Date field: coleta_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676652 | Proc: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: None | Check field: form_medico_revisao1=Sim | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,087 - INFO -  - ID: 676653 | Proc: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: None | Check field: rando_q1_v2=Sim | Date field: revisao_dt_visita=2026-03-16
+2026-04-01 10:57:32,088 - INFO -  - ID: 676658 | Proc: Orientações para uso de métodos contraceptivos | Data exec: None | Check field: form_medico_gravidez_q3=N/A | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,088 - INFO -  - ID: 676654 | Proc: Monitoramento de eventos adversos | Data exec: None | Check field: form_medico_revisao7=Não | Date field: form_medico_dt_visita=2026-03-16
+2026-04-01 10:57:32,088 - INFO -  - ID: 676655 | Proc: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: None | Check field: ipaq_dt_visita=2026-03-16 | Date field: ipaq_dt_visita=2026-03-16
+2026-04-01 10:57:32,088 - INFO -  - ID: 676656 | Proc: Consulta Médica | Data exec: None | Check field: form_medico_dt_rubrica=2026-03-16 | Date field: form_medico_dt_rubrica=2026-03-16
+2026-04-01 10:57:32,088 - INFO -  - ID: 676657 | Proc: Reembolso | Data exec: None | Check field: None=N/A | Date field: None=N/A
+2026-04-01 10:57:32,088 - INFO - DEBUG: Procedure mapping summary:
+2026-04-01 10:57:32,088 - INFO -   Total procedures in PoloTrial: 21
+2026-04-01 10:57:32,088 - INFO -   Matched with mapping: 20
+2026-04-01 10:57:32,088 - INFO -   Unmatched: 1
+2026-04-01 10:57:32,088 - WARNING - DEBUG: Unmatched procedures (no mapping found):
+2026-04-01 10:57:32,088 - WARNING -   - 'Reembolso'
+2026-04-01 10:57:32,090 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping....
+2026-04-01 10:57:32,090 - INFO - No date in REDCap for procedure 'Teste de gravidez' (check_field=coleta_gravidez)
+2026-04-01 10:57:32,282 - INFO - ✅s Procedure updated successfully. procedure_id=676647 date=2026-03-16
+2026-04-01 10:57:32,472 - INFO - ✅s Procedure updated successfully. procedure_id=676656 date=2026-03-16
+2026-04-01 10:57:32,654 - INFO - ✅s Procedure updated successfully. procedure_id=676648 date=2026-03-16
+2026-04-01 10:57:32,843 - INFO - ✅s Procedure updated successfully. procedure_id=676650 date=2026-03-16
+2026-04-01 10:57:33,032 - INFO - ✅s Procedure updated successfully. procedure_id=676649 date=2026-03-16
+2026-04-01 10:57:33,224 - INFO - ✅s Procedure updated successfully. procedure_id=676646 date=2026-03-16
+2026-04-01 10:57:33,419 - INFO - ✅s Procedure updated successfully. procedure_id=676644 date=2026-03-16
+2026-04-01 10:57:33,619 - INFO - ✅s Procedure updated successfully. procedure_id=676645 date=2026-03-16
+2026-04-01 10:57:34,157 - INFO - ✅s Procedure updated successfully. procedure_id=676653 date=2026-03-16
+2026-04-01 10:57:34,347 - INFO - ✅s Procedure updated successfully. procedure_id=676654 date=2026-03-16
+2026-04-01 10:57:34,349 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping....
+2026-04-01 10:57:34,349 - INFO - No date in REDCap for procedure 'Orientações para uso de métodos contraceptivos' (check_field=form_medico_gravidez_q3)
+2026-04-01 10:57:34,538 - INFO - ✅s Procedure updated successfully. procedure_id=676652 date=2026-03-16
+2026-04-01 10:57:34,730 - INFO - ✅s Procedure updated successfully. procedure_id=676655 date=2026-03-16
+2026-04-01 10:57:34,731 - INFO - No procedure to sync for pattern Globulina\s+Ligadora\s+De\s+Hormonios\s+Sexuais
+2026-04-01 10:57:34,732 - INFO - No date in REDCap for procedure 'Hemograma completo-sangue' (check_field=lab_hematocrito)
+2026-04-01 10:57:34,937 - INFO - ✅s Procedure updated successfully. procedure_id=676659 date=2026-03-16
+2026-04-01 10:57:35,135 - INFO - ✅s Procedure updated successfully. procedure_id=676663 date=2026-03-16
+2026-04-01 10:57:35,326 - INFO - ✅s Procedure updated successfully. procedure_id=676660 date=2026-03-16
+2026-04-01 10:57:35,520 - INFO - ✅s Procedure updated successfully. procedure_id=676664 date=2026-03-16
+2026-04-01 10:57:35,703 - INFO - ✅s Procedure updated successfully. procedure_id=676662 date=2026-03-16
+2026-04-01 10:57:35,703 - WARNING - Invalid procedure config: {'procedure_name': "Concentra[cç][aã]'o\\s+s[eé]rica\\s+de\\s+oxandrolona\\s+e\\s+farmacocin[eé]tica", 'co_procedimento': '129', 'redcap_check_field': '', 'redcap_date_field': ''}. Skipping...
+2026-04-01 10:57:35,703 - INFO - V1 procedures synchronized: 17/22
+2026-04-01 10:57:35,703 - INFO - executor_name: Dr. Antônio Flávio Silva Souza Júnior
+2026-04-01 10:57:36,314 - INFO - V1: executor atribuído em Consulta Médica. procedure_id=676656 executor_id=4634 response_id=17244
+2026-04-01 10:57:36,314 - INFO - V1 sync completed for record_id=105-1
+2026-04-01 10:57:36,315 - INFO - Successfully processed DET for record_id=105-1, event_name=visita_1__screenin_arm_1
+2026-04-01 11:55:24,353 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 11:58:59,663 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 11:59:00,068 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 11:59:00,732 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 13:55:28,954 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 13:56:00,507 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 13:56:16,693 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 13:56:17,303 - INFO - Webhook initialized for protocol: oxandrolona
+2026-04-01 13:56:34,801 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-04-01 13:56:35,411 - INFO - Webhook initialized for protocol: oxandrolona

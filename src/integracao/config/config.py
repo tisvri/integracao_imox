@@ -17,6 +17,7 @@ W16_EVENT_NAME="16_semanas_arm_1"
 W20_EVENT_NAME="20_semanas_arm_1"
 W24_EVENT_NAME="24_semanas_arm_1"
 NP_EVENT_NAME="visita_no_programa_arm_1"
+CIRURGIA_LCA_REDCAP_EVENT_NAME="visita_1__screenin_arm_1"
 
 
 
@@ -39,6 +40,7 @@ W16_POLOTRIAL_EVENT_NAME="16 semanas após a inserção do implante de oxandrolo
 W20_POLOTRIAL_EVENT_NAME="20 semanas após a inserção do implante de oxandrolona"
 W24_POLOTRIAL_EVENT_NAME="24 semanas após a inserção do implante de oxandrolona"
 CIRURGIA_DT_EVENT_NAME="Data da Cirurgia de LCA"
+
 
 
 # Braços Polotrial:

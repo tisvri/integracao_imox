@@ -13,6 +13,7 @@ from integracao.mappings.site_code_maps import SITE_CODE_MAPPING
 from integracao.mappings.race_code_maps import RACE_CODE_MAPPING
 from integracao.mappings.gender_maps import GENDER_MAPPING
 import time
+import unicodedata
 
 from integracao.config import config
 
@@ -114,12 +115,12 @@ def sync_v1_screening(
     arm_match = next(
         (
             a for a in arms
-            if re.search(re.escape(triagem_arm_name), str(a.get("nome", "")), re.IGNORECASE)
+            if _normalize(triagem_arm_name) in _normalize(str(a.get("nome", "")))
         ),
         None,
     )
     #Checagem de braços
-    logger.info("DEBUG: Arms matched for Triagem: %s", [a.get("nome") for a in arms if re.search(re.escape(triagem_arm_name), str(a.get("nome", "")), re.IGNORECASE)])
+    logger.info("DEBUG: Arms matched for Triagem: %s", [a.get("nome") for a in arms if _normalize(triagem_arm_name) in _normalize(str(a.get("nome", "")))])
     
     if not arm_match:
         raise RuntimeError(f"Arm Triagem not found for protocol {co_protocolo}")
@@ -204,6 +205,32 @@ def sync_v1_screening(
     )
 
     logger.info("V1 sync completed for record_id=%s", record_id)
+
+    # 10. Update visit "Data da Cirurgia de LCA"
+    cirurgia_date = redcap_payload.get("form_medico_ruptura_lca_q4")
+    if cirurgia_date:
+        cirurgia_visit_name = config.CIRURGIA_DT_EVENT_NAME
+        #LCA surgery visit
+        cirurgia_visit = next(
+            (
+                v for v in visits if v.get("nome_tarefa", "") == cirurgia_visit_name
+            ),
+            None
+        )
+        if cirurgia_visit:
+            cirurgia_visit_id = int(cirurgia_visit["id"])
+            polotrial.update_participant_visit(
+                cirurgia_visit_id,
+                {
+                    "data__realizada":str(cirurgia_date).strip()[:10],
+                    "status": 20,
+                }
+            )
+            logger.info("Visita 'Data da Cirurgia de LCA' atualizada (id=%s, data=%s).", cirurgia_visit_id, cirurgia_date)
+        else:
+            logger.warning("Visita '%s' não encontrada na agenda do participante %s.", cirurgia_visit_name, co_participante)
+    else:
+        logger.info("form_medico_ruptura_lca_q4 vazio; visita 'Data da Cirurgia de LCA' não atualizada.")
 
 
 
@@ -445,3 +472,12 @@ def sync_consulta_medica_executor(
         executor_id,
         created.get("id"),
     )
+
+
+def _normalize(text: str) -> str:
+    """
+    Remove accents and special characters from a string, leaving only alphanumeric characters and spaces.
+    """
+    nfkd = unicodedata.normalize("NFKD", text)
+    ascii_only = "".join( c for c in nfkd if not unicodedata.combining(c))
+    return " ".join(ascii_only.lower().split())
