@@ -51,7 +51,7 @@ PK_ARM_NAME ="IMOX Versão nº1 - SUBGRUPO PK"
 # Mapeamento de randomização (chave:grupo_int)
 ARM_MAPPING="1:1,Não alocado:1,2:2,Alocado:2"
 
-# Padrões de braços PoloTrial
+# Padrões de braços PoloTrial'
 ARM_1_PATTERN_ENV="OTHER_ARM_NAME"
 ARM_1_LABEL="Não alocado"
 ARM_2_PATTERN_ENV="PK_ARM_NAME"
