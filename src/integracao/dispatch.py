@@ -6,7 +6,8 @@ from integracao.events.v1_screening import sync_v1_screening
 from integracao.events.v2_randomizacao import V2_EVENT, sync_v2_randomization
 from integracao.events.status_atualization import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
 from integracao.events.generic_visit import sync_generic_visit
-from integracao.visits_catalog import VISITS_CATALOG
+from integracao.events.vnp_handler import sync_vnp
+from integracao.visits_catalog import VISITS_CATALOG, VISITA_NAO_PROGRAMADA_EVENT
 from integracao.polotrial_client import PoloTrialClient
 from integracao.redcap_client import RedcapClient
 import os

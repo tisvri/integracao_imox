@@ -347,6 +347,42 @@ class PoloTrialClient:
             raise RuntimeError(f"Error updating participant {participant_id}: {request.status_code} {request.text}")
         return request.json()
     
+    def create_participant_visit(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        POST /participante_visita
+        Create a new participant visit (used for unscheduled visits).
+        
+        :param payload: Data to create the participant visit with
+                       Required fields: co_participante, co_tarefa, nome_tarefa, data_realizada, status
+        :return: Created participant visit data
+        :rtype: Dict[str, Any]
+        """
+        request = self._request("POST", "/participante_visita", json=payload)
+        
+        # API bug: sometimes returns 500 but creates the visit.
+        if request.status_code in (200, 201):
+            return request.json()
+        
+        # If there was an error, check if the visit was created anyway.
+        if request.status_code == 500:
+            logger.warning("Polotrial returned 500 when creating visit. Checking if it was created anyway...")
+            
+            # Try to find the visit by co_participante and nome_tarefa
+            co_participante = payload.get("co_participante")
+            nome_tarefa = payload.get("nome_tarefa")
+            
+            if co_participante and nome_tarefa:
+                visits = self.list_participant_visits(co_participante=co_participante)
+                # Find the most recent visit with matching nome_tarefa
+                matching_visits = [v for v in visits if v.get("nome_tarefa") == nome_tarefa]
+                if matching_visits:
+                    # Sort by ID descending to get the most recent
+                    latest_visit = max(matching_visits, key=lambda v: v.get("id", 0))
+                    logger.info("Visit was created despite 500 error: %s", latest_visit["id"])
+                    return latest_visit
+        
+        raise RuntimeError(f"Error creating participant visit: {request.status_code} - {request.text}")
+    
     def update_participant_visit(self, participante_visita_id: int, payload: Dict[str, Any]) -> Dict[str, Any]:
         """
         PUT /participante_visita/{id}
