@@ -3,6 +3,9 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
+# Re-export config module variables
+from . import config  # noqa: F401
+
 
 @dataclass(frozen=True)
 class Settings:

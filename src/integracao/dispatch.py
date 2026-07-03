@@ -80,6 +80,21 @@ def dispatch_event(
         )
         return
     
+    # Special handler for Visita Não Programada (VNP)
+    # VNP needs special treatment because it can occur multiple times
+    if event_name == VISITA_NAO_PROGRAMADA_EVENT:
+        visit_config = VISITS_CATALOG[event_name]
+        logger.info("Dispatching to VNP handler: %s (task=%s)", event_name, visit_config.polotrial_visit_name)
+        sync_vnp(
+            record_id=record_id,
+            event_name=event_name,
+            visit_config=visit_config,
+            redcap=redcap,
+            polotrial=polotrial,
+            protocol_nickname=protocol_nickname,
+        )
+        return
+    
     if  event_name in VISITS_CATALOG:
         visit_config = VISITS_CATALOG[event_name]
         logger.info("Dispatching to generic handler: %s (task=%s)", event_name, visit_config.polotrial_visit_name)
