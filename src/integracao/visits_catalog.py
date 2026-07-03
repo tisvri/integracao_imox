@@ -59,7 +59,7 @@ from integracao.mappings.procedures_maps import (
     V3_PROCEDURES_MAP,
     V4_PROCEDURES_MAP,
     V5_PROCEDURES_MAP,
-    VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
+    # VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
 )
 
 class VisitConfig:
@@ -287,18 +287,18 @@ VISITS_CATALOG = {
 
 
     # Unscheduled Visit
-    VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
-        redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
-        polotrial_visit_name= VNP_POLOTRIAL_EVENT_NAME,
-        date_field = "form_medico_dt_visita",
-        procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
-        requires_pk=None,
-        executor_config={
-            "field": "consulta_nome_medico",
-            'date_field': 'consulta_dt',
-            "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
-        },        
-    ),
+    # VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
+    #     redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
+    #     polotrial_visit_name= VNP_POLOTRIAL_EVENT_NAME,
+    #     date_field = "form_medico_dt_visita",
+    #     procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
+    #     requires_pk=None,
+    #     executor_config={
+    #         "field": "consulta_nome_medico",
+    #         'date_field': 'consulta_dt',
+    #         "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
+    #     },        
+    # ),
 
     # LCA Surgery Date
     CIRURGIA_DT_REDCAP_EVENT: VisitConfig(
