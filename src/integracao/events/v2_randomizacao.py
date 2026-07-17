@@ -205,12 +205,24 @@ def sync_v2_randomization(
     randomization_group = parse_randomization_group(raw_randomization)
 
     if randomization_group is None:
-        logger.info(
-            "V2: %s not yet filled (or unrecognized value %r) for record %s. "
-            "Arm will not be updated at this time.",
-            RANDOMIZATION_FIELD, raw_randomization, record_id,
-        )
-    else:
+        # Se o campo PK está vazio mas a data de randomização está preenchida,
+        # o participante foi randomizado e NÃO foi para o subgrupo PK → grupo 1 (Não alocado).
+        raw_dt_randomizacao = str(redcap_payload.get(DT_RANDOMIZATION_FIELD) or "").strip()
+        if raw_dt_randomizacao:
+            logger.info(
+                "V2: %s is empty for record %s but randomization date is set (%s). "
+                "Treating as group 1 (Não alocado → IMOX Versão nº1).",
+                RANDOMIZATION_FIELD, record_id, raw_dt_randomizacao,
+            )
+            randomization_group = 1
+        else:
+            logger.info(
+                "V2: %s not yet filled (or unrecognized value %r) for record %s. "
+                "Arm will not be updated at this time.",
+                RANDOMIZATION_FIELD, raw_randomization, record_id,
+            )
+
+    if randomization_group is not None:
         logger.info(
             "DEBUG: Updating participant arm - co_participante=%s "
             "randomization_group=%s (parsed from %r)",
@@ -502,7 +514,7 @@ def update_participant_arm_if_needed(
     target_arm = next(
         (
             a for a in protocol_arms
-            if re.search(target_arm_pattern, str(a.get("nome", "")), re.IGNORECASE)
+            if re.fullmatch(target_arm_pattern, str(a.get("nome", "")).strip(), re.IGNORECASE)
         ),
         None,
     )
