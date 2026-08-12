@@ -23,6 +23,7 @@ class RedcapClient:
         record_id: str,
         event_name: str,
         *,
+        repeat_instance: Optional[str] = None,
         raw_or_label: str = 'label',
         raw_or_label_headers: str = 'label',
     ) -> Dict[str, Any]:
@@ -39,6 +40,7 @@ class RedcapClient:
             "type": "eav",
             "records": [record_id],
             "events": [event_name],
+            "exportRepeatingInstruments": "true",
             "rawOrLabel": raw_or_label,
             "rawOrLabelHeaders": raw_or_label_headers,
             "exportCheckboxLabel": "false",
@@ -70,6 +72,9 @@ class RedcapClient:
         out: Dict[str, Any] = {}
         for entry in data:
             # entry: {record, field_name, value, event_name, ...}
+            entry_repeat_instance = entry.get("repeat_instance")
+            if repeat_instance is not None and str(entry_repeat_instance or "") != str(repeat_instance):
+                continue
             field_name = entry.get("field_name")
             value = entry.get("value")
             if field_name:

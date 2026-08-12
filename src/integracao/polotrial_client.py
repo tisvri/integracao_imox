@@ -297,6 +297,20 @@ class PoloTrialClient:
         if procedure_request.status_code != 200:
             raise RuntimeError(f"Error updating participant visit procedure: {procedure_request.status_code} - {procedure_request.text}")
         return procedure_request.json()
+
+    def create_participant_visit_procedure(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """Create a procedure link for a participant visit."""
+        procedure_request = self._request(
+            "POST",
+            "/participante_visita_procedimento",
+            json=payload,
+        )
+        if procedure_request.status_code not in (200, 201):
+            raise RuntimeError(
+                "Error creating participant visit procedure: "
+                f"{procedure_request.status_code} - {procedure_request.text}"
+            )
+        return procedure_request.json()
     
     def find_person_by_name(self, ds_nome: str) -> Optional[Dict[str, Any]]:
         """
@@ -350,13 +364,28 @@ class PoloTrialClient:
     def create_participant_visit(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         """
         POST /participante_visita
-        Create a new participant visit (used for unscheduled visits).
+        Create a new participant visit (including unscheduled visits).
         
-        :param payload: Data to create the participant visit with
-                       Required fields: co_participante, co_tarefa, nome_tarefa, data_realizada, status
+        :param payload: Data to create the participant visit with. The API also
+                   requires data_estimada, including for unscheduled visits.
         :return: Created participant visit data
         :rtype: Dict[str, Any]
         """
+        if not payload.get("data_estimada") and payload.get("data_realizada"):
+            payload = {
+                **payload,
+                "data_estimada": payload["data_realizada"],
+            }
+
+        logger.info(
+            "Polotrial: creating participant visit co_participante=%s, nome_tarefa=%s, "
+            "data_estimada=%r, data_realizada=%r, status=%s",
+            payload.get("co_participante"),
+            payload.get("nome_tarefa"),
+            payload.get("data_estimada"),
+            payload.get("data_realizada"),
+            payload.get("status"),
+        )
         request = self._request("POST", "/participante_visita", json=payload)
         
         # API bug: sometimes returns 500 but creates the visit.

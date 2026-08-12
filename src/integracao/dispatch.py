@@ -7,7 +7,7 @@ from integracao.events.v2_randomizacao import V2_EVENT, sync_v2_randomization
 from integracao.events.status_atualization import PARTICIPANT_STATUS_EVENT, sync_participant_status_update
 from integracao.events.generic_visit import sync_generic_visit
 from integracao.events.vnp_handler import sync_vnp
-from integracao.visits_catalog import VISITS_CATALOG#, VISITA_NAO_PROGRAMADA_EVENT
+from integracao.visits_catalog import VISITS_CATALOG, VISITA_NAO_PROGRAMADA_EVENT
 from integracao.polotrial_client import PoloTrialClient
 from integracao.redcap_client import RedcapClient
 import os
@@ -27,7 +27,8 @@ def dispatch_event(
     event_name: str,
     redcap: RedcapClient,
     polotrial: PoloTrialClient,
-    protocol_nickname: str
+    protocol_nickname: str,
+    repeat_instance: str | None = None,
 ) -> None:
     """
     
@@ -50,6 +51,7 @@ def dispatch_event(
             redcap=redcap,
             polotrial=polotrial,
             protocol_nickname=protocol_nickname,
+            repeat_instance=repeat_instance,
         )
         
         
@@ -82,18 +84,18 @@ def dispatch_event(
     
     # Special handler for Visita Não Programada (VNP)
     # VNP needs special treatment because it can occur multiple times
-    # if event_name == VISITA_NAO_PROGRAMADA_EVENT:
-    #     visit_config = VISITS_CATALOG[event_name]
-    #     logger.info("Dispatching to VNP handler: %s (task=%s)", event_name, visit_config.polotrial_visit_name)
-    #     sync_vnp(
-    #         record_id=record_id,
-    #         event_name=event_name,
-    #         visit_config=visit_config,
-    #         redcap=redcap,
-    #         polotrial=polotrial,
-    #         protocol_nickname=protocol_nickname,
-    #     )
-    #     return
+    if event_name == VISITA_NAO_PROGRAMADA_EVENT:
+        visit_config = VISITS_CATALOG[event_name]
+        logger.info("Dispatching to VNP handler: %s (task=%s)", event_name, visit_config.polotrial_visit_name)
+        sync_vnp(
+            record_id=record_id,
+            event_name=event_name,
+            visit_config=visit_config,
+            redcap=redcap,
+            polotrial=polotrial,
+            protocol_nickname=protocol_nickname,
+        )
+        return
     
     if  event_name in VISITS_CATALOG:
         visit_config = VISITS_CATALOG[event_name]

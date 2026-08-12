@@ -154,6 +154,11 @@ def sync_procedures(
     else:
         # Fallback: merge via protocol procedures endpoint
         logger.warning("dados_protocolo_procedimento not in response, fetching from protocolo_procedimento")
+        if "co_protocolo_procedimento" not in pvp_df.columns:
+            raise RuntimeError(
+                f"{visit_label}: Polotrial returned no procedures linked to "
+                f"participant visit {participante_visita_id}"
+            )
         proto_proc = polotrial.list_protocol_procedures(co_protocolo = co_protocolo)
         proto_df = pd.DataFrame(proto_proc)[['id', 'nome_procedimento_estudo']].rename(
             columns={'id': 'co_protocolo_procedimento'}

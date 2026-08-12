@@ -25,6 +25,7 @@ def sync_vnp(
     redcap: RedcapClient,
     polotrial: PoloTrialClient,
     protocol_nickname: str,
+    repeat_instance: str | None = None,
 ) -> None:
     """
     Handler específico para Visita Não Programada (VNP).
@@ -45,7 +46,11 @@ def sync_vnp(
     """
     
     # 1. Get participant info from PoloTrial
-    redcap_payload = redcap.export_record_eav(record_id, event_name)
+    redcap_payload = redcap.export_record_eav(
+        record_id,
+        event_name,
+        repeat_instance=repeat_instance,
+    )
     
     # 2. Identificar tipo de visita e data
     # Pode ser coleta ou form_medico
@@ -136,7 +141,12 @@ def sync_vnp(
             visit_label=visit_config.polotrial_visit_name,
         )
     
-    logger.info("VNP: Successfully synced visit %s for record %s", participant_visit_id, record_id)
+    logger.info(
+        "VNP: Successfully synced participant visit id=%s for record=%s. "
+        "This visit was created or updated; see the creation/update log above.",
+        participant_visit_id,
+        record_id,
+    )
 
 
 def _find_or_create_vnp(
@@ -190,6 +200,19 @@ def _find_or_create_vnp(
             }
             
             current = polotrial.get_participant_visit(participant_visit_id)
+            logger.info(
+                "VNP: Existing visit details id=%s, co_participante=%s, "
+                "co_protocolo=%s, co_tarefa=%s, nome_tarefa=%s, "
+                "data_estimada=%s, data_realizada=%s, status=%s",
+                participant_visit_id,
+                current.get("co_participante"),
+                current.get("co_protocolo"),
+                current.get("co_tarefa"),
+                current.get("nome_tarefa"),
+                current.get("data_estimada"),
+                current.get("data_realizada"),
+                current.get("status"),
+            )
             if (
                 str(current.get("data_realizada", ""))[:10] == target_date and
                 int(current.get("status", -1)) == desired["status"]
@@ -207,16 +230,46 @@ def _find_or_create_vnp(
         target_date
     )
     
+    # Preserve the task and procedure template from a previous VNP when the
+    # API does not materialize the flowchart automatically for a new visit.
+    template_visit = vnps[0] if vnps else None
+    template_procedures = []
+    if template_visit:
+        template_procedures = polotrial.list_participant_visit_procedures(
+            co_participante_visita=int(template_visit["id"])
+        )
+
+    # The API requires data_estimada on creation. For an unscheduled visit,
+    # the actual date is already known, so use it only as a technical value.
     payload = {
         "co_participante": co_participante,
         "co_protocolo": co_protocolo,
         "nome_tarefa": config.VNP_POLOTRIAL_EVENT_NAME,
+        "data_estimada": visit_date,
         "data_realizada": visit_date,
         "status": 20,  # 20 = Completed (realizada)
     }
+    if template_visit and template_visit.get("co_tarefa") is not None:
+        payload["co_tarefa"] = template_visit["co_tarefa"]
     
     created_visit = polotrial.create_participant_visit(payload)
     participant_visit_id = int(created_visit["id"])
+    created_procedures = polotrial.list_participant_visit_procedures(
+        co_participante_visita=participant_visit_id
+    )
+    if not created_procedures and template_procedures:
+        logger.info(
+            "VNP: New visit %s has no procedures; copying %d procedures from visit %s",
+            participant_visit_id,
+            len(template_procedures),
+            template_visit["id"],
+        )
+        for procedure in template_procedures:
+            procedure_payload = {
+                "co_participante_visita": participant_visit_id,
+                "co_protocolo_procedimento": procedure["co_protocolo_procedimento"],
+            }
+            polotrial.create_participant_visit_procedure(procedure_payload)
     
     logger.info(
         "VNP: Created new visit (id=%s, date=%s)",

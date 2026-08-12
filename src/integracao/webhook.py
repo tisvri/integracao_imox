@@ -172,6 +172,7 @@ async def redcap_imox_det(
         _run_sync,
         record_id=record,
         event_name=redcap_event_name,
+        repeat_instance=redcap_repeat_instance,
     )
 
     return {"message": "DET received successfully"}
@@ -183,7 +184,8 @@ async def redcap_imox_det(
 def _run_sync(
         *,
         record_id: str,
-        event_name: str
+    event_name: str,
+    repeat_instance: str | None = None,
 ) -> None:
     """
     Background worker function to process the DET event synchronously.
@@ -210,6 +212,7 @@ def _run_sync(
             redcap=_redcap,
             polotrial=_polotrial,
             protocol_nickname=_settings.protocol_nickname,
+            repeat_instance=repeat_instance,
         )
         logger.info("Successfully processed DET for record_id=%s, event_name=%s", record_id, event_name)
     except Exception:

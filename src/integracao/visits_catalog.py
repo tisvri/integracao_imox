@@ -22,7 +22,7 @@ W12_EVENT = config.W12_EVENT_NAME
 W16_EVENT = config.W16_EVENT_NAME
 W20_EVENT = config.W20_EVENT_NAME
 W24_EVENT = config.W24_EVENT_NAME
-# VISITA_NAO_PROGRAMADA_EVENT = config.NP_EVENT_NAME
+VISITA_NAO_PROGRAMADA_EVENT = config.NP_EVENT_NAME
 CIRURGIA_DT_REDCAP_EVENT = config.V1_EVENT_NAME
 
 #Polotrial Events
@@ -40,7 +40,7 @@ W12_POLOTRIAL_EVENT_NAME = config.W12_POLOTRIAL_EVENT_NAME
 W16_POLOTRIAL_EVENT_NAME = config.W16_POLOTRIAL_EVENT_NAME
 W20_POLOTRIAL_EVENT_NAME = config.W20_POLOTRIAL_EVENT_NAME
 W24_POLOTRIAL_EVENT_NAME = config.W24_POLOTRIAL_EVENT_NAME
-# VNP_POLOTRIAL_EVENT_NAME = config.VNP_POLOTRIAL_EVENT_NAME
+VNP_POLOTRIAL_EVENT_NAME = config.VNP_POLOTRIAL_EVENT_NAME
 
 
 # Importing procedure mapping from sync_engine to avoid circular dependency
@@ -59,7 +59,7 @@ from integracao.mappings.procedures_maps import (
     V3_PROCEDURES_MAP,
     V4_PROCEDURES_MAP,
     V5_PROCEDURES_MAP,
-    # VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
+    VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
 )
 
 class VisitConfig:
@@ -100,7 +100,7 @@ VISITS_CATALOG = {
             "field": "consulta_nome_medico",
             'date_field': 'consulta_dt',
             "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
-        },        
+        },
     ),
     #V4
     V4_EVENT: VisitConfig(
@@ -113,7 +113,7 @@ VISITS_CATALOG = {
             "field": "consulta_nome_medico",
             'date_field': 'consulta_dt',
             "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
-        },        
+        },
     ),
 
     # V5
@@ -127,7 +127,7 @@ VISITS_CATALOG = {
             "field": "consulta_nome_medico",
             'date_field': 'consulta_dt',
             "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
-        },        
+        },
     ),
 
     # PRE_INSERTION_EVENT_NAME
@@ -287,18 +287,18 @@ VISITS_CATALOG = {
 
 
     # Unscheduled Visit
-    # VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
-    #     redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
-    #     polotrial_visit_name= VNP_POLOTRIAL_EVENT_NAME,
-    #     date_field = "form_medico_dt_visita",
-    #     procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
-    #     requires_pk=None,
-    #     executor_config={
-    #         "field": "consulta_nome_medico",
-    #         'date_field': 'consulta_dt',
-    #         "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
-    #     },        
-    # ),
+    VISITA_NAO_PROGRAMADA_EVENT: VisitConfig(
+        redcap_event_name = VISITA_NAO_PROGRAMADA_EVENT,
+        polotrial_visit_name= VNP_POLOTRIAL_EVENT_NAME,
+        date_field = "form_medico_dt_visita",
+        procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
+        requires_pk=None,
+        executor_config={
+            "field": "consulta_nome_medico",
+            'date_field': 'consulta_dt',
+            "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
+        },
+    ),
 
     # LCA Surgery Date
     CIRURGIA_DT_REDCAP_EVENT: VisitConfig(
