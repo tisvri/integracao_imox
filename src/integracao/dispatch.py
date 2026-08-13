@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 
 from integracao.events.v1_screening import sync_v1_screening
 from integracao.events.v2_randomizacao import V2_EVENT, sync_v2_randomization
@@ -43,6 +44,17 @@ def dispatch_event(
     Raises:
         RuntimeError: _description_
     """
+    logger.info(
+        "Dispatch runtime: pid=%s, module=%s, event_name=%r, "
+        "vnp_event=%r, event_equal=%s",
+        os.getpid(),
+        __file__,
+        event_name,
+        VISITA_NAO_PROGRAMADA_EVENT,
+        event_name == VISITA_NAO_PROGRAMADA_EVENT,
+    )
+    event_name = event_name.strip()
+
     if event_name == V1_EVENT:
         logger.info("Dispatching to V1 handler: %s", event_name)
         sync_v1_screening(
