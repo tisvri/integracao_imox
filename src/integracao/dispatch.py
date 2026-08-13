@@ -94,6 +94,7 @@ def dispatch_event(
             redcap=redcap,
             polotrial=polotrial,
             protocol_nickname=protocol_nickname,
+            repeat_instance=repeat_instance,
         )
         return
     

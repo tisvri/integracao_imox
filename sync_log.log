@@ -21987,3 +21987,557 @@ TypeError: sync_v1_screening() got an unexpected keyword argument 'repeat_instan
 2026-08-12 17:25:34,929 - INFO - visita_2__randomiz_arm_1: participant 3532 arm updated 320 → 319 (Não alocado). data_randomizacao=2026-08-05
 2026-08-12 17:25:34,930 - INFO - V2 sync completed for record_id=100-16
 2026-08-12 17:25:34,932 - INFO - Successfully processed DET for record_id=100-16, event_name=visita_2__randomiz_arm_1
+2026-08-13 12:30:32,127 - INFO - Webhook initialized for protocol: oxandrolona
+2026-08-13 12:31:58,677 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=1, repeat_instrument=None
+2026-08-13 12:31:58,816 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:32:02,765 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:32:02,767 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:32:02,768 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:32:02,769 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:32:02,771 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1 with 32 fields
+2026-08-13 12:32:02,772 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-06-23
+2026-08-13 12:32:03,541 - INFO - Polotrial: authentication successful
+2026-08-13 12:32:04,087 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:32:04,088 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:32:04,090 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:32:04,091 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:32:04,093 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1 with 186 fields
+2026-08-13 12:32:05,597 - INFO - VNP: No existing visit found for date 2026-06-23. Creating new visit.
+2026-08-13 12:32:05,598 - INFO - Polotrial: creating participant visit co_participante=3395, nome_tarefa=Não Programada, data_estimada='2026-06-23', data_realizada='2026-06-23', status=20
+2026-08-13 12:32:09,778 - INFO - VNP: Created new visit (id=43733, date=2026-06-23)
+2026-08-13 12:32:09,986 - WARNING - dados_protocolo_procedimento not in response, fetching from protocolo_procedimento
+2026-08-13 12:32:09,987 - ERROR - Error processing DET for record_id=100-4, event_name=visita_no_programa_arm_1
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/webhook.py", line 209, in _run_sync
+    dispatch_event(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/dispatch.py", line 90, in dispatch_event
+    sync_vnp(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/events/vnp_handler.py", line 110, in sync_vnp
+    sync_procedures(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/sync_engine.py", line 158, in sync_procedures
+    raise RuntimeError(
+RuntimeError: Não Programada: Polotrial returned no procedures linked to participant visit 43733
+2026-08-13 12:32:54,881 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=2, repeat_instrument=None
+2026-08-13 12:32:54,884 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:32:55,613 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:32:55,614 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:32:55,616 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:32:55,618 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:32:55,619 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1 with 32 fields
+2026-08-13 12:32:55,621 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-06-23
+2026-08-13 12:32:56,164 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:32:56,165 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:32:56,167 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:32:56,168 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:32:56,170 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1 with 186 fields
+2026-08-13 12:32:57,602 - INFO - VNP: Found existing visit with matching date (id=43733, date=2026-06-23). Updating.
+2026-08-13 12:32:57,773 - INFO - VNP: Existing visit details id=43733, co_participante=3395, co_protocolo=None, co_tarefa=None, nome_tarefa=Não Programada, data_estimada=2026-06-23T00:00:00.000Z, data_realizada=2026-06-23T00:00:00.000Z, status=20
+2026-08-13 12:32:57,774 - INFO - VNP: Visit 43733 already up to date
+2026-08-13 12:32:57,983 - WARNING - dados_protocolo_procedimento not in response, fetching from protocolo_procedimento
+2026-08-13 12:32:57,984 - ERROR - Error processing DET for record_id=100-4, event_name=visita_no_programa_arm_1
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/webhook.py", line 209, in _run_sync
+    dispatch_event(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/dispatch.py", line 90, in dispatch_event
+    sync_vnp(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/events/vnp_handler.py", line 110, in sync_vnp
+    sync_procedures(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/sync_engine.py", line 158, in sync_procedures
+    raise RuntimeError(
+RuntimeError: Não Programada: Polotrial returned no procedures linked to participant visit 43733
+2026-08-13 12:34:48,367 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-2, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=1, repeat_instrument=None
+2026-08-13 12:34:48,368 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:34:49,065 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:34:49,065 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:34:49,066 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:34:49,067 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-2","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:34:49,068 - INFO - REDCap: exported record 100-2 for event visita_no_programa_arm_1 with 50 fields
+2026-08-13 12:34:49,068 - INFO - VNP: Processing unscheduled visit for record_id=100-2, visit_date=2026-07-10
+2026-08-13 12:34:49,560 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:34:49,561 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:34:49,561 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:34:49,562 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-2","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-2","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:34:49,563 - INFO - REDCap: exported record 100-2 for event visita_1__screenin_arm_1 with 185 fields
+2026-08-13 12:34:51,090 - INFO - VNP: Found existing visit with matching date (id=43686, date=2026-07-10). Updating.
+2026-08-13 12:34:51,253 - INFO - VNP: Existing visit details id=43686, co_participante=3393, co_protocolo=None, co_tarefa=None, nome_tarefa=Não Programada, data_estimada=2026-07-10T00:00:00.000Z, data_realizada=2026-07-10T00:00:00.000Z, status=20
+2026-08-13 12:34:51,254 - INFO - VNP: Visit 43686 already up to date
+2026-08-13 12:34:51,510 - INFO - DEBUG: Available procedures in visit Não Programada
+2026-08-13 12:34:51,511 - INFO -  - ID: 723867 | Name: Exame físico | Data exec: 2026-07-10T00:00:00.000Z | Pattern: Exame\s+f[ií]sico | Check Field: form_medico_ex_fisico_q0 (Value: Sim) | Date Field: form_medico_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,512 - INFO -  - ID: 723868 | Name: Sinais vitais | Data exec: 2026-07-10T00:00:00.000Z | Pattern: Sinais\s+vitais | Check Field: form_medico_sv1 (Value: Sim) | Date Field: form_medico_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,513 - INFO -  - ID: 723869 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: nan | Pattern: Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,513 - INFO -  - ID: 723870 | Name: Hemograma completo-sangue | Data exec: nan | Pattern: Hemograma\s+completo-sangue | Check Field: lab_hematocrito (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,514 - INFO -  - ID: 723871 | Name: Creatinina sérica-sangue | Data exec: nan | Pattern: Creatinina\s+s[eé]rica-sangue | Check Field: lab_creatinina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,514 - INFO -  - ID: 723872 | Name: Ureia sérica-sangue | Data exec: nan | Pattern: Ureia\s+s[eé]rica-sangue | Check Field: lab_ureia (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,515 - INFO -  - ID: 723873 | Name: Bilirrubina sérica (total)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,515 - INFO -  - ID: 723874 | Name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,516 - INFO -  - ID: 723875 | Name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,517 - INFO -  - ID: 723876 | Name: Fosfatase alcalina (FA)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,517 - INFO -  - ID: 723877 | Name: Albumina-Sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,518 - INFO -  - ID: 723878 | Name: Gama glutamil transferase (GGT)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,518 - INFO -  - ID: 723879 | Name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,519 - INFO -  - ID: 723880 | Name: Antígeno prostático específico livre (PSA)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,519 - INFO -  - ID: 723881 | Name: Colesterol- sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,520 - INFO -  - ID: 723882 | Name: Low-density lipoprotein (LDL)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,520 - INFO -  - ID: 723883 | Name: High-density lipoprotein (HDL)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,521 - INFO -  - ID: 723884 | Name: Lipoproteína a - sangue | Data exec: nan | Pattern: Lipoproteína\s+a\s+-\s+sangue | Check Field: lab_lipoproteina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,521 - INFO -  - ID: 723885 | Name: Testosterona total | Data exec: nan | Pattern: Testosterona\s+total | Check Field: lab_testo_total (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,522 - INFO -  - ID: 723886 | Name: Testosterona livre sangue | Data exec: nan | Pattern: Testosterona\s+livre\s+sangue | Check Field: lab_testo_livre (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,523 - INFO -  - ID: 723887 | Name: Hormônio folículo-estimulante (FSH)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,523 - INFO -  - ID: 723888 | Name: Hormônio luteinizante (LH)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,524 - INFO -  - ID: 723889 | Name: Dímero D-sangue | Data exec: nan | Pattern: D[íi]mero\s+D-sangue | Check Field: lab_dd (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,525 - INFO -  - ID: 723890 | Name: Proteína S livre-sangue | Data exec: nan | Pattern: Prote[ií]na\s+S\s+livre-sangue | Check Field: lab_prot_s (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:34:51,525 - INFO -  - ID: 723891 | Name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,526 - INFO -  - ID: 723892 | Name: Teste de gravidez | Data exec: nan | Pattern: Teste\s+de\s+gravidez | Check Field: coleta_gravidez (Value: N/A) | Date Field: coleta_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,527 - INFO -  - ID: 723893 | Name: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: nan | Pattern: Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria | Check Field: rando_q1_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:34:51,528 - INFO -  - ID: 723894 | Name: Orientações para uso de métodos contraceptivos | Data exec: nan | Pattern: Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos | Check Field: form_medico_gravidez_q3 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,528 - INFO -  - ID: 723895 | Name: Bioimpedância | Data exec: nan | Pattern: Bioimped[aâ]ncia | Check Field: aval_corp_bioimpedancia (Value: N/A) | Date Field: aval_corp_dt_visita (Value: N/A)
+2026-08-13 12:34:51,529 - INFO -  - ID: 723896 | Name: Ressonância magnética por imagem da coxa | Data exec: nan | Pattern: Resson[aâ]ncia magn[eé]tica por imagem da coxa | Check Field: form_medico_ex_imagem1 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-07-10)
+2026-08-13 12:34:51,530 - INFO -  - ID: 723897 | Name: Dinamometria isométrica | Data exec: nan | Pattern: Dinamometria isom[eé]trica | Check Field: fisio_isometria_q5 (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:34:51,530 - INFO -  - ID: 723898 | Name: Y balance test | Data exec: nan | Pattern: Y balance test | Check Field: fisio_teste_y (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:34:51,531 - INFO -  - ID: 723899 | Name: Knee Society Score (KSS) | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,531 - INFO -  - ID: 723900 | Name: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,532 - INFO -  - ID: 723901 | Name: Questionário Lysholm Knee Scoring Scale | Data exec: nan | Pattern: Question[aá]rio Lysholm Knee Scoring Scale | Check Field: rando_q3_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:34:51,532 - INFO -  - ID: 723902 | Name: Questionário Short Form-12 (SF-36SF-36) | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,533 - INFO -  - ID: 723903 | Name: Questionário GAD-7 | Data exec: nan | Pattern: Question[aá]rio GAD-7 | Check Field: rando_q5_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:34:51,533 - INFO -  - ID: 723904 | Name: Questionário PHQ9 | Data exec: nan | Pattern: Question[aá]rio PHQ9 | Check Field: rando_q6_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:34:51,534 - INFO -  - ID: 723905 | Name: Questionário Patient Acceptable Symptom State (PAS) | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,534 - INFO -  - ID: 723906 | Name: Consulta Médica | Data exec: 2026-07-10T00:00:00.000Z | Pattern: Consulta\s+M[eé]dica | Check Field: form_medico_rubrica (Value: Akira Barbosa Hirota) | Date Field: form_medico_dt_rubrica (Value: 2026-07-10)
+2026-08-13 12:34:51,535 - INFO -  - ID: 723907 | Name: Consulta Fisioterapeuta | Data exec: nan | Pattern: Consulta Fisioterapeuta | Check Field: fisio_dt_visita (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:34:51,535 - INFO -  - ID: 723908 | Name: Reembolso | Data exec: nan | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:34:51,536 - INFO -  - ID: 723909 | Name: Reconsentimento | Data exec: nan | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-08-13 12:34:51,536 - INFO - DEBUG: Procedure mapping summary for visit Não Programada: 24 matched, 19 unmatched
+2026-08-13 12:34:51,537 - INFO -  Total procedures in Polotrial: 43
+2026-08-13 12:34:51,537 - INFO -  Matched procedures: 24
+2026-08-13 12:34:51,538 - INFO -  Unmatched procedures: 19
+2026-08-13 12:34:51,538 - WARNING - DEBUG: Unmatched procedures in visit Não Programada: ['Bilirrubina sérica (total)-sangue', 'Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue', 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue', 'Fosfatase alcalina (FA)-sangue', 'Albumina-Sangue', 'Gama glutamil transferase (GGT)-sangue', 'Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue', 'Antígeno prostático específico livre (PSA)-sangue', 'Colesterol- sangue', 'Low-density lipoprotein (LDL)-sangue', 'High-density lipoprotein (HDL)-sangue', 'Hormônio folículo-estimulante (FSH)-sangue', 'Hormônio luteinizante (LH)-sangue', 'Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue', 'Knee Society Score (KSS)', 'Questionário IPAQ (International Phyisical Ativity Questionnaire)', 'Questionário Short Form-12 (SF-36SF-36)', 'Questionário Patient Acceptable Symptom State (PAS)', 'Reembolso'] (no mapping found in procedures_map for these procedure names)
+2026-08-13 12:34:51,538 - WARNING -  - Unmatched procedure name: Bilirrubina sérica (total)-sangue
+2026-08-13 12:34:51,539 - WARNING -  - Unmatched procedure name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue
+2026-08-13 12:34:51,539 - WARNING -  - Unmatched procedure name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue
+2026-08-13 12:34:51,540 - WARNING -  - Unmatched procedure name: Fosfatase alcalina (FA)-sangue
+2026-08-13 12:34:51,540 - WARNING -  - Unmatched procedure name: Albumina-Sangue
+2026-08-13 12:34:51,540 - WARNING -  - Unmatched procedure name: Gama glutamil transferase (GGT)-sangue
+2026-08-13 12:34:51,541 - WARNING -  - Unmatched procedure name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue
+2026-08-13 12:34:51,541 - WARNING -  - Unmatched procedure name: Antígeno prostático específico livre (PSA)-sangue
+2026-08-13 12:34:51,542 - WARNING -  - Unmatched procedure name: Colesterol- sangue
+2026-08-13 12:34:51,542 - WARNING -  - Unmatched procedure name: Low-density lipoprotein (LDL)-sangue
+2026-08-13 12:34:51,542 - WARNING -  - Unmatched procedure name: High-density lipoprotein (HDL)-sangue
+2026-08-13 12:34:51,543 - WARNING -  - Unmatched procedure name: Hormônio folículo-estimulante (FSH)-sangue
+2026-08-13 12:34:51,543 - WARNING -  - Unmatched procedure name: Hormônio luteinizante (LH)-sangue
+2026-08-13 12:34:51,544 - WARNING -  - Unmatched procedure name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue
+2026-08-13 12:34:51,544 - WARNING -  - Unmatched procedure name: Knee Society Score (KSS)
+2026-08-13 12:34:51,544 - WARNING -  - Unmatched procedure name: Questionário IPAQ (International Phyisical Ativity Questionnaire)
+2026-08-13 12:34:51,545 - WARNING -  - Unmatched procedure name: Questionário Short Form-12 (SF-36SF-36)
+2026-08-13 12:34:51,545 - WARNING -  - Unmatched procedure name: Questionário Patient Acceptable Symptom State (PAS)
+2026-08-13 12:34:51,545 - WARNING -  - Unmatched procedure name: Reembolso
+2026-08-13 12:34:51,576 - INFO - No procedures to sync for pattern Exame\s+f[ií]sico in visit Não Programada
+2026-08-13 12:34:51,578 - INFO - No procedures to sync for pattern Sinais\s+vitais in visit Não Programada
+2026-08-13 12:34:51,582 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao4 indicates not done (value = ''). Skipping
+2026-08-13 12:34:51,583 - INFO - Não Programada: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes). Skipping sync for this procedure.
+2026-08-13 12:34:51,585 - INFO - Não Programada: No valid date found in REDCap for procedure Hemograma completo-sangue (pattern Hemograma\s+completo-sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,588 - INFO - Não Programada: No valid date found in REDCap for procedure Creatinina sérica-sangue (pattern Creatinina\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,590 - INFO - Não Programada: No valid date found in REDCap for procedure Ureia sérica-sangue (pattern Ureia\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,592 - INFO - No procedures to sync for pattern Bilirrubina\s+s[eé]rica\s+(total)-sangue in visit Não Programada
+2026-08-13 12:34:51,594 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+oxalac[eé]tica/aspartato\s+aminotransferase\s+(TGO/AST)-sangue in visit Não Programada
+2026-08-13 12:34:51,596 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+pir[uú]vica/alanina\s+aminotransferase\s+(TGP/ALT)-sangue in visit Não Programada
+2026-08-13 12:34:51,598 - INFO - No procedures to sync for pattern Fosfatase\s+alcalina\s+(FA)-sangue in visit Não Programada
+2026-08-13 12:34:51,600 - INFO - No procedures to sync for pattern Gama\s+glutamil\s+transferase\s+(GGT)-sangue in visit Não Programada
+2026-08-13 12:34:51,603 - INFO - No procedures to sync for pattern Creatinina\s+quinase\s+ou\s+Creatinina\s+fosfoquinase\s+(CK\s+ou\s+CPK)-\s+sangue in visit Não Programada
+2026-08-13 12:34:51,605 - INFO - No procedures to sync for pattern Antígeno\s+prost[aá]tico\s+espec[ií]fico\s+livre\s+(PSA)-sangue in visit Não Programada
+2026-08-13 12:34:51,607 - INFO - No procedures to sync for pattern Colesterol-sangue in visit Não Programada
+2026-08-13 12:34:51,609 - INFO - No procedures to sync for pattern Low-density\s+lipoprotein\s+(LDL)-sangue in visit Não Programada
+2026-08-13 12:34:51,610 - INFO - No procedures to sync for pattern High-density\s+lipoprotein\s+(HDL)-sangue in visit Não Programada
+2026-08-13 12:34:51,612 - INFO - Não Programada: No valid date found in REDCap for procedure Lipoproteína a - sangue (pattern Lipoproteína\s+a\s+-\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,615 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona total (pattern Testosterona\s+total). Skipping sync for this procedure.
+2026-08-13 12:34:51,617 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona livre sangue (pattern Testosterona\s+livre\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,620 - INFO - No procedures to sync for pattern Horm[oô]nio\s+fol[ií]culo-estimulante\s+(FSH)-sangue in visit Não Programada
+2026-08-13 12:34:51,624 - INFO - No procedures to sync for pattern Horm[oô]nio\s+luteinizante\s+(LH)-sangue in visit Não Programada
+2026-08-13 12:34:51,628 - INFO - Não Programada: No valid date found in REDCap for procedure Dímero D-sangue (pattern D[íi]mero\s+D-sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,631 - INFO - Não Programada: No valid date found in REDCap for procedure Proteína S livre-sangue (pattern Prote[ií]na\s+S\s+livre-sangue). Skipping sync for this procedure.
+2026-08-13 12:34:51,642 - INFO - No procedures to sync for pattern Globulina\s+Ligadora\s+De\s+Horm[oô]nios\s+Sexuais\s+(SHBG)-sangue in visit Não Programada
+2026-08-13 12:34:51,646 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping
+2026-08-13 12:34:51,648 - INFO - Não Programada: No valid date found in REDCap for procedure Teste de gravidez (pattern Teste\s+de\s+gravidez). Skipping sync for this procedure.
+2026-08-13 12:34:51,652 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para programa fisioterápico para reabilitação pós-operatória (pattern Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria). Skipping sync for this procedure.
+2026-08-13 12:34:51,656 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping
+2026-08-13 12:34:51,656 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para uso de métodos contraceptivos (pattern Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos). Skipping sync for this procedure.
+2026-08-13 12:34:51,663 - INFO - No procedures to sync for pattern Monitoramento\s+de\s+eventos\s+adversos in visit Não Programada
+2026-08-13 12:34:51,667 - INFO - No procedures to sync for pattern Consulta\s+M[eé]dica in visit Não Programada
+2026-08-13 12:34:51,670 - INFO - Não Programada: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-08-13 12:34:51,672 - INFO - Não Programada: No valid date found in REDCap for procedure Bioimpedância (pattern Bioimped[aâ]ncia). Skipping sync for this procedure.
+2026-08-13 12:34:51,674 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_ex_imagem1 indicates not done (value = ''). Skipping
+2026-08-13 12:34:51,675 - INFO - Não Programada: No valid date found in REDCap for procedure Ressonância magnética por imagem da coxa (pattern Resson[aâ]ncia magn[eé]tica por imagem da coxa). Skipping sync for this procedure.
+2026-08-13 12:34:51,677 - INFO - Não Programada: No valid date found in REDCap for procedure Dinamometria isométrica (pattern Dinamometria isom[eé]trica). Skipping sync for this procedure.
+2026-08-13 12:34:51,679 - INFO - Não Programada: No valid date found in REDCap for procedure Y balance test (pattern Y balance test). Skipping sync for this procedure.
+2026-08-13 12:34:51,680 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário Lysholm Knee Scoring Scale (pattern Question[aá]rio Lysholm Knee Scoring Scale). Skipping sync for this procedure.
+2026-08-13 12:34:51,682 - INFO - No procedures to sync for pattern Question[aá]rio Short Form-12 (SF-36SF-36) in visit Não Programada
+2026-08-13 12:34:51,684 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário GAD-7 (pattern Question[aá]rio GAD-7). Skipping sync for this procedure.
+2026-08-13 12:34:51,685 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário PHQ9 (pattern Question[aá]rio PHQ9). Skipping sync for this procedure.
+2026-08-13 12:34:51,687 - INFO - No procedures to sync for pattern Question[aá]rio Patient Acceptable Symptom State (PAS) in visit Não Programada
+2026-08-13 12:34:51,689 - INFO - Não Programada: No valid date found in REDCap for procedure Consulta Fisioterapeuta (pattern Consulta Fisioterapeuta). Skipping sync for this procedure.
+2026-08-13 12:34:51,689 - INFO - Não Programada: Total procedures synced: 0
+2026-08-13 12:34:52,103 - INFO - Não Programada: consulta_nome_medico is empty, skipping executor sync
+2026-08-13 12:34:52,104 - INFO - VNP: Successfully synced participant visit id=43686 for record=100-2. This visit was created or updated; see the creation/update log above.
+2026-08-13 12:34:52,104 - INFO - Successfully processed DET for record_id=100-2, event_name=visita_no_programa_arm_1
+2026-08-13 12:39:27,483 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=1, repeat_instrument=None
+2026-08-13 12:39:27,486 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:39:28,291 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:39:28,292 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:39:28,293 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:39:28,293 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:39:28,294 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1 with 32 fields
+2026-08-13 12:39:28,295 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-06-23
+2026-08-13 12:39:28,824 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:39:28,826 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:39:28,827 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:39:28,828 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:39:28,830 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1 with 186 fields
+2026-08-13 12:39:30,364 - INFO - VNP: No existing visit found for date 2026-06-23. Creating new visit.
+2026-08-13 12:39:30,365 - INFO - Polotrial: creating participant visit co_participante=3395, nome_tarefa=Não Programada, data_estimada='2026-06-23', data_realizada='2026-06-23', status=20
+2026-08-13 12:39:34,210 - INFO - VNP: Created new visit (id=43734, date=2026-06-23)
+2026-08-13 12:39:34,391 - WARNING - dados_protocolo_procedimento not in response, fetching from protocolo_procedimento
+2026-08-13 12:39:34,392 - ERROR - Error processing DET for record_id=100-4, event_name=visita_no_programa_arm_1
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/webhook.py", line 209, in _run_sync
+    dispatch_event(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/dispatch.py", line 90, in dispatch_event
+    sync_vnp(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/events/vnp_handler.py", line 110, in sync_vnp
+    sync_procedures(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/sync_engine.py", line 158, in sync_procedures
+    raise RuntimeError(
+RuntimeError: Não Programada: Polotrial returned no procedures linked to participant visit 43734
+2026-08-13 12:41:01,621 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=2, repeat_instrument=None
+2026-08-13 12:41:01,624 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:41:02,362 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:41:02,363 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:41:02,365 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:41:02,366 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:41:02,367 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1 with 32 fields
+2026-08-13 12:41:02,367 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-06-23
+2026-08-13 12:41:02,926 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:41:02,930 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:41:02,931 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:41:02,932 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:41:02,934 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1 with 186 fields
+2026-08-13 12:41:04,564 - INFO - VNP: Found existing visit with matching date (id=43734, date=2026-06-23). Updating.
+2026-08-13 12:41:04,733 - INFO - VNP: Existing visit details id=43734, co_participante=3395, co_protocolo=None, co_tarefa=None, nome_tarefa=Não Programada, data_estimada=2026-06-23T00:00:00.000Z, data_realizada=2026-06-23T00:00:00.000Z, status=20
+2026-08-13 12:41:04,734 - INFO - VNP: Visit 43734 already up to date
+2026-08-13 12:41:04,931 - WARNING - dados_protocolo_procedimento not in response, fetching from protocolo_procedimento
+2026-08-13 12:41:04,932 - ERROR - Error processing DET for record_id=100-4, event_name=visita_no_programa_arm_1
+Traceback (most recent call last):
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/webhook.py", line 209, in _run_sync
+    dispatch_event(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/dispatch.py", line 90, in dispatch_event
+    sync_vnp(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/events/vnp_handler.py", line 110, in sync_vnp
+    sync_procedures(
+  File "/mnt/c/Users/Science/Documents/Python/integracao_imox/src/integracao/sync_engine.py", line 158, in sync_procedures
+    raise RuntimeError(
+RuntimeError: Não Programada: Polotrial returned no procedures linked to participant visit 43734
+2026-08-13 12:43:39,728 - INFO - Shutting down webhook for protocol: oxandrolona
+2026-08-13 12:44:06,431 - INFO - Webhook initialized for protocol: oxandrolona
+2026-08-13 12:44:36,582 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=1, repeat_instrument=None
+2026-08-13 12:44:36,686 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:44:37,496 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:44:37,497 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:44:37,499 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:44:37,500 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:44:37,502 - INFO - REDCap: filtering event=visita_no_programa_arm_1 by repeat_instance='1'; response instances=['1', '2']
+2026-08-13 12:44:37,503 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1, repeat_instance='1', with 13 fields from 13 entries
+2026-08-13 12:44:37,504 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-04-15
+2026-08-13 12:44:38,970 - INFO - Polotrial: authentication successful
+2026-08-13 12:44:39,518 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:44:39,521 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:44:39,526 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:44:39,531 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:44:39,533 - INFO - REDCap: filtering event=visita_1__screenin_arm_1 by repeat_instance=None; response instances=[]
+2026-08-13 12:44:39,535 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1, repeat_instance=None, with 186 fields from 186 entries
+2026-08-13 12:44:41,012 - INFO - VNP: No existing visit found for date 2026-04-15. Creating new visit.
+2026-08-13 12:44:41,191 - INFO - Polotrial: creating participant visit co_participante=3395, nome_tarefa=Não Programada, data_estimada='2026-04-15', data_realizada='2026-04-15', status=20
+2026-08-13 12:44:44,964 - INFO - VNP: Visit 43735 has no procedures; linking 53 protocol procedures
+2026-08-13 12:44:57,499 - INFO - VNP: Created new visit (id=43735, date=2026-04-15)
+2026-08-13 12:44:57,852 - INFO - DEBUG: Available procedures in visit Não Programada
+2026-08-13 12:44:57,854 - INFO -  - ID: 725510 | Name: Termo de consentimento Livre e Esclarecido | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,855 - INFO -  - ID: 725511 | Name: Avaliação dos critérios de inclusão/exclusão | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,856 - INFO -  - ID: 725512 | Name: Dados demográficos | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,857 - INFO -  - ID: 725513 | Name: Exame físico | Data exec: None | Pattern: Exame\s+f[ií]sico | Check Field: form_medico_ex_fisico_q0 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,858 - INFO -  - ID: 725514 | Name: História médica | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,859 - INFO -  - ID: 725515 | Name: Sinais vitais | Data exec: None | Pattern: Sinais\s+vitais | Check Field: form_medico_sv1 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,861 - INFO -  - ID: 725516 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern: Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,862 - INFO -  - ID: 725555 | Name: Hemograma completo-sangue | Data exec: None | Pattern: Hemograma\s+completo-sangue | Check Field: lab_hematocrito (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,863 - INFO -  - ID: 725541 | Name: Creatinina sérica-sangue | Data exec: None | Pattern: Creatinina\s+s[eé]rica-sangue | Check Field: lab_creatinina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,864 - INFO -  - ID: 725542 | Name: Ureia sérica-sangue | Data exec: None | Pattern: Ureia\s+s[eé]rica-sangue | Check Field: lab_ureia (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,865 - INFO -  - ID: 725560 | Name: Bilirrubina sérica (total)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,866 - INFO -  - ID: 725544 | Name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,868 - INFO -  - ID: 725543 | Name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,870 - INFO -  - ID: 725547 | Name: Fosfatase alcalina (FA)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,871 - INFO -  - ID: 725561 | Name: Albumina-Sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,872 - INFO -  - ID: 725545 | Name: Gama glutamil transferase (GGT)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,874 - INFO -  - ID: 725552 | Name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,875 - INFO -  - ID: 725559 | Name: Antígeno prostático específico livre (PSA)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,876 - INFO -  - ID: 725548 | Name: Colesterol- sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,877 - INFO -  - ID: 725554 | Name: Low-density lipoprotein (LDL)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,878 - INFO -  - ID: 725551 | Name: High-density lipoprotein (HDL)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,879 - INFO -  - ID: 725550 | Name: Lipoproteína a - sangue | Data exec: None | Pattern: Lipoproteína\s+a\s+-\s+sangue | Check Field: lab_lipoproteina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,881 - INFO -  - ID: 725562 | Name: Testosterona total | Data exec: None | Pattern: Testosterona\s+total | Check Field: lab_testo_total (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,882 - INFO -  - ID: 725556 | Name: Testosterona livre sangue | Data exec: None | Pattern: Testosterona\s+livre\s+sangue | Check Field: lab_testo_livre (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,883 - INFO -  - ID: 725558 | Name: Hormônio folículo-estimulante (FSH)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,884 - INFO -  - ID: 725557 | Name: Hormônio luteinizante (LH)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,885 - INFO -  - ID: 725549 | Name: Dímero D-sangue | Data exec: None | Pattern: D[íi]mero\s+D-sangue | Check Field: lab_dd (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,886 - INFO -  - ID: 725553 | Name: Proteína S livre-sangue | Data exec: None | Pattern: Prote[ií]na\s+S\s+livre-sangue | Check Field: lab_prot_s (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:44:57,888 - INFO -  - ID: 725546 | Name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,889 - INFO -  - ID: 725517 | Name: Teste de gravidez | Data exec: None | Pattern: Teste\s+de\s+gravidez | Check Field: coleta_gravidez (Value: N/A) | Date Field: coleta_dt_visita (Value: 2026-04-15)
+2026-08-13 12:44:57,891 - INFO -  - ID: 725518 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,894 - INFO -  - ID: 725519 | Name: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,895 - INFO -  - ID: 725520 | Name: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: None | Pattern: Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria | Check Field: rando_q1_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:44:57,896 - INFO -  - ID: 725540 | Name: Orientações para uso de métodos contraceptivos | Data exec: None | Pattern: Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos | Check Field: form_medico_gravidez_q3 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,898 - INFO -  - ID: 725521 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,899 - INFO -  - ID: 725522 | Name: Inserção subdérmica do implante absorvível | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,901 - INFO -  - ID: 725523 | Name: Bioimpedância | Data exec: None | Pattern: Bioimped[aâ]ncia | Check Field: aval_corp_bioimpedancia (Value: N/A) | Date Field: aval_corp_dt_visita (Value: N/A)
+2026-08-13 12:44:57,902 - INFO -  - ID: 725524 | Name: Ressonância magnética por imagem da coxa | Data exec: None | Pattern: Resson[aâ]ncia magn[eé]tica por imagem da coxa | Check Field: form_medico_ex_imagem1 (Value: N/A) | Date Field: form_medico_dt_visita (Value: N/A)
+2026-08-13 12:44:57,903 - INFO -  - ID: 725525 | Name: Dinamometria isométrica | Data exec: None | Pattern: Dinamometria isom[eé]trica | Check Field: fisio_isometria_q5 (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:44:57,904 - INFO -  - ID: 725526 | Name: Y balance test | Data exec: None | Pattern: Y balance test | Check Field: fisio_teste_y (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:44:57,905 - INFO -  - ID: 725527 | Name: Knee Society Score (KSS) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,906 - INFO -  - ID: 725528 | Name: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,913 - INFO -  - ID: 725529 | Name: Questionário Lysholm Knee Scoring Scale | Data exec: None | Pattern: Question[aá]rio Lysholm Knee Scoring Scale | Check Field: rando_q3_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:44:57,915 - INFO -  - ID: 725530 | Name: Questionário Short Form-12 (SF-36SF-36) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,916 - INFO -  - ID: 725531 | Name: Questionário GAD-7 | Data exec: None | Pattern: Question[aá]rio GAD-7 | Check Field: rando_q5_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:44:57,917 - INFO -  - ID: 725532 | Name: Questionário PHQ9 | Data exec: None | Pattern: Question[aá]rio PHQ9 | Check Field: rando_q6_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:44:57,918 - INFO -  - ID: 725533 | Name: Questionário Patient Acceptable Symptom State (PAS) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,919 - INFO -  - ID: 725534 | Name: Avaliação da Satisfação do Participante | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,921 - INFO -  - ID: 725535 | Name: Consulta Médica | Data exec: None | Pattern: Consulta\s+M[eé]dica | Check Field: form_medico_rubrica (Value: N/A) | Date Field: form_medico_dt_rubrica (Value: N/A)
+2026-08-13 12:44:57,922 - INFO -  - ID: 725536 | Name: Consulta Fisioterapeuta | Data exec: None | Pattern: Consulta Fisioterapeuta | Check Field: fisio_dt_visita (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:44:57,923 - INFO -  - ID: 725537 | Name: Reembolso | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,928 - INFO -  - ID: 725538 | Name: Referenciamento Médico | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:44:57,930 - INFO -  - ID: 725539 | Name: Reconsentimento | Data exec: None | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-08-13 12:44:57,930 - INFO - DEBUG: Procedure mapping summary for visit Não Programada: 25 matched, 28 unmatched
+2026-08-13 12:44:57,931 - INFO -  Total procedures in Polotrial: 53
+2026-08-13 12:44:57,932 - INFO -  Matched procedures: 25
+2026-08-13 12:44:57,933 - INFO -  Unmatched procedures: 28
+2026-08-13 12:44:57,934 - WARNING - DEBUG: Unmatched procedures in visit Não Programada: ['Termo de consentimento Livre e Esclarecido', 'Avaliação dos critérios de inclusão/exclusão', 'Dados demográficos', 'História médica', 'Bilirrubina sérica (total)-sangue', 'Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue', 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue', 'Fosfatase alcalina (FA)-sangue', 'Albumina-Sangue', 'Gama glutamil transferase (GGT)-sangue', 'Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue', 'Antígeno prostático específico livre (PSA)-sangue', 'Colesterol- sangue', 'Low-density lipoprotein (LDL)-sangue', 'High-density lipoprotein (HDL)-sangue', 'Hormônio folículo-estimulante (FSH)-sangue', 'Hormônio luteinizante (LH)-sangue', 'Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue', 'Concentração sérica de oxandrolona e farmacocinética', 'Dispensação de medicação para tromboprofilaxia pós-cirurgica', 'Inserção subdérmica do implante absorvível', 'Knee Society Score (KSS)', 'Questionário IPAQ (International Phyisical Ativity Questionnaire)', 'Questionário Short Form-12 (SF-36SF-36)', 'Questionário Patient Acceptable Symptom State (PAS)', 'Avaliação da Satisfação do Participante', 'Reembolso', 'Referenciamento Médico'] (no mapping found in procedures_map for these procedure names)
+2026-08-13 12:44:57,935 - WARNING -  - Unmatched procedure name: Termo de consentimento Livre e Esclarecido
+2026-08-13 12:44:57,936 - WARNING -  - Unmatched procedure name: Avaliação dos critérios de inclusão/exclusão
+2026-08-13 12:44:57,936 - WARNING -  - Unmatched procedure name: Dados demográficos
+2026-08-13 12:44:57,938 - WARNING -  - Unmatched procedure name: História médica
+2026-08-13 12:44:57,939 - WARNING -  - Unmatched procedure name: Bilirrubina sérica (total)-sangue
+2026-08-13 12:44:57,941 - WARNING -  - Unmatched procedure name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue
+2026-08-13 12:44:57,942 - WARNING -  - Unmatched procedure name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue
+2026-08-13 12:44:57,943 - WARNING -  - Unmatched procedure name: Fosfatase alcalina (FA)-sangue
+2026-08-13 12:44:57,944 - WARNING -  - Unmatched procedure name: Albumina-Sangue
+2026-08-13 12:44:57,945 - WARNING -  - Unmatched procedure name: Gama glutamil transferase (GGT)-sangue
+2026-08-13 12:44:57,945 - WARNING -  - Unmatched procedure name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue
+2026-08-13 12:44:57,946 - WARNING -  - Unmatched procedure name: Antígeno prostático específico livre (PSA)-sangue
+2026-08-13 12:44:57,947 - WARNING -  - Unmatched procedure name: Colesterol- sangue
+2026-08-13 12:44:57,948 - WARNING -  - Unmatched procedure name: Low-density lipoprotein (LDL)-sangue
+2026-08-13 12:44:57,948 - WARNING -  - Unmatched procedure name: High-density lipoprotein (HDL)-sangue
+2026-08-13 12:44:57,949 - WARNING -  - Unmatched procedure name: Hormônio folículo-estimulante (FSH)-sangue
+2026-08-13 12:44:57,950 - WARNING -  - Unmatched procedure name: Hormônio luteinizante (LH)-sangue
+2026-08-13 12:44:57,951 - WARNING -  - Unmatched procedure name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue
+2026-08-13 12:44:57,951 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-08-13 12:44:57,952 - WARNING -  - Unmatched procedure name: Dispensação de medicação para tromboprofilaxia pós-cirurgica
+2026-08-13 12:44:57,953 - WARNING -  - Unmatched procedure name: Inserção subdérmica do implante absorvível
+2026-08-13 12:44:57,953 - WARNING -  - Unmatched procedure name: Knee Society Score (KSS)
+2026-08-13 12:44:57,958 - WARNING -  - Unmatched procedure name: Questionário IPAQ (International Phyisical Ativity Questionnaire)
+2026-08-13 12:44:57,959 - WARNING -  - Unmatched procedure name: Questionário Short Form-12 (SF-36SF-36)
+2026-08-13 12:44:57,959 - WARNING -  - Unmatched procedure name: Questionário Patient Acceptable Symptom State (PAS)
+2026-08-13 12:44:57,960 - WARNING -  - Unmatched procedure name: Avaliação da Satisfação do Participante
+2026-08-13 12:44:57,961 - WARNING -  - Unmatched procedure name: Reembolso
+2026-08-13 12:44:57,962 - WARNING -  - Unmatched procedure name: Referenciamento Médico
+2026-08-13 12:44:57,995 - INFO - Não Programada: No valid date found in REDCap for procedure Exame físico (pattern Exame\s+f[ií]sico). Skipping sync for this procedure.
+2026-08-13 12:44:58,004 - INFO - Não Programada: No valid date found in REDCap for procedure Sinais vitais (pattern Sinais\s+vitais). Skipping sync for this procedure.
+2026-08-13 12:44:58,009 - INFO - Não Programada: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes). Skipping sync for this procedure.
+2026-08-13 12:44:58,012 - INFO - Não Programada: No valid date found in REDCap for procedure Hemograma completo-sangue (pattern Hemograma\s+completo-sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,018 - INFO - Não Programada: No valid date found in REDCap for procedure Creatinina sérica-sangue (pattern Creatinina\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,023 - INFO - Não Programada: No valid date found in REDCap for procedure Ureia sérica-sangue (pattern Ureia\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,045 - INFO - No procedures to sync for pattern Bilirrubina\s+s[eé]rica\s+(total)-sangue in visit Não Programada
+2026-08-13 12:44:58,051 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+oxalac[eé]tica/aspartato\s+aminotransferase\s+(TGO/AST)-sangue in visit Não Programada
+2026-08-13 12:44:58,060 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+pir[uú]vica/alanina\s+aminotransferase\s+(TGP/ALT)-sangue in visit Não Programada
+2026-08-13 12:44:58,066 - INFO - No procedures to sync for pattern Fosfatase\s+alcalina\s+(FA)-sangue in visit Não Programada
+2026-08-13 12:44:58,072 - INFO - No procedures to sync for pattern Gama\s+glutamil\s+transferase\s+(GGT)-sangue in visit Não Programada
+2026-08-13 12:44:58,078 - INFO - No procedures to sync for pattern Creatinina\s+quinase\s+ou\s+Creatinina\s+fosfoquinase\s+(CK\s+ou\s+CPK)-\s+sangue in visit Não Programada
+2026-08-13 12:44:58,083 - INFO - No procedures to sync for pattern Antígeno\s+prost[aá]tico\s+espec[ií]fico\s+livre\s+(PSA)-sangue in visit Não Programada
+2026-08-13 12:44:58,091 - INFO - No procedures to sync for pattern Colesterol-sangue in visit Não Programada
+2026-08-13 12:44:58,097 - INFO - No procedures to sync for pattern Low-density\s+lipoprotein\s+(LDL)-sangue in visit Não Programada
+2026-08-13 12:44:58,102 - INFO - No procedures to sync for pattern High-density\s+lipoprotein\s+(HDL)-sangue in visit Não Programada
+2026-08-13 12:44:58,109 - INFO - Não Programada: No valid date found in REDCap for procedure Lipoproteína a - sangue (pattern Lipoproteína\s+a\s+-\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,114 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona total (pattern Testosterona\s+total). Skipping sync for this procedure.
+2026-08-13 12:44:58,119 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona livre sangue (pattern Testosterona\s+livre\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,127 - INFO - No procedures to sync for pattern Horm[oô]nio\s+fol[ií]culo-estimulante\s+(FSH)-sangue in visit Não Programada
+2026-08-13 12:44:58,131 - INFO - No procedures to sync for pattern Horm[oô]nio\s+luteinizante\s+(LH)-sangue in visit Não Programada
+2026-08-13 12:44:58,135 - INFO - Não Programada: No valid date found in REDCap for procedure Dímero D-sangue (pattern D[íi]mero\s+D-sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,143 - INFO - Não Programada: No valid date found in REDCap for procedure Proteína S livre-sangue (pattern Prote[ií]na\s+S\s+livre-sangue). Skipping sync for this procedure.
+2026-08-13 12:44:58,147 - INFO - No procedures to sync for pattern Globulina\s+Ligadora\s+De\s+Horm[oô]nios\s+Sexuais\s+(SHBG)-sangue in visit Não Programada
+2026-08-13 12:44:58,151 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping
+2026-08-13 12:44:58,156 - INFO - Não Programada: No valid date found in REDCap for procedure Teste de gravidez (pattern Teste\s+de\s+gravidez). Skipping sync for this procedure.
+2026-08-13 12:44:58,161 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para programa fisioterápico para reabilitação pós-operatória (pattern Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria). Skipping sync for this procedure.
+2026-08-13 12:44:58,166 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para uso de métodos contraceptivos (pattern Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos). Skipping sync for this procedure.
+2026-08-13 12:44:58,174 - INFO - Não Programada: No valid date found in REDCap for procedure Monitoramento de eventos adversos (pattern Monitoramento\s+de\s+eventos\s+adversos). Skipping sync for this procedure.
+2026-08-13 12:44:58,178 - INFO - Não Programada: No valid date found in REDCap for procedure Consulta Médica (pattern Consulta\s+M[eé]dica). Skipping sync for this procedure.
+2026-08-13 12:44:58,182 - INFO - Não Programada: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-08-13 12:44:58,190 - INFO - Não Programada: No valid date found in REDCap for procedure Bioimpedância (pattern Bioimped[aâ]ncia). Skipping sync for this procedure.
+2026-08-13 12:44:58,194 - INFO - Não Programada: No valid date found in REDCap for procedure Ressonância magnética por imagem da coxa (pattern Resson[aâ]ncia magn[eé]tica por imagem da coxa). Skipping sync for this procedure.
+2026-08-13 12:44:58,199 - INFO - Não Programada: No valid date found in REDCap for procedure Dinamometria isométrica (pattern Dinamometria isom[eé]trica). Skipping sync for this procedure.
+2026-08-13 12:44:58,208 - INFO - Não Programada: No valid date found in REDCap for procedure Y balance test (pattern Y balance test). Skipping sync for this procedure.
+2026-08-13 12:44:58,214 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário Lysholm Knee Scoring Scale (pattern Question[aá]rio Lysholm Knee Scoring Scale). Skipping sync for this procedure.
+2026-08-13 12:44:58,219 - INFO - No procedures to sync for pattern Question[aá]rio Short Form-12 (SF-36SF-36) in visit Não Programada
+2026-08-13 12:44:58,227 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário GAD-7 (pattern Question[aá]rio GAD-7). Skipping sync for this procedure.
+2026-08-13 12:44:58,232 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário PHQ9 (pattern Question[aá]rio PHQ9). Skipping sync for this procedure.
+2026-08-13 12:44:58,246 - INFO - No procedures to sync for pattern Question[aá]rio Patient Acceptable Symptom State (PAS) in visit Não Programada
+2026-08-13 12:44:58,251 - INFO - Não Programada: No valid date found in REDCap for procedure Consulta Fisioterapeuta (pattern Consulta Fisioterapeuta). Skipping sync for this procedure.
+2026-08-13 12:44:58,252 - INFO - Não Programada: Total procedures synced: 0
+2026-08-13 12:44:58,705 - INFO - Não Programada: consulta_nome_medico is empty, skipping executor sync
+2026-08-13 12:44:58,706 - INFO - VNP: Successfully synced participant visit id=43735 for record=100-4. This visit was created or updated; see the creation/update log above.
+2026-08-13 12:44:58,708 - INFO - Successfully processed DET for record_id=100-4, event_name=visita_no_programa_arm_1
+2026-08-13 12:46:25,804 - INFO - Received DET: project_id=57, username=eduardosoccasvri, instrument=coleta_de_amostras, record=100-4, event_name=visita_no_programa_arm_1, data_access_group=centro_de_oncologi, repeat_instance=2, repeat_instrument=None
+2026-08-13 12:46:25,807 - INFO - Dispatching to VNP handler: visita_no_programa_arm_1 (task=Não Programada)
+2026-08-13 12:46:26,562 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:46:26,563 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:46:26,564 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:46:26,565 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita n\u00e3o programada","redcap_repeat_instrument":"","redcap_repeat_instance":1,"field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"1
+2026-08-13 12:46:26,566 - INFO - REDCap: filtering event=visita_no_programa_arm_1 by repeat_instance='2'; response instances=['1', '2']
+2026-08-13 12:46:26,567 - INFO - REDCap: exported record 100-4 for event visita_no_programa_arm_1, repeat_instance='2', with 32 fields from 32 entries
+2026-08-13 12:46:26,568 - INFO - VNP: Processing unscheduled visit for record_id=100-4, visit_date=2026-06-23
+2026-08-13 12:46:27,101 - INFO - DEBUG REDCAP URL: https://svriglobal.org/redcap/api/
+2026-08-13 12:46:27,103 - INFO - DEBUG REDCAP TOKEN (FIRST 8 CHARS): B662D4C2...
+2026-08-13 12:46:27,104 - INFO - DEBUG REDCAP STATUS: 200
+2026-08-13 12:46:27,106 - INFO - DEBUG REDCAP RESPONSE (FIRST 200 CHARS): [{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"coleta_de_amostras_complete","value":"Complete"},{"record":"100-4","redcap_event_name":"Visita 1 - Screening","field_name":"
+2026-08-13 12:46:27,112 - INFO - REDCap: filtering event=visita_1__screenin_arm_1 by repeat_instance=None; response instances=[]
+2026-08-13 12:46:27,114 - INFO - REDCap: exported record 100-4 for event visita_1__screenin_arm_1, repeat_instance=None, with 186 fields from 186 entries
+2026-08-13 12:46:28,629 - INFO - VNP: No existing visit found for date 2026-06-23. Creating new visit.
+2026-08-13 12:46:28,890 - INFO - Polotrial: creating participant visit co_participante=3395, nome_tarefa=Não Programada, data_estimada='2026-06-23', data_realizada='2026-06-23', status=20
+2026-08-13 12:46:33,226 - INFO - VNP: Visit 43736 has no procedures; linking 53 protocol procedures
+2026-08-13 12:46:45,769 - INFO - VNP: Created new visit (id=43736, date=2026-06-23)
+2026-08-13 12:46:45,989 - INFO - DEBUG: Available procedures in visit Não Programada
+2026-08-13 12:46:45,989 - INFO -  - ID: 725563 | Name: Termo de consentimento Livre e Esclarecido | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,990 - INFO -  - ID: 725564 | Name: Avaliação dos critérios de inclusão/exclusão | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,990 - INFO -  - ID: 725565 | Name: Dados demográficos | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,991 - INFO -  - ID: 725566 | Name: Exame físico | Data exec: None | Pattern: Exame\s+f[ií]sico | Check Field: form_medico_ex_fisico_q0 (Value: Não) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:45,991 - INFO -  - ID: 725567 | Name: História médica | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,992 - INFO -  - ID: 725568 | Name: Sinais vitais | Data exec: None | Pattern: Sinais\s+vitais | Check Field: form_medico_sv1 (Value: Não) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:45,992 - INFO -  - ID: 725569 | Name: Registro de uso de medicações pré-estudo e concomitantes | Data exec: None | Pattern: Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes | Check Field: form_medico_revisao4 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:45,993 - INFO -  - ID: 725570 | Name: Hemograma completo-sangue | Data exec: None | Pattern: Hemograma\s+completo-sangue | Check Field: lab_hematocrito (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,993 - INFO -  - ID: 725571 | Name: Creatinina sérica-sangue | Data exec: None | Pattern: Creatinina\s+s[eé]rica-sangue | Check Field: lab_creatinina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,994 - INFO -  - ID: 725572 | Name: Ureia sérica-sangue | Data exec: None | Pattern: Ureia\s+s[eé]rica-sangue | Check Field: lab_ureia (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,994 - INFO -  - ID: 725573 | Name: Bilirrubina sérica (total)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,995 - INFO -  - ID: 725574 | Name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,995 - INFO -  - ID: 725575 | Name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,995 - INFO -  - ID: 725576 | Name: Fosfatase alcalina (FA)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,996 - INFO -  - ID: 725577 | Name: Albumina-Sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,996 - INFO -  - ID: 725578 | Name: Gama glutamil transferase (GGT)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,997 - INFO -  - ID: 725579 | Name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,997 - INFO -  - ID: 725580 | Name: Antígeno prostático específico livre (PSA)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,997 - INFO -  - ID: 725581 | Name: Colesterol- sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,998 - INFO -  - ID: 725582 | Name: Low-density lipoprotein (LDL)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,998 - INFO -  - ID: 725583 | Name: High-density lipoprotein (HDL)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:45,998 - INFO -  - ID: 725584 | Name: Lipoproteína a - sangue | Data exec: None | Pattern: Lipoproteína\s+a\s+-\s+sangue | Check Field: lab_lipoproteina (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,999 - INFO -  - ID: 725585 | Name: Testosterona total | Data exec: None | Pattern: Testosterona\s+total | Check Field: lab_testo_total (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,999 - INFO -  - ID: 725586 | Name: Testosterona livre sangue | Data exec: None | Pattern: Testosterona\s+livre\s+sangue | Check Field: lab_testo_livre (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:45,999 - INFO -  - ID: 725587 | Name: Hormônio folículo-estimulante (FSH)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,000 - INFO -  - ID: 725588 | Name: Hormônio luteinizante (LH)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,000 - INFO -  - ID: 725589 | Name: Dímero D-sangue | Data exec: None | Pattern: D[íi]mero\s+D-sangue | Check Field: lab_dd (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:46,000 - INFO -  - ID: 725590 | Name: Proteína S livre-sangue | Data exec: None | Pattern: Prote[ií]na\s+S\s+livre-sangue | Check Field: lab_prot_s (Value: N/A) | Date Field: lab_dt_visita (Value: N/A)
+2026-08-13 12:46:46,001 - INFO -  - ID: 725591 | Name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,001 - INFO -  - ID: 725592 | Name: Teste de gravidez | Data exec: None | Pattern: Teste\s+de\s+gravidez | Check Field: coleta_gravidez (Value: N/A) | Date Field: coleta_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:46,001 - INFO -  - ID: 725593 | Name: Concentração sérica de oxandrolona e farmacocinética | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,002 - INFO -  - ID: 725594 | Name: Dispensação de medicação para tromboprofilaxia pós-cirurgica | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,002 - INFO -  - ID: 725595 | Name: Orientações para programa fisioterápico para reabilitação pós-operatória | Data exec: None | Pattern: Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria | Check Field: rando_q1_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:46:46,003 - INFO -  - ID: 725596 | Name: Orientações para uso de métodos contraceptivos | Data exec: None | Pattern: Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos | Check Field: form_medico_gravidez_q3 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:46,003 - INFO -  - ID: 725597 | Name: Monitoramento de eventos adversos | Data exec: None | Pattern: Monitoramento\s+de\s+eventos\s+adversos | Check Field: form_medico_revisao7 (Value: Não) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:46,004 - INFO -  - ID: 725598 | Name: Inserção subdérmica do implante absorvível | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,004 - INFO -  - ID: 725599 | Name: Bioimpedância | Data exec: None | Pattern: Bioimped[aâ]ncia | Check Field: aval_corp_bioimpedancia (Value: N/A) | Date Field: aval_corp_dt_visita (Value: N/A)
+2026-08-13 12:46:46,005 - INFO -  - ID: 725600 | Name: Ressonância magnética por imagem da coxa | Data exec: None | Pattern: Resson[aâ]ncia magn[eé]tica por imagem da coxa | Check Field: form_medico_ex_imagem1 (Value: N/A) | Date Field: form_medico_dt_visita (Value: 2026-06-23)
+2026-08-13 12:46:46,005 - INFO -  - ID: 725601 | Name: Dinamometria isométrica | Data exec: None | Pattern: Dinamometria isom[eé]trica | Check Field: fisio_isometria_q5 (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:46:46,006 - INFO -  - ID: 725602 | Name: Y balance test | Data exec: None | Pattern: Y balance test | Check Field: fisio_teste_y (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:46:46,006 - INFO -  - ID: 725603 | Name: Knee Society Score (KSS) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,006 - INFO -  - ID: 725604 | Name: Questionário IPAQ (International Phyisical Ativity Questionnaire) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,006 - INFO -  - ID: 725605 | Name: Questionário Lysholm Knee Scoring Scale | Data exec: None | Pattern: Question[aá]rio Lysholm Knee Scoring Scale | Check Field: rando_q3_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:46:46,007 - INFO -  - ID: 725606 | Name: Questionário Short Form-12 (SF-36SF-36) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,007 - INFO -  - ID: 725607 | Name: Questionário GAD-7 | Data exec: None | Pattern: Question[aá]rio GAD-7 | Check Field: rando_q5_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:46:46,008 - INFO -  - ID: 725608 | Name: Questionário PHQ9 | Data exec: None | Pattern: Question[aá]rio PHQ9 | Check Field: rando_q6_v2 (Value: N/A) | Date Field: revisao_dt_visita (Value: N/A)
+2026-08-13 12:46:46,008 - INFO -  - ID: 725609 | Name: Questionário Patient Acceptable Symptom State (PAS) | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,009 - INFO -  - ID: 725610 | Name: Avaliação da Satisfação do Participante | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,009 - INFO -  - ID: 725611 | Name: Consulta Médica | Data exec: None | Pattern: Consulta\s+M[eé]dica | Check Field: form_medico_rubrica (Value: Akira Barbosa Hirota) | Date Field: form_medico_dt_rubrica (Value: 2026-06-23)
+2026-08-13 12:46:46,009 - INFO -  - ID: 725612 | Name: Consulta Fisioterapeuta | Data exec: None | Pattern: Consulta Fisioterapeuta | Check Field: fisio_dt_visita (Value: N/A) | Date Field: fisio_dt_visita (Value: N/A)
+2026-08-13 12:46:46,010 - INFO -  - ID: 725613 | Name: Reembolso | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,010 - INFO -  - ID: 725614 | Name: Referenciamento Médico | Data exec: None | Pattern: None | Check Field: None (Value: N/A) | Date Field: None (Value: N/A)
+2026-08-13 12:46:46,011 - INFO -  - ID: 725615 | Name: Reconsentimento | Data exec: None | Pattern: Reconsentimento | Check Field: tcle_reconcentimento (Value: N/A) | Date Field: tcle_dt_visita_aplicacao (Value: N/A)
+2026-08-13 12:46:46,011 - INFO - DEBUG: Procedure mapping summary for visit Não Programada: 25 matched, 28 unmatched
+2026-08-13 12:46:46,011 - INFO -  Total procedures in Polotrial: 53
+2026-08-13 12:46:46,012 - INFO -  Matched procedures: 25
+2026-08-13 12:46:46,012 - INFO -  Unmatched procedures: 28
+2026-08-13 12:46:46,012 - WARNING - DEBUG: Unmatched procedures in visit Não Programada: ['Termo de consentimento Livre e Esclarecido', 'Avaliação dos critérios de inclusão/exclusão', 'Dados demográficos', 'História médica', 'Bilirrubina sérica (total)-sangue', 'Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue', 'Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue', 'Fosfatase alcalina (FA)-sangue', 'Albumina-Sangue', 'Gama glutamil transferase (GGT)-sangue', 'Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue', 'Antígeno prostático específico livre (PSA)-sangue', 'Colesterol- sangue', 'Low-density lipoprotein (LDL)-sangue', 'High-density lipoprotein (HDL)-sangue', 'Hormônio folículo-estimulante (FSH)-sangue', 'Hormônio luteinizante (LH)-sangue', 'Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue', 'Concentração sérica de oxandrolona e farmacocinética', 'Dispensação de medicação para tromboprofilaxia pós-cirurgica', 'Inserção subdérmica do implante absorvível', 'Knee Society Score (KSS)', 'Questionário IPAQ (International Phyisical Ativity Questionnaire)', 'Questionário Short Form-12 (SF-36SF-36)', 'Questionário Patient Acceptable Symptom State (PAS)', 'Avaliação da Satisfação do Participante', 'Reembolso', 'Referenciamento Médico'] (no mapping found in procedures_map for these procedure names)
+2026-08-13 12:46:46,012 - WARNING -  - Unmatched procedure name: Termo de consentimento Livre e Esclarecido
+2026-08-13 12:46:46,013 - WARNING -  - Unmatched procedure name: Avaliação dos critérios de inclusão/exclusão
+2026-08-13 12:46:46,013 - WARNING -  - Unmatched procedure name: Dados demográficos
+2026-08-13 12:46:46,013 - WARNING -  - Unmatched procedure name: História médica
+2026-08-13 12:46:46,014 - WARNING -  - Unmatched procedure name: Bilirrubina sérica (total)-sangue
+2026-08-13 12:46:46,014 - WARNING -  - Unmatched procedure name: Transaminase glutâmico oxalacética/aspartato aminotransferase (TGO/AST)-sangue
+2026-08-13 12:46:46,014 - WARNING -  - Unmatched procedure name: Transaminase glutâmico pirúvica/alanina aminotransferase (TGP/ALT)-sangue
+2026-08-13 12:46:46,014 - WARNING -  - Unmatched procedure name: Fosfatase alcalina (FA)-sangue
+2026-08-13 12:46:46,014 - WARNING -  - Unmatched procedure name: Albumina-Sangue
+2026-08-13 12:46:46,015 - WARNING -  - Unmatched procedure name: Gama glutamil transferase (GGT)-sangue
+2026-08-13 12:46:46,015 - WARNING -  - Unmatched procedure name: Creatinina quinase ou Creatinina fosfoquinase (CK ou CPK)- sangue
+2026-08-13 12:46:46,015 - WARNING -  - Unmatched procedure name: Antígeno prostático específico livre (PSA)-sangue
+2026-08-13 12:46:46,015 - WARNING -  - Unmatched procedure name: Colesterol- sangue
+2026-08-13 12:46:46,016 - WARNING -  - Unmatched procedure name: Low-density lipoprotein (LDL)-sangue
+2026-08-13 12:46:46,016 - WARNING -  - Unmatched procedure name: High-density lipoprotein (HDL)-sangue
+2026-08-13 12:46:46,016 - WARNING -  - Unmatched procedure name: Hormônio folículo-estimulante (FSH)-sangue
+2026-08-13 12:46:46,016 - WARNING -  - Unmatched procedure name: Hormônio luteinizante (LH)-sangue
+2026-08-13 12:46:46,017 - WARNING -  - Unmatched procedure name: Globulina Ligadora De Hormonios Sexuais (SHBG)-sangue
+2026-08-13 12:46:46,017 - WARNING -  - Unmatched procedure name: Concentração sérica de oxandrolona e farmacocinética
+2026-08-13 12:46:46,017 - WARNING -  - Unmatched procedure name: Dispensação de medicação para tromboprofilaxia pós-cirurgica
+2026-08-13 12:46:46,017 - WARNING -  - Unmatched procedure name: Inserção subdérmica do implante absorvível
+2026-08-13 12:46:46,018 - WARNING -  - Unmatched procedure name: Knee Society Score (KSS)
+2026-08-13 12:46:46,018 - WARNING -  - Unmatched procedure name: Questionário IPAQ (International Phyisical Ativity Questionnaire)
+2026-08-13 12:46:46,018 - WARNING -  - Unmatched procedure name: Questionário Short Form-12 (SF-36SF-36)
+2026-08-13 12:46:46,018 - WARNING -  - Unmatched procedure name: Questionário Patient Acceptable Symptom State (PAS)
+2026-08-13 12:46:46,019 - WARNING -  - Unmatched procedure name: Avaliação da Satisfação do Participante
+2026-08-13 12:46:46,019 - WARNING -  - Unmatched procedure name: Reembolso
+2026-08-13 12:46:46,020 - WARNING -  - Unmatched procedure name: Referenciamento Médico
+2026-08-13 12:46:46,200 - INFO - ✅ Não Programada: Synced procedure 'Exame físico' (pattern Exame\s+f[ií]sico) with date 2026-06-23
+2026-08-13 12:46:46,373 - INFO - ✅ Não Programada: Synced procedure 'Sinais vitais' (pattern Sinais\s+vitais) with date 2026-06-23
+2026-08-13 12:46:46,375 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_revisao4 indicates not done (value = ''). Skipping
+2026-08-13 12:46:46,376 - INFO - Não Programada: No valid date found in REDCap for procedure Registro de uso de medicações pré-estudo e concomitantes (pattern Registro\s+de\s+uso\s+de\s+medica[cç][oõ]es\s+pr[eé]-estudo\s+e\s+concomitantes). Skipping sync for this procedure.
+2026-08-13 12:46:46,377 - INFO - Não Programada: No valid date found in REDCap for procedure Hemograma completo-sangue (pattern Hemograma\s+completo-sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,379 - INFO - Não Programada: No valid date found in REDCap for procedure Creatinina sérica-sangue (pattern Creatinina\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,380 - INFO - Não Programada: No valid date found in REDCap for procedure Ureia sérica-sangue (pattern Ureia\s+s[eé]rica-sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,381 - INFO - No procedures to sync for pattern Bilirrubina\s+s[eé]rica\s+(total)-sangue in visit Não Programada
+2026-08-13 12:46:46,382 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+oxalac[eé]tica/aspartato\s+aminotransferase\s+(TGO/AST)-sangue in visit Não Programada
+2026-08-13 12:46:46,383 - INFO - No procedures to sync for pattern Transaminase\s+glut[aâ]mico\s+pir[uú]vica/alanina\s+aminotransferase\s+(TGP/ALT)-sangue in visit Não Programada
+2026-08-13 12:46:46,384 - INFO - No procedures to sync for pattern Fosfatase\s+alcalina\s+(FA)-sangue in visit Não Programada
+2026-08-13 12:46:46,386 - INFO - No procedures to sync for pattern Gama\s+glutamil\s+transferase\s+(GGT)-sangue in visit Não Programada
+2026-08-13 12:46:46,388 - INFO - No procedures to sync for pattern Creatinina\s+quinase\s+ou\s+Creatinina\s+fosfoquinase\s+(CK\s+ou\s+CPK)-\s+sangue in visit Não Programada
+2026-08-13 12:46:46,389 - INFO - No procedures to sync for pattern Antígeno\s+prost[aá]tico\s+espec[ií]fico\s+livre\s+(PSA)-sangue in visit Não Programada
+2026-08-13 12:46:46,391 - INFO - No procedures to sync for pattern Colesterol-sangue in visit Não Programada
+2026-08-13 12:46:46,392 - INFO - No procedures to sync for pattern Low-density\s+lipoprotein\s+(LDL)-sangue in visit Não Programada
+2026-08-13 12:46:46,393 - INFO - No procedures to sync for pattern High-density\s+lipoprotein\s+(HDL)-sangue in visit Não Programada
+2026-08-13 12:46:46,394 - INFO - Não Programada: No valid date found in REDCap for procedure Lipoproteína a - sangue (pattern Lipoproteína\s+a\s+-\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,396 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona total (pattern Testosterona\s+total). Skipping sync for this procedure.
+2026-08-13 12:46:46,397 - INFO - Não Programada: No valid date found in REDCap for procedure Testosterona livre sangue (pattern Testosterona\s+livre\s+sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,398 - INFO - No procedures to sync for pattern Horm[oô]nio\s+fol[ií]culo-estimulante\s+(FSH)-sangue in visit Não Programada
+2026-08-13 12:46:46,399 - INFO - No procedures to sync for pattern Horm[oô]nio\s+luteinizante\s+(LH)-sangue in visit Não Programada
+2026-08-13 12:46:46,401 - INFO - Não Programada: No valid date found in REDCap for procedure Dímero D-sangue (pattern D[íi]mero\s+D-sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,403 - INFO - Não Programada: No valid date found in REDCap for procedure Proteína S livre-sangue (pattern Prote[ií]na\s+S\s+livre-sangue). Skipping sync for this procedure.
+2026-08-13 12:46:46,404 - INFO - No procedures to sync for pattern Globulina\s+Ligadora\s+De\s+Horm[oô]nios\s+Sexuais\s+(SHBG)-sangue in visit Não Programada
+2026-08-13 12:46:46,405 - WARNING - Date exists (coleta_dt_visita) but check field coleta_gravidez indicates not done (value = ''). Skipping
+2026-08-13 12:46:46,406 - INFO - Não Programada: No valid date found in REDCap for procedure Teste de gravidez (pattern Teste\s+de\s+gravidez). Skipping sync for this procedure.
+2026-08-13 12:46:46,407 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para programa fisioterápico para reabilitação pós-operatória (pattern Orienta[cç][oõ]es\s+para\s+programa\s+fisioter[aá]pico\s+para\s+reabilita[cç][aã]o\s+p[oó]s-operat[oó]ria). Skipping sync for this procedure.
+2026-08-13 12:46:46,408 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_gravidez_q3 indicates not done (value = ''). Skipping
+2026-08-13 12:46:46,408 - INFO - Não Programada: No valid date found in REDCap for procedure Orientações para uso de métodos contraceptivos (pattern Orienta[cç][oõ]es\s+para\s+uso\s+de\s+m[ée]todos\s+contraceptivos). Skipping sync for this procedure.
+2026-08-13 12:46:46,599 - INFO - ✅ Não Programada: Synced procedure 'Monitoramento de eventos adversos' (pattern Monitoramento\s+de\s+eventos\s+adversos) with date 2026-06-23
+2026-08-13 12:46:46,789 - INFO - ✅ Não Programada: Synced procedure 'Consulta Médica' (pattern Consulta\s+M[eé]dica) with date 2026-06-23
+2026-08-13 12:46:46,790 - INFO - Não Programada: No valid date found in REDCap for procedure Reconsentimento (pattern Reconsentimento). Skipping sync for this procedure.
+2026-08-13 12:46:46,792 - INFO - Não Programada: No valid date found in REDCap for procedure Bioimpedância (pattern Bioimped[aâ]ncia). Skipping sync for this procedure.
+2026-08-13 12:46:46,793 - WARNING - Date exists (form_medico_dt_visita) but check field form_medico_ex_imagem1 indicates not done (value = ''). Skipping
+2026-08-13 12:46:46,794 - INFO - Não Programada: No valid date found in REDCap for procedure Ressonância magnética por imagem da coxa (pattern Resson[aâ]ncia magn[eé]tica por imagem da coxa). Skipping sync for this procedure.
+2026-08-13 12:46:46,795 - INFO - Não Programada: No valid date found in REDCap for procedure Dinamometria isométrica (pattern Dinamometria isom[eé]trica). Skipping sync for this procedure.
+2026-08-13 12:46:46,796 - INFO - Não Programada: No valid date found in REDCap for procedure Y balance test (pattern Y balance test). Skipping sync for this procedure.
+2026-08-13 12:46:46,798 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário Lysholm Knee Scoring Scale (pattern Question[aá]rio Lysholm Knee Scoring Scale). Skipping sync for this procedure.
+2026-08-13 12:46:46,801 - INFO - No procedures to sync for pattern Question[aá]rio Short Form-12 (SF-36SF-36) in visit Não Programada
+2026-08-13 12:46:46,802 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário GAD-7 (pattern Question[aá]rio GAD-7). Skipping sync for this procedure.
+2026-08-13 12:46:46,804 - INFO - Não Programada: No valid date found in REDCap for procedure Questionário PHQ9 (pattern Question[aá]rio PHQ9). Skipping sync for this procedure.
+2026-08-13 12:46:46,805 - INFO - No procedures to sync for pattern Question[aá]rio Patient Acceptable Symptom State (PAS) in visit Não Programada
+2026-08-13 12:46:46,807 - INFO - Não Programada: No valid date found in REDCap for procedure Consulta Fisioterapeuta (pattern Consulta Fisioterapeuta). Skipping sync for this procedure.
+2026-08-13 12:46:46,808 - INFO - Não Programada: Total procedures synced: 4
+2026-08-13 12:46:47,304 - INFO - Não Programada: consulta_nome_medico is empty, skipping executor sync
+2026-08-13 12:46:47,305 - INFO - VNP: Successfully synced participant visit id=43736 for record=100-4. This visit was created or updated; see the creation/update log above.
+2026-08-13 12:46:47,306 - INFO - Successfully processed DET for record_id=100-4, event_name=visita_no_programa_arm_1

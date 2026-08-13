@@ -68,19 +68,43 @@ class RedcapClient:
         data = redcap_request.json()
         if not isinstance(data, list):
             raise RuntimeError(f" Unexpected REDCap response (expected list), got: {type(data)}")
+
+        returned_instances = sorted({
+            str(entry.get("redcap_repeat_instance", entry.get("repeat_instance")))
+            for entry in data
+            if entry.get("redcap_repeat_instance", entry.get("repeat_instance")) is not None
+        })
+        logger.info(
+            "REDCap: filtering event=%s by repeat_instance=%r; response instances=%s",
+            event_name,
+            repeat_instance,
+            returned_instances,
+        )
         
         out: Dict[str, Any] = {}
+        matched_entries = 0
         for entry in data:
             # entry: {record, field_name, value, event_name, ...}
-            entry_repeat_instance = entry.get("repeat_instance")
+            entry_repeat_instance = entry.get(
+                "redcap_repeat_instance",
+                entry.get("repeat_instance"),
+            )
             if repeat_instance is not None and str(entry_repeat_instance or "") != str(repeat_instance):
                 continue
+            matched_entries += 1
             field_name = entry.get("field_name")
             value = entry.get("value")
             if field_name:
                 out[field_name] = value
                 
-        logger.info("REDCap: exported record %s for event %s with %d fields", record_id, event_name, len(out))
+        logger.info(
+            "REDCap: exported record %s for event %s, repeat_instance=%r, with %d fields from %d entries",
+            record_id,
+            event_name,
+            repeat_instance,
+            len(out),
+            matched_entries,
+        )
         return out
     
     def list_events(self) -> Any:

@@ -196,6 +196,7 @@ def _find_or_create_vnp(
             # Atualizar status se necessário
             desired = {
                 "data_realizada": visit_date,
+                "co_protocolo": co_protocolo,
                 "status": 20  # 20 = Completed (realizada)
             }
             
@@ -215,12 +216,20 @@ def _find_or_create_vnp(
             )
             if (
                 str(current.get("data_realizada", ""))[:10] == target_date and
+                str(current.get("co_protocolo") or "") == str(co_protocolo) and
                 int(current.get("status", -1)) == desired["status"]
             ):
                 logger.info("VNP: Visit %s already up to date", participant_visit_id)
             else:
                 polotrial.update_participant_visit(participant_visit_id, desired)
                 logger.info("VNP: Updated visit %s", participant_visit_id)
+
+            _ensure_vnp_procedures(
+                participant_visit_id=participant_visit_id,
+                co_protocolo=co_protocolo,
+                template_procedures=[],
+                polotrial=polotrial,
+            )
             
             return participant_visit_id
     
@@ -238,6 +247,10 @@ def _find_or_create_vnp(
         template_procedures = polotrial.list_participant_visit_procedures(
             co_participante_visita=int(template_visit["id"])
         )
+    if not template_procedures:
+        template_procedures = polotrial.list_protocol_procedures(
+            co_protocolo=co_protocolo
+        )
 
     # The API requires data_estimada on creation. For an unscheduled visit,
     # the actual date is already known, so use it only as a technical value.
@@ -254,22 +267,12 @@ def _find_or_create_vnp(
     
     created_visit = polotrial.create_participant_visit(payload)
     participant_visit_id = int(created_visit["id"])
-    created_procedures = polotrial.list_participant_visit_procedures(
-        co_participante_visita=participant_visit_id
+    _ensure_vnp_procedures(
+        participant_visit_id=participant_visit_id,
+        co_protocolo=co_protocolo,
+        template_procedures=template_procedures,
+        polotrial=polotrial,
     )
-    if not created_procedures and template_procedures:
-        logger.info(
-            "VNP: New visit %s has no procedures; copying %d procedures from visit %s",
-            participant_visit_id,
-            len(template_procedures),
-            template_visit["id"],
-        )
-        for procedure in template_procedures:
-            procedure_payload = {
-                "co_participante_visita": participant_visit_id,
-                "co_protocolo_procedimento": procedure["co_protocolo_procedimento"],
-            }
-            polotrial.create_participant_visit_procedure(procedure_payload)
     
     logger.info(
         "VNP: Created new visit (id=%s, date=%s)",
@@ -278,3 +281,44 @@ def _find_or_create_vnp(
     )
     
     return participant_visit_id
+
+
+def _ensure_vnp_procedures(
+    *,
+    participant_visit_id: int,
+    co_protocolo: int,
+    template_procedures: list[Dict[str, Any]],
+    polotrial: PoloTrialClient,
+) -> None:
+    """Ensure a VNP has procedure links when the API created it empty."""
+    current_procedures = polotrial.list_participant_visit_procedures(
+        co_participante_visita=participant_visit_id
+    )
+    if current_procedures:
+        return
+
+    procedures = template_procedures or polotrial.list_protocol_procedures(
+        co_protocolo=co_protocolo
+    )
+    if not procedures:
+        logger.warning(
+            "VNP: No protocol procedures available to link to visit %s",
+            participant_visit_id,
+        )
+        return
+
+    logger.info(
+        "VNP: Visit %s has no procedures; linking %d protocol procedures",
+        participant_visit_id,
+        len(procedures),
+    )
+    for procedure in procedures:
+        procedure_id = procedure.get("co_protocolo_procedimento", procedure.get("id"))
+        if procedure_id is None:
+            continue
+        polotrial.create_participant_visit_procedure(
+            {
+                "co_participante_visita": participant_visit_id,
+                "co_protocolo_procedimento": procedure_id,
+            }
+        )
