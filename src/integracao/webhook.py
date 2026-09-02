@@ -182,8 +182,8 @@ async def redcap_imox_det(
 #============================================================================================================================
 
 def _run_sync(
-        *,
-        record_id: str,
+    *,
+    record_id: str,
     event_name: str,
     repeat_instance: str | None = None,
 ) -> None:
