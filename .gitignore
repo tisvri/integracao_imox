@@ -9,3 +9,4 @@ wheels/
 # Virtual environments
 .venv
 .env
+sync_log.log

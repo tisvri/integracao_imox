@@ -28,7 +28,7 @@ def sync_v1_screening(
     redcap: RedcapClient,
     polotrial: PoloTrialClient,
     protocol_nickname: str,
-    repeat_instance: str
+    repeat_instance: str | None = None
 ) -> None:
     # 1. Get Redcap data (record and event)
     redcap_payload  = redcap.export_record_eav(

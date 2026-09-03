@@ -294,8 +294,8 @@ VISITS_CATALOG = {
         procedures_map = VISITA_NAO_PROGRAMADA_PROCEDURES_MAP,
         requires_pk=None,
         executor_config={
-            "field": "consulta_nome_medico",
-            'date_field': 'consulta_dt',
+                "field": "form_medico_rubrica",
+                'date_field': 'form_medico_dt_rubrica',
             "procedure_pattern": r"^Consulta M[eéEÉ]dica$"
         },
     ),
